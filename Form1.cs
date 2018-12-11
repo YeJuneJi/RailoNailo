@@ -16,5 +16,11 @@ namespace RailoNailo
         {
             InitializeComponent();
         }
+
+        private void btnTourInfo_Click(object sender, EventArgs e)
+        {
+            FormTourInformation formTourInformation = new FormTourInformation();
+            formTourInformation.Show();
+        }
     }
 }

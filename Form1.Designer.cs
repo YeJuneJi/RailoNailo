@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnTourInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnTourInfo
+            // 
+            this.btnTourInfo.Location = new System.Drawing.Point(357, 418);
+            this.btnTourInfo.Name = "btnTourInfo";
+            this.btnTourInfo.Size = new System.Drawing.Size(126, 38);
+            this.btnTourInfo.TabIndex = 0;
+            this.btnTourInfo.Text = "전국관광정보";
+            this.btnTourInfo.UseVisualStyleBackColor = true;
+            this.btnTourInfo.Click += new System.EventHandler(this.btnTourInfo_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 450);
+            this.ClientSize = new System.Drawing.Size(918, 583);
+            this.Controls.Add(this.btnTourInfo);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -42,6 +54,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnTourInfo;
     }
 }
 
