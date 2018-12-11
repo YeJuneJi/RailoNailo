@@ -16,5 +16,16 @@ namespace RailoNailo
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHoneyTip_Click(object sender, EventArgs e)
+        {
+            HoneyTip ht = new HoneyTip();
+            ht.Show();
+        }
     }
 }
