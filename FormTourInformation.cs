@@ -16,39 +16,68 @@ namespace RailoNailo
     public partial class FormTourInformation : Form
     {
         private string serviceKey = "Sf8fjXzeJx8CxVqHJ5cDq2WSEO%2B7Gfor9J8ubISBAGIJIidA2L8rVXoAWxCx59Jo4PERKpiKGrqRLF2oMtTy%2Bw%3D%3D"; //서비스 키
-        private string areaCode = string.Empty; //지역코드조회 . 지역코드는 areaCode.json 참조.
+        //private string areaCode = string.Empty; //지역코드조회 . 지역코드는 areaCode.json 참조.
         private string categoryCode = string.Empty; //서비스 분류코드 조회
         private string areaBasedList = string.Empty;//지역기반 관광정보 조회
         private string operationName = string.Empty; //오퍼레이션 명
 
-        private int numOfRows = 17; //한 페이지 결과 수
+        JsonCodes areaCode;
+        JObject jobj;
+        JArray jarr;
+        private List<JsonCodes> areaList;
+        private List<JsonCodes> categoryList;
+        private List<JsonCodes> category2List;
+        private int numOfRows = 50; //한 페이지 결과 수
         private int pageNo = 1; //한 페이지 번호
         public FormTourInformation()
         {
             InitializeComponent();
+            areaList = new List<JsonCodes>();
+            categoryList = new List<JsonCodes>();
+            category2List = new List<JsonCodes>();
+            jobj = new JObject();
+            jarr = new JArray();
         }
 
         private void FormTourInformation_Load(object sender, EventArgs e)
         {
             this.Text = "전국관광정보";
             cbxAreas.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxAreaDetails.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxCategory1.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxAreas.Items.Clear();
+            cbxCategory1.Items.Clear();
 
-            JObject jobj = JObject.Parse(GetJson("areaCode", string.Empty));
-            JArray arr = JArray.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
+            DisplayArea("areaCode", areaList, cbxAreas);
+            DisplayArea("categoryCode", categoryList, cbxCategory1);
 
-            foreach (var item in arr)
-            {
-                cbxAreas.Items.Add(item["name"].ToString());
-            }
-
-            //GetJson("areaCode", "&areaCode=1");
+            
         }
 
+        private void DisplayArea(string operationName, List<JsonCodes> jsonlist, ComboBox cbx)
+        {
+            
+            jobj.RemoveAll();
+            jarr.RemoveAll();
+            jobj = JObject.Parse(GetJson(operationName, string.Empty));
+            jarr = JArray.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
+            foreach (JObject item in jarr)
+            {
+                 areaCode = new JsonCodes
+                {
+                    Code = Convert.ToString(item["code"]), //코드
+                    Name = Convert.ToString(item["name"]), //코드명
+                    Rname = Convert.ToInt32(item["rnum"]) //일련번호
+                };
+                cbx.Items.Add(areaCode.Name);
+                jsonlist.Add(areaCode);
+            }
+        }
 
         private string GetJson(string operationName, string reqParam)
         {
             string serverUrl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/" + operationName + "?ServiceKey=" + serviceKey + "&MobileOS=ETC&MobileApp=TestApp&_type=json&numOfRows=" + numOfRows + "&pageNo=" + pageNo + reqParam;
+
             HttpWebRequest request = WebRequest.Create(serverUrl) as HttpWebRequest;
             HttpWebResponse response = request.GetResponse() as HttpWebResponse;
             string statusCode = response.StatusCode.ToString();
@@ -57,7 +86,7 @@ namespace RailoNailo
             {
                 Stream stream = response.GetResponseStream();
                 StreamReader streamReader = new StreamReader(stream, Encoding.UTF8);
-                tbxResult.Text = json = streamReader.ReadToEnd();//.Replace("<b>", "").Replace("</b>", "");
+                tbxResult.Text = json = streamReader.ReadToEnd();
                 streamReader.Close();
                 stream.Close();
             }
@@ -71,6 +100,38 @@ namespace RailoNailo
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbxAreas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxAreaDetails.Items.Clear();
+            int area = 0;
+            foreach (JsonCodes item in areaList)
+            {
+                if ((cbxAreas.SelectedItem).ToString() == item.Name)
+                {
+                    area = Convert.ToInt32(item.Code);
+                    break;
+                }
+            }
+            JObject jobj = JObject.Parse(GetJson("areaCode", "&areaCode=" + area));
+            if (area != 8)
+            {
+                JArray arr = JArray.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
+                foreach (JObject item in arr)
+                {
+                    cbxAreaDetails.Items.Add(item["name"].ToString());
+                }
+            }
+            else
+            {
+                cbxAreaDetails.Items.Add(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").SelectToken("name").ToString());
+            }
+        }
+
+        private void cbxCategory2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxCategory2.Items.Clear();
         }
     }
 }
