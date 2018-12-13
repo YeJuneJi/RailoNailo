@@ -99,6 +99,7 @@
             this.cbxCategory2.Name = "cbxCategory2";
             this.cbxCategory2.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory2.TabIndex = 6;
+            this.cbxCategory2.SelectedIndexChanged += new System.EventHandler(this.cbxCategory2_SelectedIndexChanged);
             // 
             // cbxCategory3
             // 
