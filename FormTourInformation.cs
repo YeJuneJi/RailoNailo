@@ -21,13 +21,12 @@ namespace RailoNailo
         private string areaBasedList = string.Empty;//지역기반 관광정보 조회
         private string operationName = string.Empty; //오퍼레이션 명
 
-        JsonCodes areaCode;
-        JObject jobj;
-        JArray jarr;
+        JsonCodes code;
+        
         private List<JsonCodes> areaList;
         private List<JsonCodes> categoryList;
         private List<JsonCodes> category2List;
-        private int numOfRows = 50; //한 페이지 결과 수
+        private int numOfRows = 20; //한 페이지 결과 수
         private int pageNo = 1; //한 페이지 번호
         public FormTourInformation()
         {
@@ -35,8 +34,7 @@ namespace RailoNailo
             areaList = new List<JsonCodes>();
             categoryList = new List<JsonCodes>();
             category2List = new List<JsonCodes>();
-            jobj = new JObject();
-            jarr = new JArray();
+            
         }
 
         private void FormTourInformation_Load(object sender, EventArgs e)
@@ -45,32 +43,29 @@ namespace RailoNailo
             cbxAreas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxAreaDetails.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxCategory1.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxCategory2.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxAreas.Items.Clear();
             cbxCategory1.Items.Clear();
 
             DisplayArea("areaCode", areaList, cbxAreas);
             DisplayArea("categoryCode", categoryList, cbxCategory1);
 
-            
         }
 
         private void DisplayArea(string operationName, List<JsonCodes> jsonlist, ComboBox cbx)
         {
-            
-            jobj.RemoveAll();
-            jarr.RemoveAll();
-            jobj = JObject.Parse(GetJson(operationName, string.Empty));
-            jarr = JArray.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
+            JObject jobj = JObject.Parse(GetJson(operationName, string.Empty));
+            JArray jarr = JArray.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
             foreach (JObject item in jarr)
             {
-                 areaCode = new JsonCodes
+                 code = new JsonCodes
                 {
                     Code = Convert.ToString(item["code"]), //코드
                     Name = Convert.ToString(item["name"]), //코드명
                     Rname = Convert.ToInt32(item["rnum"]) //일련번호
                 };
-                cbx.Items.Add(areaCode.Name);
-                jsonlist.Add(areaCode);
+                cbx.Items.Add(code.Name);
+                jsonlist.Add(code);
             }
         }
 
@@ -86,7 +81,7 @@ namespace RailoNailo
             {
                 Stream stream = response.GetResponseStream();
                 StreamReader streamReader = new StreamReader(stream, Encoding.UTF8);
-                tbxResult.Text = json = streamReader.ReadToEnd();
+                json = streamReader.ReadToEnd();
                 streamReader.Close();
                 stream.Close();
             }
@@ -105,6 +100,7 @@ namespace RailoNailo
         private void cbxAreas_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbxAreaDetails.Items.Clear();
+            
             int area = 0;
             foreach (JsonCodes item in areaList)
             {
@@ -114,24 +110,40 @@ namespace RailoNailo
                     break;
                 }
             }
-            JObject jobj = JObject.Parse(GetJson("areaCode", "&areaCode=" + area));
+            JObject areaObj = JObject.Parse(GetJson("areaCode", "&areaCode=" + area));
             if (area != 8)
             {
-                JArray arr = JArray.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
-                foreach (JObject item in arr)
+                JArray areaArr = JArray.Parse(areaObj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
+                foreach (JObject item in areaArr)
                 {
                     cbxAreaDetails.Items.Add(item["name"].ToString());
                 }
             }
             else
             {
-                cbxAreaDetails.Items.Add(jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").SelectToken("name").ToString());
+                cbxAreaDetails.Items.Add(areaObj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").SelectToken("name").ToString());
             }
         }
 
-        private void cbxCategory2_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxCategory1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             cbxCategory2.Items.Clear();
+            string category = string.Empty;
+            foreach (JsonCodes categoryitem in categoryList)
+            {
+                if ((cbxCategory1.SelectedItem).ToString() == categoryitem.Name)
+                {
+                    category = categoryitem.Code;
+                    break;
+                }
+                JObject categoryObj = JObject.Parse(GetJson("categoryCode", "&cat1=" + category));
+                JArray categoryArr = JArray.Parse(categoryObj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
+                foreach (JObject item in categoryArr)
+                {
+                    cbxCategory2.Items.Add(item["name"].ToString());
+                }
+            }
         }
     }
 }

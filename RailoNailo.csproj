@@ -99,6 +99,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="areaCode.json" />
+    <None Include="categoryCode.json" />
     <None Include="json1.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
