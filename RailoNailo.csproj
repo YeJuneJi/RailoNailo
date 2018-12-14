@@ -128,6 +128,7 @@
     <Content Include="honeyTipImage\Main22.png" />
     <Content Include="honeyTipImage\main3.PNG" />
     <Content Include="honeyTipImage\main4.PNG" />
+    <Content Include="mainForm\passenger-train-front-view_icon-icons.com_70424.png" />
     <Content Include="Railo_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -121,19 +121,22 @@
   <data name="우" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\honeyTipImage\우.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="빠른좌" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\honeyTipImage\빠른좌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="빠른우" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\honeyTipImage\빠른우.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="main4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\honeyTipImage\main4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="좌" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\honeyTipImage\좌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="빠른좌" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\honeyTipImage\빠른좌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\honeyTipImage\main4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\RandomPhoto\a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="passenger-train-front-view_icon-icons.com_70424" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainForm\passenger-train-front-view_icon-icons.com_70424.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

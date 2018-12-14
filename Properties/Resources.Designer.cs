@@ -83,6 +83,16 @@ namespace RailoNailo.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap passenger_train_front_view_icon_icons_com_70424 {
+            get {
+                object obj = ResourceManager.GetObject("passenger-train-front-view_icon-icons.com_70424", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 빠른우 {
             get {
                 object obj = ResourceManager.GetObject("빠른우", resourceCulture);

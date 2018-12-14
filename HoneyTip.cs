@@ -22,7 +22,6 @@ namespace RailoNailo
         {
             InitializeComponent();
             PrivateFontCollection privateFonts = new PrivateFontCollection();
-
             privateFonts.AddFontFile(@"C:\Railo\한나체!.ttf");
             Font font = new Font(privateFonts.Families[0], 14f);
 
