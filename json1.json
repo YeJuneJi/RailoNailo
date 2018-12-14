@@ -1,4 +1,6 @@
 {
+  //http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?ServiceKey=Sf8fjXzeJx8CxVqHJ5cDq2WSEO%2B7Gfor9J8ubISBAGIJIidA2L8rVXoAWxCx59Jo4PERKpiKGrqRLF2oMtTy%2Bw%3D%3D&contentTypeId=39&contentId=1936919&MobileOS=ETC&MobileApp=TourAPI3.0_Guide&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y&transGuideYN=Y&_type=json
+
   "response": {
     "header": {
       "resultCode": "0000",
@@ -6,47 +8,33 @@
     },
     "body": {
       "items": {
-        "item": [
-          {
-            "code": "A01",
-            "name": "자연",
-            "rnum": 1
-          },
-          {
-            "code": "A02",
-            "name": "인문(문화/예술/역사)",
-            "rnum": 2
-          },
-          {
-            "code": "A03",
-            "name": "레포츠",
-            "rnum": 3
-          },
-          {
-            "code": "A04",
-            "name": "쇼핑",
-            "rnum": 4
-          },
-          {
-            "code": "A05",
-            "name": "음식",
-            "rnum": 5
-          },
-          {
-            "code": "B02",
-            "name": "숙박",
-            "rnum": 6
-          },
-          {
-            "code": "C01",
-            "name": "추천코스",
-            "rnum": 7
-          }
-        ]
+        "item": {
+          "addr1": "경상북도 경주시 교촌안길 5",
+          "addr2": "(교동)",
+          "areacode": 35,
+          "cat1": "A05",
+          "cat2": "A0502",
+          "cat3": "A05020900",
+          "contentid": 1936919,
+          "contenttypeid": 39,
+          "createdtime": 20140725102924,
+          "firstimage": "http:\/\/tong.visitkorea.or.kr\/cms\/resource\/47\/1936947_image2_1.JPG",
+          "firstimage2": "http:\/\/tong.visitkorea.or.kr\/cms\/resource\/47\/1936947_image2_1.JPG",
+          "mapx": 129.2151649162,
+          "mapy": 35.8296055592,
+          "mlevel": 6,
+          "modifiedtime": 20181105094737,
+          "overview": "[경상북도 경주시 교동에 있는 커피전문점 가비]<br \/> 가비는 경주 교촌마을 안에 있는 커피전문점으로 커피, 빙수 및 전통차 등의 메뉴를 제공하는 카페이다. 한옥으로 이루어진 가비는 현대적 디자인과 한옥풍의 디자인으로 전통과 현대의 멋을 느낄 수 있다. 또한 교촌마을과 월정교를 둘러볼 수 있어 관광 중에 이용하기에도 좋다.<br>",
+          "sigungucode": 2,
+          "tel": "054-771-2524",
+          "telname": "가비",
+          "title": "가비",
+          "zipcode": 38170
+        }
       },
-      "numOfRows": 20,
+      "numOfRows": 10,
       "pageNo": 1,
-      "totalCount": 7
+      "totalCount": 1
     }
   }
 }

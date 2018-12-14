@@ -1,0 +1,25 @@
+//cbxAreaDetails.Items.Clear();
+cbxAreas_SelectedIndexChanged의 초기 메서드 내용
+            //string area = string.Empty;
+            //foreach (JsonCodes item in areaList)
+            //{
+            //    if ((cbxAreas.SelectedItem).ToString() == item.Name)
+            //    {
+            //        area = item.Code;
+            //        break;
+            //    }
+            //}
+            //JObject obj = JObject.Parse(GetJson("areaCode", "&areaCode=" + area));
+            //tbxResult.Text = obj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").Type.ToString();
+            //if (obj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").Type == JTokenType.Array)
+            //{
+            //    JArray arr = JArray.Parse(obj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").ToString());
+            //    foreach (JObject item in arr)
+            //    {
+            //        cbxAreaDetails.Items.Add(item["name"].ToString());
+            //    }
+            //}
+            //else
+            //{
+            //    cbxAreaDetails.Items.Add(obj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").SelectToken("name").ToString());
+            //}
