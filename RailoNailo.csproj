@@ -85,6 +85,11 @@
     <Compile Include="HoneyTipInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SqlDbConnection.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -94,14 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="json1.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -113,17 +113,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="한나체!.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1.PNG" />
-    <Content Include="2.png" />
-    <Content Include="Main.PNG" />
-    <Content Include="main2.PNG" />
-    <Content Include="main3.PNG" />
-    <Content Include="main4.PNG" />
+    <Content Include="honeyTipImage\1.PNG" />
+    <Content Include="honeyTipImage\2.png" />
+    <Content Include="honeyTipImage\Main.PNG" />
+    <Content Include="honeyTipImage\main2.PNG" />
+    <Content Include="honeyTipImage\Main22.png" />
+    <Content Include="honeyTipImage\main3.PNG" />
+    <Content Include="honeyTipImage\main4.PNG" />
     <Content Include="Railo_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -131,7 +135,20 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Railo_DB.mdf</DependentUpon>
     </Content>
-    <Content Include="캡처.PNG" />
+    <Content Include="honeyTipImage\빠른우.png" />
+    <Content Include="honeyTipImage\빠른좌.png" />
+    <Content Include="honeyTipImage\우.png" />
+    <Content Include="honeyTipImage\좌.png" />
+    <Content Include="honeyTipImage\캡처.PNG" />
+    <Content Include="RandomPhoto\a.png" />
+    <Content Include="RandomPhoto\b.png" />
+    <Content Include="RandomPhoto\c.png" />
+    <Content Include="RandomPhoto\d.png" />
+    <Content Include="RandomPhoto\e.png" />
+    <Content Include="RandomPhoto\f.png" />
+    <Content Include="RandomPhoto\g.png" />
+    <Content Include="RandomPhoto\h.png" />
+    <Content Include="RandomPhoto\i.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnHoneyTip = new System.Windows.Forms.Button();
-            this.btnFeeling = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,21 +51,11 @@
             this.btnHoneyTip.UseVisualStyleBackColor = true;
             this.btnHoneyTip.Click += new System.EventHandler(this.btnHoneyTip_Click);
             // 
-            // btnFeeling
-            // 
-            this.btnFeeling.Location = new System.Drawing.Point(651, 72);
-            this.btnFeeling.Name = "btnFeeling";
-            this.btnFeeling.Size = new System.Drawing.Size(75, 23);
-            this.btnFeeling.TabIndex = 2;
-            this.btnFeeling.Text = "여행 후기";
-            this.btnFeeling.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 575);
-            this.Controls.Add(this.btnFeeling);
             this.Controls.Add(this.btnHoneyTip);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -81,7 +70,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHoneyTip;
-        private System.Windows.Forms.Button btnFeeling;
     }
 }
 
