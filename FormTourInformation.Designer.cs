@@ -40,6 +40,9 @@
             this.tourListView = new System.Windows.Forms.ListView();
             this.tbxResult = new System.Windows.Forms.TextBox();
             this.tourimgList = new System.Windows.Forms.ImageList(this.components);
+            this.btnPrev = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.lblPage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbxAreas
@@ -136,11 +139,41 @@
             this.tourimgList.ImageSize = new System.Drawing.Size(256, 256);
             this.tourimgList.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // btnPrev
+            // 
+            this.btnPrev.Location = new System.Drawing.Point(172, 553);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(75, 23);
+            this.btnPrev.TabIndex = 11;
+            this.btnPrev.Text = "이전";
+            this.btnPrev.UseVisualStyleBackColor = true;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(407, 553);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 12;
+            this.btnNext.Text = "다음";
+            this.btnNext.UseVisualStyleBackColor = true;
+            // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.Location = new System.Drawing.Point(279, 558);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(91, 12);
+            this.lblPage.TabIndex = 13;
+            this.lblPage.Text = "PageToDisplay";
+            // 
             // FormTourInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 559);
+            this.ClientSize = new System.Drawing.Size(954, 592);
+            this.Controls.Add(this.lblPage);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.tbxResult);
             this.Controls.Add(this.tourListView);
             this.Controls.Add(this.btnSearch);
@@ -171,5 +204,8 @@
         private System.Windows.Forms.ListView tourListView;
         private System.Windows.Forms.TextBox tbxResult;
         private System.Windows.Forms.ImageList tourimgList;
+        private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Label lblPage;
     }
 }
