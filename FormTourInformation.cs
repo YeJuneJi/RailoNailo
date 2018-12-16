@@ -23,14 +23,16 @@ namespace RailoNailo
         //private string operationName = string.Empty; //오퍼레이션 명
 
         private JsonCodes code;
-        private areaBasedList areaBased;
+        private AreaBased areaBased;
         private List<JsonCodes> areaList;
         private List<JsonCodes> areaDetailList;
         private List<JsonCodes> categoryList;
         private List<JsonCodes> category2List;
         private List<JsonCodes> category3List;
-        private List<areaBasedList> areaBasedlist;
+        private List<AreaBased> areaBasedlist;
         //private int numOfRows = 20; //한 페이지 결과 수
+        private int totalDataCount = 0; // 전체 데이터 개수
+        private int totalPageNo = 0;
         private int pageNo = 1; //한 페이지 번호
 
 
@@ -44,8 +46,7 @@ namespace RailoNailo
             categoryList = new List<JsonCodes>();
             category2List = new List<JsonCodes>();
             category3List = new List<JsonCodes>();
-            areaBasedlist = new List<areaBasedList>();
-
+            areaBasedlist = new List<AreaBased>();
         }
 
         private void FormTourInformation_Load(object sender, EventArgs e)
@@ -89,8 +90,8 @@ namespace RailoNailo
         /// <param name="operationName">오퍼레이션 명</param>
         /// <param name="reqParam">추가 응답코드</param>
         /// <param name="numOfRows">한페이지 결과 수</param>
-        /// <returns></returns>
-        private string GetJson(string operationName, string reqParam, int numOfRows)
+        /// <returns>parsing된 json문서를 string으로 반환</returns>
+        internal string GetJson(string operationName, string reqParam, int numOfRows)
         {
             string serverUrl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/" + operationName + "?ServiceKey=" + serviceKey + "&MobileOS=ETC&MobileApp=TestApp&_type=json&numOfRows=" + numOfRows + "&pageNo=" + pageNo + reqParam;
 
@@ -132,8 +133,10 @@ namespace RailoNailo
         /// <param name="parentCbx">상위 콤보박스</param>
         /// <param name="childCbx">하위 콤보박스</param>
         /// <param name="list">상위 콤보박스의 list of JsonCodes</param>
+        /// <returns>다음 분류의 객체를 저장하기위한 List를 return</returns>
         private List<JsonCodes> FindNextTokens(string requestMsg, string operationName, ComboBox parentCbx, ComboBox childCbx, List<JsonCodes> list)
         {
+            pageNo = 1;
             childCbx.Items.Clear();
             if (parentCbx.SelectedItem.ToString() == "전체")
             {
@@ -241,7 +244,6 @@ namespace RailoNailo
             string requestName3 = string.Empty;
             string requestName4 = string.Empty;
             string requestName5 = string.Empty;
-            
             if (cbxAreas.SelectedIndex == -1 || cbxCategory1.SelectedIndex == -1)
             {
                 MessageBox.Show("항목을 선택해 주세요!. ", "전광정", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -288,8 +290,12 @@ namespace RailoNailo
         /// <param name="jobj">경로가 담긴 jobject 객체</param>
         private void FindTourInformation(JObject jobj)
         {
+            areaBasedlist.Clear();
             JArray jarray;
             JToken jtoken = jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item");
+            totalDataCount = Int32.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("totalCount").ToString());
+            totalPageNo = (int)(Math.Ceiling((totalDataCount / (double)10)));
+            lblPage.Text = string.Format("{0} / {1}", pageNo, totalPageNo);
             try
             {
                 jarray = JArray.Parse(jtoken.ToString());
@@ -297,6 +303,8 @@ namespace RailoNailo
             catch (Exception)
             {
                 MessageBox.Show("찾으시는 관광정보가 없습니다!.", "전광정", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tourListView.Clear();
+                tourimgList.Images.Clear();
                 cbxAreas.SelectedIndex = cbxCategory1.SelectedIndex = 0;
                 return;
             }
@@ -305,7 +313,7 @@ namespace RailoNailo
             tourimgList.Images.Clear();
             foreach (JObject item in jarray)
             {
-                areaBased = new areaBasedList
+                areaBased = new AreaBased
                 {
                     ContentID = item["contentid"].ToString(),
                     Title = Convert.ToString(item["title"]),
@@ -324,19 +332,29 @@ namespace RailoNailo
                 {
                     areaBased.FirstImage = "http://api.visitkorea.or.kr/static/images/common/noImage.gif";
                 }
-
+                //areaBased.FirstImage에 있는 이미지 주소값을 요청
                 HttpWebRequest imgRequest = WebRequest.Create(areaBased.FirstImage) as HttpWebRequest;
+                //요청한 이미지 주소값에 대한 응답을 가져온다.
                 HttpWebResponse imgResponse = imgRequest.GetResponse() as HttpWebResponse;
+                //응답된 이미지를 Stream으로 받아온다.
                 Stream stream = imgResponse.GetResponseStream();
+                //받아온 Stream이미지를 Image타입으로 변환.
                 Image img = Image.FromStream(stream);
-                tourListView.LargeImageList = tourimgList;
+                //이미지리스트에 이미지를 저장,  키값 = 컨텐츠아이디
                 tourimgList.Images.Add(areaBased.ContentID, img);
+                //타이틀을 텍스트로 리스트뷰아이템에 저장 왜 ? 새로운 리스트뷰 아이템을 만들어 그곳의 이미지 키값과 이미지리스트의 키값과 일치시켜 연결.
                 ListViewItem listViewItem = new ListViewItem(areaBased.Title);
+                //리스트뷰 아이템의 이미지키값 =  컨텐츠 아이디 ->여기서 이미지 리스트와 리스트뷰를 연결시켜준다.
                 listViewItem.ImageKey = areaBased.ContentID;
+                //리스트뷰의 큰이미지 리스트에 이미지 리스트 저장
+                tourListView.LargeImageList = tourimgList;
+                //리스트뷰에 리스트뷰 아이템을 저장.
                 tourListView.Items.Add(listViewItem);
 
-                tbxResult.Text += areaBased.ContentID + "\r\n";
+                //tbxResult.Text += areaBased.ContentID + "\r\n";
                 areaBasedlist.Add(areaBased);
+                tbxResult.Text += areaBasedlist.Count + "\r\n";
+                
             }
         }
 
@@ -365,6 +383,47 @@ namespace RailoNailo
                 }
             }
             return requestName;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            tourListView.Clear();
+            tourimgList.Images.Clear();
+            if (pageNo < totalPageNo)
+            {
+                pageNo++;
+            }
+            else
+            {
+                MessageBox.Show("마지막 페이지 입니다.");
+                btnSearch_Click(null, null);
+                return;
+            }
+            btnSearch_Click(null, null);
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            tourListView.Clear();
+            tourimgList.Images.Clear();
+            if (pageNo > 1)
+            {
+                pageNo--;
+            }
+            else
+            {
+                MessageBox.Show("첫페이지입니다.");
+                btnSearch_Click(null, null);
+                return;
+            }
+            btnSearch_Click(null, null);
+        }
+
+        private void tourListView_Click(object sender, EventArgs e)
+        {
+            TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
+            tourDetail.ShowDialog();
+            
         }
     }
 }

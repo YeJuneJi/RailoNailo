@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RailoNailo
 {
-    class areaBasedList
+    class AreaBased
     {
         private string contentID;
 

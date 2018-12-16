@@ -123,6 +123,7 @@
             this.tourListView.Size = new System.Drawing.Size(653, 464);
             this.tourListView.TabIndex = 9;
             this.tourListView.UseCompatibleStateImageBehavior = false;
+            this.tourListView.Click += new System.EventHandler(this.tourListView_Click);
             // 
             // tbxResult
             // 
@@ -147,6 +148,7 @@
             this.btnPrev.TabIndex = 11;
             this.btnPrev.Text = "이전";
             this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnNext
             // 
@@ -156,6 +158,7 @@
             this.btnNext.TabIndex = 12;
             this.btnNext.Text = "다음";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // lblPage
             // 

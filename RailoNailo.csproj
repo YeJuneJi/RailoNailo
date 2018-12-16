@@ -67,7 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="areaBasedList.cs" />
+    <Compile Include="AreaBased.cs" />
     <Compile Include="JsonCodes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -84,6 +84,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlDbConnection.cs" />
+    <Compile Include="TourListDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourListDetail.Designer.cs">
+      <DependentUpon>TourListDetail.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,10 +105,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TourListDetail.resx">
+      <DependentUpon>TourListDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="areaCode.json" />
     <None Include="categoryCode.json" />
-    <None Include="json1.json" />
     <None Include="areBasedList.json" />
+    <None Include="DetailCommon.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
