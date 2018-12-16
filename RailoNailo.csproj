@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AreaBased.cs" />
+    <Compile Include="DetailCommon.cs" />
     <Compile Include="JsonCodes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -148,4 +149,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DetailCommon_1json__JSONSchema="http://json.schemastore.org/bundleconfig" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
