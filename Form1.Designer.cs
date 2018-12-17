@@ -51,6 +51,18 @@
             this.btnPlan.Text = "button2";
             this.btnPlan.UseVisualStyleBackColor = true;
             this.btnPlan.Click += new System.EventHandler(this.btnPlan_Click);
+            this.btnTourInfo = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnTourInfo
+            // 
+            this.btnTourInfo.Location = new System.Drawing.Point(357, 418);
+            this.btnTourInfo.Name = "btnTourInfo";
+            this.btnTourInfo.Size = new System.Drawing.Size(126, 38);
+            this.btnTourInfo.TabIndex = 0;
+            this.btnTourInfo.Text = "전국관광정보";
+            this.btnTourInfo.UseVisualStyleBackColor = true;
+            this.btnTourInfo.Click += new System.EventHandler(this.btnTourInfo_Click);
             // 
             // Form1
             // 
@@ -59,6 +71,8 @@
             this.ClientSize = new System.Drawing.Size(862, 567);
             this.Controls.Add(this.btnPlan);
             this.Controls.Add(this.btnJihyea);
+            this.ClientSize = new System.Drawing.Size(918, 583);
+            this.Controls.Add(this.btnTourInfo);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -69,6 +83,7 @@
 
         private System.Windows.Forms.Button btnJihyea;
         private System.Windows.Forms.Button btnPlan;
+        private System.Windows.Forms.Button btnTourInfo;
     }
 }
 
