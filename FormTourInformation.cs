@@ -351,9 +351,8 @@ namespace RailoNailo
                 //리스트뷰에 리스트뷰 아이템을 저장.
                 tourListView.Items.Add(listViewItem);
 
-                //tbxResult.Text += areaBased.ContentID + "\r\n";
                 areaBasedlist.Add(areaBased);
-                tbxResult.Text += areaBasedlist.Count + "\r\n";
+                //tbxResult.Text += areaBasedlist.Count + "\r\n";
                 
             }
         }

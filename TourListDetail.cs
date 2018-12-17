@@ -30,28 +30,47 @@ namespace RailoNailo
         }
         private void TourListDetail_Load(object sender, EventArgs e)
         {
+            int findIndex = 0;
             string json = finfo.GetJson("detailCommon", "&contentId=" + contentID + "&defaultYN=Y&addrinfoYN=Y&overviewYN=Y", 1);
             JObject jobj = JObject.Parse(json);
             JToken jtoken = jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item");
-            detailCommon = new DetailCommon
+            tbxResult.Text = jtoken.ToString();
+            try
             {
-                Title = jtoken["title"].ToString(),
-                OverView = jtoken["overview"].ToString(),
-                Addr1 = jtoken.ToString().Contains("addr1") ? jtoken["addr1"].ToString() : "",
-                Addr2 = jtoken.ToString().Contains("addr2") ? jtoken["addr2"].ToString() : "",
-                Tel = jtoken.ToString().Contains("tel") ? jtoken["tel"].ToString() : "",
-                ContentID = jtoken["contentid"].ToString(),
-                ContentTypeID = jtoken["contenttypeid"].ToString(),
-                ZipCode = jtoken.ToString().Contains("zipcode") ? jtoken["zipcode"].ToString() : "",
-                HomePage = jtoken.ToString().Contains("homepage") ? jtoken["homepage"].ToString() : ""
-            };
+                findIndex = jtoken["homepage"].ToString().IndexOf(">") + 1;
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            catch (NullReferenceException)
+            {
+                findIndex = 0;
+            }
+            finally
+            {
+                //tbxResult.Text = jtoken.ToString().Contains("homepage") ? jtoken["homepage"].ToString().Remove(0, findIndex).Replace("</a>", "") : "";
+                detailCommon = new DetailCommon
+                {
+                    Title = jtoken.ToString().Contains("title") ? jtoken["title"].ToString() : "",
+                    OverView = jtoken.ToString().Contains("overview") ? jtoken["overview"].ToString().Replace("<br />", " ").Replace("<br>", "").Replace("\n", "").Replace("<strong>", "").Replace("</strong>", "") : "",
+                    Addr1 = jtoken.ToString().Contains("addr1") ? jtoken["addr1"].ToString() : "",
+                    Addr2 = jtoken.ToString().Contains("addr2") ? jtoken["addr2"].ToString() : "",
+                    Tel = jtoken.ToString().Contains("tel") && !jtoken.ToString().Contains("telname") ? jtoken["tel"].ToString() : "",
+                    ContentID = jtoken["contentid"].ToString(),
+                    ContentTypeID = jtoken["contenttypeid"].ToString(),
+                    ZipCode = jtoken.ToString().Contains("zipcode") ? jtoken["zipcode"].ToString() : "",
+                    HomePage = jtoken.ToString().Contains("homepage") ? jtoken["homepage"].ToString().Remove(0, findIndex).Replace("</a>", "") : ""/*jtoken.ToString().Contains("homepage") ? jtoken["homepage"].ToString() : ""*/
+                };
 
-            lblName.Text = detailCommon.Title;
-            lblAddr.Text = detailCommon.Addr1 + " " + detailCommon.Addr2;
-            lblZipcode.Text = detailCommon.ZipCode;
-            lblTel.Text = detailCommon.Tel;
-            tbxOverView.Text = detailCommon.OverView;
-            linkLblHomePage.Text = detailCommon.HomePage;
+                lblName.Text = detailCommon.Title;
+                lblAddr.Text = detailCommon.Addr1 + " " + detailCommon.Addr2;
+                lblZipcode.Text = detailCommon.ZipCode;
+                lblTel.Text = detailCommon.Tel;
+                tbxOverView.Text = detailCommon.OverView;
+                linkLblHomePage.Text = detailCommon.HomePage;
+            }
         }
 
         private void linkLblHomePage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -39,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.linkLblHomePage = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.tbxResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblName
@@ -144,11 +146,20 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "개요";
             // 
+            // tbxResult
+            // 
+            this.tbxResult.Location = new System.Drawing.Point(843, 12);
+            this.tbxResult.Multiline = true;
+            this.tbxResult.Name = "tbxResult";
+            this.tbxResult.Size = new System.Drawing.Size(318, 465);
+            this.tbxResult.TabIndex = 14;
+            // 
             // TourListDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 489);
+            this.ClientSize = new System.Drawing.Size(1173, 499);
+            this.Controls.Add(this.tbxResult);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLblHomePage);
             this.Controls.Add(this.label4);
@@ -180,5 +191,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLblHomePage;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TextBox tbxResult;
     }
 }

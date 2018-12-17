@@ -38,11 +38,11 @@
             this.cbxCategory3 = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tourListView = new System.Windows.Forms.ListView();
-            this.tbxResult = new System.Windows.Forms.TextBox();
             this.tourimgList = new System.Windows.Forms.ImageList(this.components);
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.lblPage = new System.Windows.Forms.Label();
+            this.tbxResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cbxAreas
@@ -120,19 +120,10 @@
             // 
             this.tourListView.Location = new System.Drawing.Point(12, 83);
             this.tourListView.Name = "tourListView";
-            this.tourListView.Size = new System.Drawing.Size(653, 464);
+            this.tourListView.Size = new System.Drawing.Size(642, 464);
             this.tourListView.TabIndex = 9;
             this.tourListView.UseCompatibleStateImageBehavior = false;
             this.tourListView.Click += new System.EventHandler(this.tourListView_Click);
-            // 
-            // tbxResult
-            // 
-            this.tbxResult.Location = new System.Drawing.Point(671, 84);
-            this.tbxResult.Multiline = true;
-            this.tbxResult.Name = "tbxResult";
-            this.tbxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxResult.Size = new System.Drawing.Size(271, 463);
-            this.tbxResult.TabIndex = 10;
             // 
             // tourimgList
             // 
@@ -142,7 +133,7 @@
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(172, 553);
+            this.btnPrev.Location = new System.Drawing.Point(91, 553);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 11;
@@ -152,7 +143,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(407, 553);
+            this.btnNext.Location = new System.Drawing.Point(444, 553);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 12;
@@ -163,21 +154,28 @@
             // lblPage
             // 
             this.lblPage.AutoSize = true;
-            this.lblPage.Location = new System.Drawing.Point(279, 558);
+            this.lblPage.Location = new System.Drawing.Point(305, 564);
             this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(91, 12);
+            this.lblPage.Size = new System.Drawing.Size(0, 12);
             this.lblPage.TabIndex = 13;
-            this.lblPage.Text = "PageToDisplay";
+            // 
+            // tbxResult
+            // 
+            this.tbxResult.Location = new System.Drawing.Point(660, 83);
+            this.tbxResult.Multiline = true;
+            this.tbxResult.Name = "tbxResult";
+            this.tbxResult.Size = new System.Drawing.Size(277, 464);
+            this.tbxResult.TabIndex = 14;
             // 
             // FormTourInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 592);
+            this.ClientSize = new System.Drawing.Size(949, 592);
+            this.Controls.Add(this.tbxResult);
             this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
-            this.Controls.Add(this.tbxResult);
             this.Controls.Add(this.tourListView);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cbxCategory3);
@@ -205,10 +203,10 @@
         private System.Windows.Forms.ComboBox cbxCategory3;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListView tourListView;
-        private System.Windows.Forms.TextBox tbxResult;
         private System.Windows.Forms.ImageList tourimgList;
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblPage;
+        private System.Windows.Forms.TextBox tbxResult;
     }
 }
