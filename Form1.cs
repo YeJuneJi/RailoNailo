@@ -16,5 +16,17 @@ namespace RailoNailo
         {
             InitializeComponent();
         }
+
+        private void btnJihyea_Click(object sender, EventArgs e)
+        {
+            FrmJiHyea fjh = new FrmJiHyea();
+            fjh.ShowDialog();
+        }
+
+        private void btnPlan_Click(object sender, EventArgs e)
+        {
+            FrmPlan fp = new FrmPlan();
+            fp.ShowDialog();
+        }
     }
 }
