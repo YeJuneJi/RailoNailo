@@ -63,6 +63,26 @@ namespace RailoNailo.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap _20181214142025_3abe71665ab9398d870efd6ac75386f5 {
+            get {
+                object obj = ResourceManager.GetObject("20181214142025.3abe71665ab9398d870efd6ac75386f5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _224 {
+            get {
+                object obj = ResourceManager.GetObject("224", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap a {
             get {
                 object obj = ResourceManager.GetObject("a", resourceCulture);
@@ -76,6 +96,16 @@ namespace RailoNailo.Properties {
         internal static System.Drawing.Bitmap main4 {
             get {
                 object obj = ResourceManager.GetObject("main4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap opgg {
+            get {
+                object obj = ResourceManager.GetObject("opgg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

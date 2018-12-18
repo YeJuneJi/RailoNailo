@@ -150,6 +150,9 @@
     <Content Include="RandomPhoto\g.png" />
     <Content Include="RandomPhoto\h.png" />
     <Content Include="RandomPhoto\i.png" />
+    <None Include="Resources\224.png" />
+    <None Include="Resources\20181214142025.3abe71665ab9398d870efd6ac75386f5.png" />
+    <None Include="Resources\opgg.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
