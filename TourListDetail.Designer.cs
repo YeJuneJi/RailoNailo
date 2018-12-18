@@ -44,7 +44,6 @@
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.plusImageTrackBar = new System.Windows.Forms.TrackBar();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbxResult = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlusImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusImageTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -184,21 +183,12 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "추가 이미지";
             // 
-            // tbxResult
-            // 
-            this.tbxResult.Location = new System.Drawing.Point(783, 273);
-            this.tbxResult.Multiline = true;
-            this.tbxResult.Name = "tbxResult";
-            this.tbxResult.Size = new System.Drawing.Size(274, 280);
-            this.tbxResult.TabIndex = 18;
-            // 
             // TourListDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1110, 565);
-            this.Controls.Add(this.tbxResult);
+            this.ClientSize = new System.Drawing.Size(784, 565);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.plusImageTrackBar);
             this.Controls.Add(this.pbxPlusImg);
@@ -239,6 +229,5 @@
         private System.Windows.Forms.ImageList imgList;
         private System.Windows.Forms.TrackBar plusImageTrackBar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbxResult;
     }
 }

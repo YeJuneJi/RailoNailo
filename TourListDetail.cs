@@ -20,7 +20,7 @@ namespace RailoNailo
         private List<DetailCommon> detailCommonList = new List<DetailCommon>();
         private List<DetailImage> detailImagesList = new List<DetailImage>();
         private FormTourInformation finfo = new FormTourInformation();
-        
+
         public TourListDetail()
         {
             InitializeComponent();
@@ -33,6 +33,7 @@ namespace RailoNailo
         }
         private void TourListDetail_Load(object sender, EventArgs e)
         {
+            this.Text = "세부정보";
             imgList.ImageSize = new Size(256, 256);
             imgList.ColorDepth = ColorDepth.Depth32Bit;
 
@@ -40,7 +41,6 @@ namespace RailoNailo
             DetailImage detailImage;
             string getjson = finfo.GetJson("detailImage", "&contentId=" + contentID + "&imageYN=Y", 5);
             JObject jobject = JObject.Parse(getjson);
-            //tbxResult.Text = jobject.ToString();
             JToken jtokens = jobject.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item");
             try
             {
@@ -86,64 +86,53 @@ namespace RailoNailo
             plusImageTrackBar.Maximum = imgList.Images.Count - 1;
 
 
-
-            int findIndex = 0;
+            string htmlTag = string.Empty;
             string homepage = string.Empty;
             string json = finfo.GetJson("detailCommon", "&contentId=" + contentID + "&defaultYN=Y&addrinfoYN=Y&overviewYN=Y", 1);
             JObject jobj = JObject.Parse(json);
             JToken jtoken = jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item");
-            tbxResult.Text = jtoken.ToString();
-            try
-            {
-                findIndex = jtoken["homepage"].ToString().IndexOf(">") + 1;
-            }
-            catch (ArgumentNullException ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-            catch (NullReferenceException)
-            {
-                findIndex = 0;
-            }
-            finally
-            {
 
-                if (jtoken.ToString().Contains("homepage"))
+            if (jtoken.ToString().Contains("homepage"))
+            {
+                string html = jtoken["homepage"].ToString();
+                var htmlDoc = new HtmlAgilityPack.HtmlDocument();
+                htmlDoc.LoadHtml(html);
+                try
                 {
-                    homepage = jtoken["homepage"].ToString().Remove(0, findIndex).Replace("</a>", "");
+                    htmlTag = htmlDoc.DocumentNode.SelectSingleNode("//a").InnerText;
                 }
-                
-                if (homepage.IndexOf("<br") != -1)
+                catch (NullReferenceException)
                 {
-                    homepage = homepage.Remove(homepage.IndexOf("<br"), homepage.Length - homepage.IndexOf("<br"));
+                    htmlTag = html;
                 }
-                else
-                {
-
-                }
-               
-                //tbxResult.Text = jtoken.ToString().Contains("homepage") ? jtoken["homepage"].ToString().Remove(0, findIndex).Replace("</a>", "") : "";
-                detailCommon = new DetailCommon
-                {
-                    Title = jtoken.ToString().Contains("title") ? jtoken["title"].ToString() : "",
-                    OverView = jtoken.ToString().Contains("overview") ? jtoken["overview"].ToString().Replace("<br />", " ").Replace("<br>", "").Replace("\n", "").Replace("<strong>", "").Replace("</strong>", "") : "",
-                    Addr1 = jtoken.ToString().Contains("addr1") ? jtoken["addr1"].ToString() : "",
-                    Addr2 = jtoken.ToString().Contains("addr2") ? jtoken["addr2"].ToString() : "",
-                    Tel = jtoken.ToString().Contains("tel") && !jtoken.ToString().Contains("telname") ? jtoken["tel"].ToString() : "",
-                    ContentID = jtoken["contentid"].ToString(),
-                    ContentTypeID = jtoken["contenttypeid"].ToString(),
-                    ZipCode = jtoken.ToString().Contains("zipcode") ? jtoken["zipcode"].ToString() : "",
-                    HomePage = jtoken.ToString().Contains("homepage") ? homepage.Remove(homepage.IndexOf("<br"), homepage.Length-homepage.IndexOf("<br")) : ""/*jtoken.ToString().Contains("homepage") ? jtoken["homepage"].ToString() : ""*/
-                };
-
-                lblName.Text = detailCommon.Title;
-                lblAddr.Text = detailCommon.Addr1 + " " + detailCommon.Addr2;
-                lblZipcode.Text = detailCommon.ZipCode;
-                lblTel.Text = detailCommon.Tel;
-                tbxOverView.Text = detailCommon.OverView;
-                linkLblHomePage.Text = detailCommon.HomePage;
             }
+
+            detailCommon = new DetailCommon
+            {
+                Title = jtoken.ToString().Contains("title") ? jtoken["title"].ToString() : "",
+                OverView = jtoken.ToString().Contains("overview") ? jtoken["overview"].ToString().Replace("<br />", " ").Replace("<br>", "").Replace("\n", "").Replace("<strong>", "").Replace("</strong>", "") : "개요 없음.",
+                Addr1 = jtoken.ToString().Contains("addr1") ? jtoken["addr1"].ToString() : "주소 없음.",
+                Addr2 = jtoken.ToString().Contains("addr2") ? jtoken["addr2"].ToString() : "",
+                Tel = jtoken.ToString().Contains("tel") && !jtoken.ToString().Contains("telname") ? jtoken["tel"].ToString() : "전화번호 없음.",
+                ContentID = jtoken["contentid"].ToString(),
+                ContentTypeID = jtoken["contenttypeid"].ToString(),
+                ZipCode = jtoken.ToString().Contains("zipcode") ? jtoken["zipcode"].ToString() : "우편번호 없음.",
+                HomePage = htmlTag
+            };
+
+            lblName.Text = detailCommon.Title;
+            lblAddr.Text = detailCommon.Addr1 + " " + detailCommon.Addr2;
+            lblZipcode.Text = detailCommon.ZipCode;
+            lblTel.Text = detailCommon.Tel;
+            tbxOverView.Text = detailCommon.OverView;
+            linkLblHomePage.Text = detailCommon.HomePage;
+            if (string.IsNullOrEmpty(linkLblHomePage.Text))
+            {
+                linkLblHomePage.Text = "홈페이지 없음.";
+                linkLblHomePage.Enabled = false;
+            }
+            
+
         }
 
         private void AddImageList(DetailImage detailImage)
