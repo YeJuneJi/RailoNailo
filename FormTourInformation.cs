@@ -60,7 +60,8 @@ namespace RailoNailo
             cbxAreas.Items.Clear();
             cbxCategory1.Items.Clear();
             tourListView.View = View.LargeIcon;
-
+            btnNext.Enabled = btnPrev.Enabled = false;
+            lblInfo.Visible = false;
             DisplayComboBx("areaCode", areaList, cbxAreas);
             DisplayComboBx("categoryCode", categoryList, cbxCategory1);
 
@@ -282,6 +283,8 @@ namespace RailoNailo
                 JObject jobj = JObject.Parse(GetJson("areaBasedList", "&areaCode=" + requestName1 + "&sigunguCode=" + requestName2 + "&cat1=" + requestName3 + "&cat2=" + requestName4 + "&cat3=" + requestName5, 10));
                 FindTourInformation(jobj);
             }
+            lblInfo.Visible = true;
+            btnPrev.Enabled = btnNext.Enabled = true;
         }
 
         /// <summary>
@@ -423,6 +426,11 @@ namespace RailoNailo
             TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
             tourDetail.ShowDialog();
             
+        }
+
+        private void cbxCategory3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

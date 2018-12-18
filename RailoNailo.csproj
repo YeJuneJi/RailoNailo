@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="AreaBased.cs" />
     <Compile Include="DetailCommon.cs" />
+    <Compile Include="DetailImage.cs" />
     <Compile Include="JsonCodes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -113,6 +114,7 @@
     <None Include="categoryCode.json" />
     <None Include="areBasedList.json" />
     <None Include="DetailCommon.json" />
+    <None Include="detailImage.json" />
     <None Include="json1.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

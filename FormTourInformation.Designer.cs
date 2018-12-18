@@ -42,7 +42,7 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.lblPage = new System.Windows.Forms.Label();
-            this.tbxResult = new System.Windows.Forms.TextBox();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbxAreas
@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(325, 31);
+            this.label2.Location = new System.Drawing.Point(462, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 4;
@@ -83,7 +83,7 @@
             // cbxCategory1
             // 
             this.cbxCategory1.FormattingEnabled = true;
-            this.cbxCategory1.Location = new System.Drawing.Point(327, 57);
+            this.cbxCategory1.Location = new System.Drawing.Point(464, 57);
             this.cbxCategory1.Name = "cbxCategory1";
             this.cbxCategory1.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory1.TabIndex = 5;
@@ -92,7 +92,7 @@
             // cbxCategory2
             // 
             this.cbxCategory2.FormattingEnabled = true;
-            this.cbxCategory2.Location = new System.Drawing.Point(454, 57);
+            this.cbxCategory2.Location = new System.Drawing.Point(591, 57);
             this.cbxCategory2.Name = "cbxCategory2";
             this.cbxCategory2.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory2.TabIndex = 6;
@@ -101,14 +101,15 @@
             // cbxCategory3
             // 
             this.cbxCategory3.FormattingEnabled = true;
-            this.cbxCategory3.Location = new System.Drawing.Point(581, 57);
+            this.cbxCategory3.Location = new System.Drawing.Point(718, 57);
             this.cbxCategory3.Name = "cbxCategory3";
             this.cbxCategory3.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory3.TabIndex = 7;
+            this.cbxCategory3.SelectedIndexChanged += new System.EventHandler(this.cbxCategory3_SelectedIndexChanged);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(742, 55);
+            this.btnSearch.Location = new System.Drawing.Point(879, 55);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 8;
@@ -118,9 +119,9 @@
             // 
             // tourListView
             // 
-            this.tourListView.Location = new System.Drawing.Point(12, 83);
+            this.tourListView.Location = new System.Drawing.Point(12, 116);
             this.tourListView.Name = "tourListView";
-            this.tourListView.Size = new System.Drawing.Size(642, 464);
+            this.tourListView.Size = new System.Drawing.Size(943, 431);
             this.tourListView.TabIndex = 9;
             this.tourListView.UseCompatibleStateImageBehavior = false;
             this.tourListView.Click += new System.EventHandler(this.tourListView_Click);
@@ -133,7 +134,7 @@
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(91, 553);
+            this.btnPrev.Location = new System.Drawing.Point(254, 557);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 11;
@@ -143,7 +144,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(444, 553);
+            this.btnNext.Location = new System.Drawing.Point(607, 557);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 12;
@@ -154,25 +155,26 @@
             // lblPage
             // 
             this.lblPage.AutoSize = true;
-            this.lblPage.Location = new System.Drawing.Point(305, 564);
+            this.lblPage.Location = new System.Drawing.Point(468, 562);
             this.lblPage.Name = "lblPage";
             this.lblPage.Size = new System.Drawing.Size(0, 12);
             this.lblPage.TabIndex = 13;
             // 
-            // tbxResult
+            // lblInfo
             // 
-            this.tbxResult.Location = new System.Drawing.Point(660, 83);
-            this.tbxResult.Multiline = true;
-            this.tbxResult.Name = "tbxResult";
-            this.tbxResult.Size = new System.Drawing.Size(277, 464);
-            this.tbxResult.TabIndex = 14;
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(713, 101);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(241, 12);
+            this.lblInfo.TabIndex = 14;
+            this.lblInfo.Text = "세부사항을 보시려면 그림을 클릭해 주세요!";
             // 
             // FormTourInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 592);
-            this.Controls.Add(this.tbxResult);
+            this.ClientSize = new System.Drawing.Size(971, 592);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
@@ -207,6 +209,6 @@
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblPage;
-        private System.Windows.Forms.TextBox tbxResult;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
