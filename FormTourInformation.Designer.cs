@@ -105,7 +105,6 @@
             this.cbxCategory3.Name = "cbxCategory3";
             this.cbxCategory3.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory3.TabIndex = 7;
-            this.cbxCategory3.SelectedIndexChanged += new System.EventHandler(this.cbxCategory3_SelectedIndexChanged);
             // 
             // btnSearch
             // 

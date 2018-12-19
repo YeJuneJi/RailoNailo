@@ -291,7 +291,7 @@ namespace RailoNailo
         /// 관광정보를 찾아 이미지로 출력해주는 메서드
         /// </summary>
         /// <param name="jobj">경로가 담긴 jobject 객체</param>
-        private void FindTourInformation(JObject jobj)
+        internal void FindTourInformation(JObject jobj)
         {
             areaBasedlist.Clear();
             JArray jarray;
@@ -428,9 +428,5 @@ namespace RailoNailo
             
         }
 
-        private void cbxCategory3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
