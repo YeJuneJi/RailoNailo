@@ -34,6 +34,11 @@ namespace RailoNailo
         private int totalDataCount = 0; // 전체 데이터 개수
         private int totalPageNo = 0;
         private int pageNo = 1; //한 페이지 번호
+        public int PageNo
+        {
+            get { return this.pageNo;  }
+            set { this.pageNo = value; }
+        }
 
 
 
@@ -305,7 +310,7 @@ namespace RailoNailo
             }
             catch (Exception)
             {
-                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "전광정", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "여행을 떠나자^ㅡ^", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tourListView.Clear();
                 tourimgList.Images.Clear();
                 cbxAreas.SelectedIndex = cbxCategory1.SelectedIndex = 0;
@@ -356,7 +361,6 @@ namespace RailoNailo
 
                 areaBasedlist.Add(areaBased);
                 //tbxResult.Text += areaBasedlist.Count + "\r\n";
-                
             }
         }
 
@@ -425,8 +429,6 @@ namespace RailoNailo
         {
             TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
             tourDetail.ShowDialog();
-            
         }
-
     }
 }

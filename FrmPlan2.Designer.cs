@@ -37,7 +37,7 @@
             this.tourimgList = new System.Windows.Forms.ImageList(this.components);
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,14 +88,15 @@
             // 
             this.tourListView.Location = new System.Drawing.Point(661, 12);
             this.tourListView.Name = "tourListView";
-            this.tourListView.Size = new System.Drawing.Size(458, 524);
+            this.tourListView.Size = new System.Drawing.Size(426, 524);
             this.tourListView.TabIndex = 17;
             this.tourListView.UseCompatibleStateImageBehavior = false;
+            this.tourListView.Click += new System.EventHandler(this.tourListView_Click);
             // 
             // tourimgList
             // 
             this.tourimgList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.tourimgList.ImageSize = new System.Drawing.Size(128, 128);
+            this.tourimgList.ImageSize = new System.Drawing.Size(150, 150);
             this.tourimgList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // btnPrev
@@ -110,7 +111,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(1039, 542);
+            this.btnNext.Location = new System.Drawing.Point(1007, 547);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(80, 23);
             this.btnNext.TabIndex = 19;
@@ -118,21 +119,20 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // label1
+            // lblPage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(865, 547);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 12);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "lblPage";
+            this.lblPage.AutoSize = true;
+            this.lblPage.Location = new System.Drawing.Point(865, 547);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(0, 12);
+            this.lblPage.TabIndex = 20;
             // 
             // FrmPlan2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 644);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1100, 644);
+            this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.tourListView);
@@ -158,6 +158,6 @@
         private System.Windows.Forms.ImageList tourimgList;
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPage;
     }
 }
