@@ -72,6 +72,12 @@
   <ItemGroup>
     <Compile Include="AreaBased.cs" />
     <Compile Include="DetailCommon.cs" />
+    <Compile Include="FrmTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrain.Designer.cs">
+      <DependentUpon>FrmTrain.cs</DependentUpon>
+    </Compile>
     <Compile Include="JsonCodes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -146,6 +152,7 @@
     <None Include="areBasedList.json" />
     <None Include="DetailCommon.json" />
     <None Include="json1.json" />
+    <None Include="json2.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,7 +164,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>

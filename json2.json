@@ -1,0 +1,97 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "NORMAL SERVICE."
+    },
+    "body": {
+      "items": {
+        "item": [
+          {
+            "adultcharge": 23700,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201055900,
+            "depplacename": "서울",
+            "depplandtime": 20181201050500,
+            "traingradename": "KTX-산천"
+          },
+          {
+            "adultcharge": 23700,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201061000,
+            "depplacename": "서울",
+            "depplandtime": 20181201051500,
+            "traingradename": "KTX"
+          },
+          {
+            "adultcharge": 23700,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201063000,
+            "depplacename": "서울",
+            "depplandtime": 20181201053000,
+            "traingradename": "KTX"
+          },
+          {
+            "adultcharge": 23700,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201064600,
+            "depplacename": "서울",
+            "depplandtime": 20181201054000,
+            "traingradename": "KTX-산천"
+          },
+          {
+            "adultcharge": 10800,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201080300,
+            "depplacename": "서울",
+            "depplandtime": 20181201055600,
+            "traingradename": "무궁화호"
+          },
+          {
+            "adultcharge": 23700,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201070100,
+            "depplacename": "서울",
+            "depplandtime": 20181201060000,
+            "traingradename": "KTX"
+          },
+          {
+            "adultcharge": 23700,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201071100,
+            "depplacename": "서울",
+            "depplandtime": 20181201060500,
+            "traingradename": "KTX-산천"
+          },
+          {
+            "adultcharge": 16000,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201075600,
+            "depplacename": "서울",
+            "depplandtime": 20181201061600,
+            "traingradename": "ITX-새마을"
+          },
+          {
+            "adultcharge": 23700,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201073100,
+            "depplacename": "서울",
+            "depplandtime": 20181201063500,
+            "traingradename": "KTX"
+          },
+          {
+            "adultcharge": 10800,
+            "arrplacename": "대전",
+            "arrplandtime": 20181201083500,
+            "depplacename": "서울",
+            "depplandtime": 20181201063800,
+            "traingradename": "무궁화호"
+          }
+        ]
+      },
+      "numOfRows": 10,
+      "pageNo": 1,
+      "totalCount": 114
+    }
+  }
+}
