@@ -28,6 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnJihyea = new System.Windows.Forms.Button();
+            this.btnPlan = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnJihyea
+            // 
+            this.btnJihyea.Location = new System.Drawing.Point(662, 37);
+            this.btnJihyea.Name = "btnJihyea";
+            this.btnJihyea.Size = new System.Drawing.Size(142, 91);
+            this.btnJihyea.TabIndex = 0;
+            this.btnJihyea.Text = "button1";
+            this.btnJihyea.UseVisualStyleBackColor = true;
+            this.btnJihyea.Click += new System.EventHandler(this.btnJihyea_Click);
+            // 
+            // btnPlan
+            // 
+            this.btnPlan.Location = new System.Drawing.Point(662, 167);
+            this.btnPlan.Name = "btnPlan";
+            this.btnPlan.Size = new System.Drawing.Size(142, 91);
+            this.btnPlan.TabIndex = 1;
+            this.btnPlan.Text = "button2";
+            this.btnPlan.UseVisualStyleBackColor = true;
+            this.btnPlan.Click += new System.EventHandler(this.btnPlan_Click);
             this.btnTourInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -45,6 +68,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(862, 567);
+            this.Controls.Add(this.btnPlan);
+            this.Controls.Add(this.btnJihyea);
             this.ClientSize = new System.Drawing.Size(918, 583);
             this.Controls.Add(this.btnTourInfo);
             this.Name = "Form1";
@@ -55,6 +81,8 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnJihyea;
+        private System.Windows.Forms.Button btnPlan;
         private System.Windows.Forms.Button btnTourInfo;
     }
 }

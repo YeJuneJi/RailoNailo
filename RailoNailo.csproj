@@ -73,6 +73,12 @@
     <Compile Include="AreaBased.cs" />
     <Compile Include="DetailCommon.cs" />
     <Compile Include="DetailImage.cs" />
+    <Compile Include="FrmTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrain.Designer.cs">
+      <DependentUpon>FrmTrain.cs</DependentUpon>
+    </Compile>
     <Compile Include="JsonCodes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -80,6 +86,25 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmJiHyea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmJiHyea.Designer.cs">
+      <DependentUpon>FrmJiHyea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlan.Designer.cs">
+      <DependentUpon>FrmPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlan2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlan2.Designer.cs">
+      <DependentUpon>FrmPlan2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs" />
     <Compile Include="FormTourInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +123,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmJiHyea.resx">
+      <DependentUpon>FrmJiHyea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlan.resx">
+      <DependentUpon>FrmPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlan2.resx">
+      <DependentUpon>FrmPlan2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTourInformation.resx">
       <DependentUpon>FormTourInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +143,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TourListDetail.resx">
       <DependentUpon>TourListDetail.cs</DependentUpon>
@@ -119,6 +154,7 @@
     <None Include="DetailCommon.json" />
     <None Include="detailImage.json" />
     <None Include="json1.json" />
+    <None Include="json2.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -134,6 +170,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\noImage.jpg" />
+    <Content Include="Images\가평.png" />
+    <Content Include="Images\강릉.png" />
+    <Content Include="Images\경주.png" />
+    <Content Include="Images\광명.png" />
+    <Content Include="Images\광주.png" />
+    <Content Include="Images\광주송정.png" />
+    <Content Include="Images\구미.png" />
+    <Content Include="Images\김천%28구미%29.png" />
+    <Content Include="Images\나주.png" />
+    <Content Include="Images\남원.png" />
+    <Content Include="Images\단양.png" />
+    <Content Include="Images\대구.png" />
+    <Content Include="Images\대전.png" />
+    <Content Include="Images\동대구.png" />
+    <Content Include="Images\동해.png" />
+    <Content Include="Images\마산.png" />
+    <Content Include="Images\목포.png" />
+    <Content Include="Images\민둥산.png" />
+    <Content Include="Images\부산.png" />
+    <Content Include="Images\부전.png" />
+    <Content Include="Images\서울.png" />
+    <Content Include="Images\수원.png" />
+    <Content Include="Images\순천.png" />
+    <Content Include="Images\신경주.png" />
+    <Content Include="Images\안동.png" />
+    <Content Include="Images\여수엑스포.png" />
+    <Content Include="Images\영등포.png" />
+    <Content Include="Images\영월.png" />
+    <Content Include="Images\영전.png" />
+    <Content Include="Images\영주.png" />
+    <Content Include="Images\영천.png" />
+    <Content Include="Images\용산.png" />
+    <Content Include="Images\울산.png" />
+    <Content Include="Images\익산.png" />
+    <Content Include="Images\전주.png" />
+    <Content Include="Images\점촌.png" />
+    <Content Include="Images\정읍.png" />
+    <Content Include="Images\제천.png" />
+    <Content Include="Images\진주.png" />
+    <Content Include="Images\천안.png" />
+    <Content Include="Images\천안아산.png" />
+    <Content Include="Images\청량리.png" />
+    <Content Include="Images\춘양.png" />
+    <Content Include="Images\춘천.png" />
+    <Content Include="Images\충주.png" />
+    <Content Include="Images\태백.png" />
+    <Content Include="Images\평창.png" />
+    <Content Include="Images\포항.png" />
     <Content Include="Railo_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -141,6 +226,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Railo_DB.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\iconfinder_arrow-down_227604.png" />
+    <Content Include="Resources\iconfinder_arrow-left_227602.png" />
+    <Content Include="Resources\iconfinder_arrow-right_227601.png" />
+    <Content Include="Resources\iconfinder_Plus_2001887 %282%29.png" />
+    <Content Include="Resources\iconfinder_Plus_2001887.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
