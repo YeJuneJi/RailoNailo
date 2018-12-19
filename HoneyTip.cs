@@ -24,14 +24,13 @@ namespace RailoNailo
             PrivateFontCollection privateFonts = new PrivateFontCollection();
             privateFonts.AddFontFile(@"C:\Railo\한나체!.ttf");
             Font font = new Font(privateFonts.Families[0], 14f);
-
             btnImg1.Font = btnImg2.Font = btnImg3.Font = btnImg4.Font = btnImg5.Font = btnImg6.Font = btnImg7.Font = btnImg8.Font = btnImg9.Font = font;
         }
         private int displayPage = 9;
         private int totalPage = 0; //전체 페이지
         private int currPage = 0; //현재 페이지
         int temp = 1;
-        //string[] photo = { "a", "b", "c", "d", "e", "f", "g", "h", "i" };
+        
         string[] a = new string[27]; //제목, 블로그 이름(+9), 링크 (+18)
 
         private void HoneyTip_Load(object sender, EventArgs e)
@@ -53,7 +52,7 @@ namespace RailoNailo
             blogSearch(honeyTipTitle);
         }
 
-        private void blogSearch(string honeyTipTitle)
+        private void blogSearch(string honeyTipTitle) //블로그 데이터 파싱
         {
             int aa = currPage * displayPage;
             if (aa == 0)
@@ -87,15 +86,6 @@ namespace RailoNailo
                 }
                 a[i + 18] = honeyTipArray[i]["link"].ToString().Replace("?Redirect=Log&amp;logNo=", "/");
             }
-            //WebRequest req = WebRequest.Create("http://postfiles4.naver.net/MjAxODEyMTFfMTI1/MDAxNTQ0NTA5ODg2OTc1.E52pKHu18Bsbne9IT8KUaRoow_vy0gaYIvB9c-3xl-Ig.M7MUhj3laUHgZwTh0A52_nICv6tZoTCtS9GlqHPko78g.JPEG.overroad89/main.jpg");
-            //WebResponse res = req.GetResponse();
-            //Stream stream = res.GetResponseStream();            
-
-            //btnImg1.BackgroundImage = Image.FromStream(stream);
-            //btnImg2.BackgroundImage = Image.FromFile(@"C:\Railo\1.png");
-            //btnImg3.BackgroundImage = Image.FromFile(@"C:\Railo\2.png");  
-            //btnImg3.BackgroundImage = new SolidBrush(Color.FromArgb(50, 255, 0, 0));            
-            
             btnImg1.Text = a[0];
             btnImg2.Text = a[1];
             btnImg3.Text = a[2];
@@ -134,8 +124,7 @@ namespace RailoNailo
         }
 
         private void button1_Click(object sender, EventArgs e) //이전버튼
-        {
-            
+        {            
             if (currPage > 0 ) 
             {
                 currPage--;
@@ -171,8 +160,8 @@ namespace RailoNailo
 
         private void button4_Click(object sender, EventArgs e) //마지막페이지
         {
-            currPage = totalPage-2;
-            HoneyTip_Load(null, null);
+            //currPage = totalPage-2;
+            //HoneyTip_Load(null, null);
         }
 
         private void btnImg1_Click(object sender, EventArgs e)

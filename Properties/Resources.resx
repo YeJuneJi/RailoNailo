@@ -118,34 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="passenger-train-front-view_icon-icons.com_70424" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\mainForm\passenger-train-front-view_icon-icons.com_70424.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="노선도" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainForm\노선도.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="20181214142025.3abe71665ab9398d870efd6ac75386f5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20181214142025.3abe71665ab9398d870efd6ac75386f5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="티켓" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainForm\티켓.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="224" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\224.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="빠른우" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\honeyTipImage\빠른우.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="opgg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\opgg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="좌" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\honeyTipImage\좌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="빠른좌" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\honeyTipImage\빠른좌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="우" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\honeyTipImage\우.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainForm\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="main4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\honeyTipImage\main4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="passenger-train-front-view_icon-icons.com_70424" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainForm\passenger-train-front-view_icon-icons.com_70424.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="우" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\honeyTipImage\우.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="좌" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\honeyTipImage\좌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="빠른좌" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\honeyTipImage\빠른좌.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\RandomPhoto\a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="224" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\224.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="opgg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opgg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="티켓1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainForm\티켓.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="시간표" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\mainForm\시간표.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
