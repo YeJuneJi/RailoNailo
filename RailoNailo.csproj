@@ -113,6 +113,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SearchKeyword.cs" />
     <Compile Include="SqlDbConnection.cs" />
     <Compile Include="TourListDetail.cs">
@@ -138,14 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="TourListDetail.resx">
       <DependentUpon>TourListDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,11 +228,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Railo_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\photographer-407068_1280.jpg" />
+    <None Include="Resources\gogo.bmp" />
+    <None Include="Resources\calm-2317269_1920.jpg" />
+    <Content Include="Resources\FormDetailBack.jpg" />
     <Content Include="Resources\iconfinder_arrow-down_227604.png" />
     <Content Include="Resources\iconfinder_arrow-left_227602.png" />
     <Content Include="Resources\iconfinder_arrow-right_227601.png" />
     <Content Include="Resources\iconfinder_Plus_2001887 %282%29.png" />
     <Content Include="Resources\iconfinder_Plus_2001887.png" />
+    <None Include="Resources\icons8_Delete.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

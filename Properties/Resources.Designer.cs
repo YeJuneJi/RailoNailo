@@ -63,6 +63,16 @@ namespace RailoNailo.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap FormDetailBack {
+            get {
+                object obj = ResourceManager.GetObject("FormDetailBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_arrow_down_227604 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_arrow-down_227604", resourceCulture);
@@ -106,6 +116,26 @@ namespace RailoNailo.Properties {
         internal static System.Drawing.Bitmap iconfinder_Plus_2001887__2_ {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Plus_2001887 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Delete {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap photographer_407068_1280 {
+            get {
+                object obj = ResourceManager.GetObject("photographer_407068_1280", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

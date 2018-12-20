@@ -36,7 +36,8 @@ namespace RailoNailo
             this.Text = "세부정보";
             imgList.ImageSize = new Size(256, 256);
             imgList.ColorDepth = ColorDepth.Depth32Bit;
-
+            plusImageTrackBar.BackColor = Color.FromArgb(255, 247, 248, 250);
+            tbxOverView.BackColor = Color.FromArgb(255, 233, 237, 238);
             string type = string.Empty;
             DetailImage detailImage;
             string getjson = finfo.GetJson("detailImage", "&contentId=" + contentID + "&imageYN=Y", 5);
@@ -161,6 +162,11 @@ namespace RailoNailo
         private void plusImageTrackBar_Scroll(object sender, EventArgs e)
         {
             pbxPlusImg.Image = imgList.Images[plusImageTrackBar.Value];
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
