@@ -126,7 +126,7 @@ namespace RailoNailo
             }
             catch (Exception)
             {
-                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "메세", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "전지혜", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tourListView.Clear();
                 tourimgList.Images.Clear();
                 return;
