@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnJihyea = new System.Windows.Forms.Button();
+            this.btnPlan = new System.Windows.Forms.Button();
             this.btnTourInfo = new System.Windows.Forms.Button();
             this.btnHoneyTip = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
@@ -45,12 +47,34 @@
             this.panelMove = new System.Windows.Forms.Panel();
             this.btnTry = new System.Windows.Forms.Button();
             this.lbl4 = new System.Windows.Forms.Label();
+            this.btnTra = new System.Windows.Forms.Button();
+            this.btnPlanView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnJihyea
+            // 
+            this.btnJihyea.Location = new System.Drawing.Point(212, 142);
+            this.btnJihyea.Name = "btnJihyea";
+            this.btnJihyea.Size = new System.Drawing.Size(124, 23);
+            this.btnJihyea.TabIndex = 0;
+            this.btnJihyea.Text = "button1";
+            this.btnJihyea.UseVisualStyleBackColor = true;
+            this.btnJihyea.Click += new System.EventHandler(this.btnJihyea_Click);
+            // 
+            // btnPlan
+            // 
+            this.btnPlan.Location = new System.Drawing.Point(500, 143);
+            this.btnPlan.Name = "btnPlan";
+            this.btnPlan.Size = new System.Drawing.Size(142, 22);
+            this.btnPlan.TabIndex = 1;
+            this.btnPlan.Text = "button2";
+            this.btnPlan.UseVisualStyleBackColor = true;
+            this.btnPlan.Click += new System.EventHandler(this.btnPlan_Click);
             // 
             // btnTourInfo
             // 
@@ -86,6 +110,7 @@
             this.btn2.TabIndex = 3;
             this.btn2.Text = "전국 지역별 혜택";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn4
             // 
@@ -98,6 +123,7 @@
             this.btn4.TabIndex = 4;
             this.btn4.Text = "여행계획짜기";
             this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn1
             // 
@@ -118,6 +144,7 @@
             this.panel1.Controls.Add(this.btn4);
             this.panel1.Controls.Add(this.btn2);
             this.panel1.Controls.Add(this.btnHoneyTip);
+            this.panel1.Controls.Add(this.btnPlanView);
             this.panel1.Location = new System.Drawing.Point(-7, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 37);
@@ -250,6 +277,27 @@
             this.lbl4.Size = new System.Drawing.Size(107, 18);
             this.lbl4.TabIndex = 16;
             this.lbl4.Text = "내 여행계획보기";
+            this.lbl4.Click += new System.EventHandler(this.lbl4_Click);
+            // 
+            // btnTra
+            // 
+            this.btnTra.Location = new System.Drawing.Point(714, 383);
+            this.btnTra.Name = "btnTra";
+            this.btnTra.Size = new System.Drawing.Size(142, 91);
+            this.btnTra.TabIndex = 2;
+            this.btnTra.Text = "button3";
+            this.btnTra.UseVisualStyleBackColor = true;
+            this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
+            // 
+            // btnPlanView
+            // 
+            this.btnPlanView.Location = new System.Drawing.Point(778, -6);
+            this.btnPlanView.Name = "btnPlanView";
+            this.btnPlanView.Size = new System.Drawing.Size(142, 56);
+            this.btnPlanView.TabIndex = 3;
+            this.btnPlanView.Text = "나의 여행 정보 보기";
+            this.btnPlanView.UseVisualStyleBackColor = true;
+            this.btnPlanView.Click += new System.EventHandler(this.btnPlanView_Click);
             // 
             // Form1
             // 
@@ -270,6 +318,9 @@
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnTra);
+            this.Controls.Add(this.btnPlan);
+            this.Controls.Add(this.btnJihyea);
             this.Controls.Add(this.btnTourInfo);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -288,7 +339,10 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnJihyea;
+        private System.Windows.Forms.Button btnPlan;
         private System.Windows.Forms.Button btnTourInfo;
+
         private System.Windows.Forms.Button btnHoneyTip;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -305,6 +359,10 @@
         private System.Windows.Forms.Panel panelMove;
         private System.Windows.Forms.Button btnTry;
         private System.Windows.Forms.Label lbl4;
+
+        private System.Windows.Forms.Button btnTra;
+        private System.Windows.Forms.Button btnPlanView;
+
     }
 }
 

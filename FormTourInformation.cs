@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -182,7 +182,6 @@ namespace RailoNailo
 
             return jsonList;
         }
-
         private void cbxCategory2_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbxCategory3.Items.Clear();

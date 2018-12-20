@@ -30,6 +30,8 @@ namespace RailoNailo
         private void Form1_Load(object sender, EventArgs e)
         {
             MainImageTry();
+
+            
             //폰트변경
             //PrivateFontCollection privateFonts = new PrivateFontCollection();      
             //privateFonts.AddFontFile( "한나체!.ttf" );
@@ -37,7 +39,7 @@ namespace RailoNailo
             //btn1.Font = btn2.Font= btnHoneyTip.Font= btn4.Font=font;
 
         }
-
+        
         private void MainImageTry() //메인 배경 랜덤으로 출력
         {
             Random r = new Random();
@@ -50,11 +52,25 @@ namespace RailoNailo
             ht.Show();
         }        
 
+
+        private void btnJihyea_Click(object sender, EventArgs e)
+        {
+            FrmJiHyea fjh = new FrmJiHyea();
+            fjh.ShowDialog();
+        }
+
+        private void btnPlan_Click(object sender, EventArgs e)
+        {
+            FrmPlan fp = new FrmPlan();
+            fp.ShowDialog();
+        }
+
         private void btnTourInfo_Click(object sender, EventArgs e)
         {
             FormTourInformation formTourInformation = new FormTourInformation();
             formTourInformation.Show();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {            
@@ -99,5 +115,35 @@ namespace RailoNailo
         }
 
         
+
+        private void btnTra_Click(object sender, EventArgs e)
+        {
+            FrmTrain ft = new FrmTrain();
+            ft.ShowDialog();
+        }
+
+        private void btnPlanView_Click(object sender, EventArgs e)
+        {
+            FrmPlanView fpv = new FrmPlanView();
+            fpv.ShowDialog();
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            FrmJiHyea fjh = new FrmJiHyea();
+            fjh.ShowDialog();
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            FrmPlan fp = new FrmPlan();
+            fp.ShowDialog();
+        }
+
+        private void lbl4_Click(object sender, EventArgs e)
+        {
+            FrmPlanView fpv = new FrmPlanView();
+            fpv.ShowDialog();
+        }
     }
 }
