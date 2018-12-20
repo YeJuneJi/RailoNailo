@@ -13,18 +13,32 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using System.Runtime.InteropServices;
 
 namespace RailoNailo
 {
     public partial class HoneyTip : Form
     {
-        public HoneyTip()
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public readonly int WM_NLBUTTONDOWN = 0xA1;
+        public readonly int HT_CAPTION = 0x2;
+
+        public HoneyTip() //폰트설정
         {
             InitializeComponent();
             PrivateFontCollection privateFonts = new PrivateFontCollection();
-            privateFonts.AddFontFile(@"C:\Railo\한나체!.ttf");
+            privateFonts.AddFontFile(@"C:\Railo\한나체Pro.ttf");
             Font font = new Font(privateFonts.Families[0], 14f);
+            Font font2 = new Font(privateFonts.Families[0], 9f);
+            Font font3 = new Font(privateFonts.Families[0], 11f);
+            Font font4 = new Font(privateFonts.Families[0], 36f);
             btnImg1.Font = btnImg2.Font = btnImg3.Font = btnImg4.Font = btnImg5.Font = btnImg6.Font = btnImg7.Font = btnImg8.Font = btnImg9.Font = font;
+            radioButton1.Font = radioButton2.Font=lblPageNum.Font = font2;
+            lbl1.Font = lbl2.Font = lbl3.Font = lbl4.Font = lbl5.Font = lbl6.Font = lbl7.Font = lbl8.Font = lbl9.Font = font3;
+            lblMainTitle.Font = font4;
         }
         private int displayPage = 9;
         private int totalPage = 0; //전체 페이지
@@ -33,13 +47,14 @@ namespace RailoNailo
         
         string[] a = new string[27]; //제목, 블로그 이름(+9), 링크 (+18)
 
-        private void HoneyTip_Load(object sender, EventArgs e)
-        {
+        private void HoneyTip_Load(object sender, EventArgs e) //내일로,내일로 여행후기 구분
+        {            
             btnImg1.FlatStyle = FlatStyle.Flat;
+
             
             //뒷배경을 투명처리(transparent)로 하실려면 아래 추가해주면됩니다. 
-            btnImg1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-            btnImg1.BackColor = Color.FromArgb(0, 255, 255, 255);
+            //btnImg1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            //listView1.BackColor = Color.FromArgb(0, 255, 255, 255);
             string honeyTipTitle = "";
             if (radioButton1.Checked)
             {
@@ -69,7 +84,7 @@ namespace RailoNailo
             {
                 totalPage += 1;
             }
-            label1.Text = temp + "/" + totalPage;
+            lblPageNum.Text = temp + "/" + totalPage;
 
             var honeyTipArray = JArray.Parse(honeyTipData["items"].ToString());
 
@@ -241,6 +256,25 @@ namespace RailoNailo
                 this.BackgroundImage = Image.FromFile(@"C:\Railo\honeyTipImage\Main22.png");
                 HoneyTip_Load(null, null);                
             }
-        }        
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelMove_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
+                ReleaseCapture();
+
+                // 타이틀 바의 다운 이벤트처럼 보냄
+                SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
+            }
+
+            base.OnMouseDown(e);
+        }
     }
 }

@@ -141,6 +141,7 @@
     <None Include="한나체!.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="한나체Pro.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -148,14 +149,26 @@
   <ItemGroup>
     <Content Include="honeyTipImage\1.PNG" />
     <Content Include="honeyTipImage\2.png" />
+    <Content Include="honeyTipImage\빠른좌.png" />
+    <Content Include="honeyTipImage\빠른우.png" />
+    <Content Include="honeyTipImage\좌.png" />
+    <Content Include="honeyTipImage\우.png" />
     <Content Include="honeyTipImage\Main.PNG" />
     <Content Include="honeyTipImage\main2.PNG" />
     <Content Include="honeyTipImage\Main22.png" />
     <Content Include="honeyTipImage\main3.PNG" />
     <Content Include="honeyTipImage\main4.PNG" />
+    <Content Include="mainForm\1.jpg" />
+    <Content Include="mainForm\2.jpg" />
+    <Content Include="mainForm\3.jpg" />
+    <Content Include="mainForm\4.jpg" />
+    <Content Include="mainForm\5.jpg" />
+    <Content Include="mainForm\6.jpg" />
     <Content Include="mainForm\close.png" />
     <Content Include="mainForm\passenger-train-front-view_icon-icons.com_70424.png" />
+    <Content Include="mainForm\Try.png" />
     <Content Include="mainForm\노선도.png" />
+    <Content Include="mainForm\배경1.jpg" />
     <Content Include="mainForm\시간표.png" />
     <Content Include="mainForm\티켓.png" />
     <Content Include="Railo_DB.mdf">
@@ -165,10 +178,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Railo_DB.mdf</DependentUpon>
     </Content>
-    <Content Include="honeyTipImage\빠른우.png" />
-    <Content Include="honeyTipImage\빠른좌.png" />
-    <Content Include="honeyTipImage\우.png" />
-    <Content Include="honeyTipImage\좌.png" />
     <Content Include="honeyTipImage\캡처.PNG" />
     <Content Include="RandomPhoto\a.png" />
     <Content Include="RandomPhoto\b.png" />

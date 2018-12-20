@@ -25,11 +25,23 @@ namespace RailoNailo
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-        }
-
+        }        
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            MainImageTry();
+            //폰트변경
+            //PrivateFontCollection privateFonts = new PrivateFontCollection();      
+            //privateFonts.AddFontFile( "한나체!.ttf" );
+            //Font font = new Font(privateFonts.Families[0], 24f);
+            //btn1.Font = btn2.Font= btnHoneyTip.Font= btn4.Font=font;
+
+        }
+
+        private void MainImageTry() //메인 배경 랜덤으로 출력
+        {
+            Random r = new Random();
+            this.BackgroundImage = Image.FromFile(@"C:\Railo\mainForm\" + r.Next(1, 7) + ".jpg");
         }
 
         private void btnHoneyTip_Click(object sender, EventArgs e)
@@ -80,5 +92,12 @@ namespace RailoNailo
 
             base.OnMouseDown(e);
         }
+
+        private void btnTry_Click(object sender, EventArgs e)
+        {
+            MainImageTry();
+        }
+
+        
     }
 }

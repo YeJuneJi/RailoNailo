@@ -43,6 +43,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMove = new System.Windows.Forms.Panel();
+            this.btnTry = new System.Windows.Forms.Button();
+            this.lbl4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,7 +54,7 @@
             // 
             // btnTourInfo
             // 
-            this.btnTourInfo.Location = new System.Drawing.Point(787, 56);
+            this.btnTourInfo.Location = new System.Drawing.Point(45, 143);
             this.btnTourInfo.Name = "btnTourInfo";
             this.btnTourInfo.Size = new System.Drawing.Size(126, 38);
             this.btnTourInfo.TabIndex = 0;
@@ -96,7 +98,6 @@
             this.btn4.TabIndex = 4;
             this.btn4.Text = "여행계획짜기";
             this.btn4.UseVisualStyleBackColor = false;
-            
             // 
             // btn1
             // 
@@ -125,6 +126,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl1.Location = new System.Drawing.Point(256, 74);
             this.lbl1.Name = "lbl1";
@@ -136,6 +138,7 @@
             // lbl2
             // 
             this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
             this.lbl2.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl2.Location = new System.Drawing.Point(392, 74);
             this.lbl2.Name = "lbl2";
@@ -147,6 +150,7 @@
             // lbl3
             // 
             this.lbl3.AutoSize = true;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
             this.lbl3.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl3.Location = new System.Drawing.Point(510, 74);
             this.lbl3.Name = "lbl3";
@@ -157,7 +161,8 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::RailoNailo.Properties.Resources.시간표;
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::RailoNailo.Properties.Resources.시간표2;
             this.pictureBox4.Location = new System.Drawing.Point(470, 58);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 33);
@@ -167,7 +172,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::RailoNailo.Properties.Resources.노선도;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::RailoNailo.Properties.Resources.노선도2;
             this.pictureBox3.Location = new System.Drawing.Point(352, 58);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 33);
@@ -177,7 +183,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::RailoNailo.Properties.Resources.티켓;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::RailoNailo.Properties.Resources.티켓3;
             this.pictureBox2.Location = new System.Drawing.Point(212, 58);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 33);
@@ -187,7 +194,8 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::RailoNailo.Properties.Resources.close;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::RailoNailo.Properties.Resources.close2;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -195,13 +203,14 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(17, 15);
             this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RailoNailo.Properties.Resources._224;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 20);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::RailoNailo.Properties.Resources._2243;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -210,19 +219,48 @@
             // 
             // panelMove
             // 
+            this.panelMove.BackColor = System.Drawing.Color.Transparent;
             this.panelMove.Location = new System.Drawing.Point(1, 1);
             this.panelMove.Name = "panelMove";
-            this.panelMove.Size = new System.Drawing.Size(889, 19);
+            this.panelMove.Size = new System.Drawing.Size(866, 19);
             this.panelMove.TabIndex = 14;
             this.panelMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseDown);
-            
+            // 
+            // btnTry
+            // 
+            this.btnTry.BackColor = System.Drawing.Color.Transparent;
+            this.btnTry.BackgroundImage = global::RailoNailo.Properties.Resources.Try1;
+            this.btnTry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTry.FlatAppearance.BorderSize = 0;
+            this.btnTry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTry.Location = new System.Drawing.Point(873, 3);
+            this.btnTry.Name = "btnTry";
+            this.btnTry.Size = new System.Drawing.Size(17, 15);
+            this.btnTry.TabIndex = 15;
+            this.btnTry.UseVisualStyleBackColor = false;
+            this.btnTry.Click += new System.EventHandler(this.btnTry_Click);
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl4.Location = new System.Drawing.Point(800, 73);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(107, 18);
+            this.lbl4.TabIndex = 16;
+            this.lbl4.Text = "내 여행계획보기";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(166)))), ((int)(((byte)(209)))));
+            this.BackgroundImage = global::RailoNailo.Properties.Resources._13;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 583);
+            this.Controls.Add(this.lbl4);
+            this.Controls.Add(this.btnTry);
             this.Controls.Add(this.panelMove);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -265,6 +303,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panelMove;
+        private System.Windows.Forms.Button btnTry;
+        private System.Windows.Forms.Label lbl4;
     }
 }
 
