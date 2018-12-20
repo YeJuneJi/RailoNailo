@@ -50,11 +50,7 @@ namespace RailoNailo
         //}
         private void Display()
         {
-
-            listPic.SendToBack();
             locList = new List<Location>();
-            listPic.Image = null;
-            timer1.Enabled = false;
             foreach (Control item in Controls)
             {
                 if (item.GetType().ToString() == "System.Windows.Forms.Label")
@@ -158,13 +154,6 @@ namespace RailoNailo
                 default:
                     break;
             }
-        }
-
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            Random rand = new Random();
-            int num = rand.Next(0, imageList1.Images.Count - 1);
-            listPic.Image = imageList1.Images[num];
         }
     }
 }

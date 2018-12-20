@@ -30,6 +30,9 @@
         {
             this.btnJihyea = new System.Windows.Forms.Button();
             this.btnPlan = new System.Windows.Forms.Button();
+            this.btnTourInfo = new System.Windows.Forms.Button();
+            this.btnTra = new System.Windows.Forms.Button();
+            this.btnPlanView = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJihyea
@@ -51,8 +54,6 @@
             this.btnPlan.Text = "button2";
             this.btnPlan.UseVisualStyleBackColor = true;
             this.btnPlan.Click += new System.EventHandler(this.btnPlan_Click);
-            this.btnTourInfo = new System.Windows.Forms.Button();
-            this.SuspendLayout();
             // 
             // btnTourInfo
             // 
@@ -64,14 +65,35 @@
             this.btnTourInfo.UseVisualStyleBackColor = true;
             this.btnTourInfo.Click += new System.EventHandler(this.btnTourInfo_Click);
             // 
+            // btnTra
+            // 
+            this.btnTra.Location = new System.Drawing.Point(662, 298);
+            this.btnTra.Name = "btnTra";
+            this.btnTra.Size = new System.Drawing.Size(142, 91);
+            this.btnTra.TabIndex = 2;
+            this.btnTra.Text = "button3";
+            this.btnTra.UseVisualStyleBackColor = true;
+            this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
+            // 
+            // btnPlanView
+            // 
+            this.btnPlanView.Location = new System.Drawing.Point(662, 418);
+            this.btnPlanView.Name = "btnPlanView";
+            this.btnPlanView.Size = new System.Drawing.Size(142, 56);
+            this.btnPlanView.TabIndex = 3;
+            this.btnPlanView.Text = "나의 여행 정보 보기";
+            this.btnPlanView.UseVisualStyleBackColor = true;
+            this.btnPlanView.Click += new System.EventHandler(this.btnPlanView_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 567);
+            this.ClientSize = new System.Drawing.Size(918, 583);
+            this.Controls.Add(this.btnPlanView);
+            this.Controls.Add(this.btnTra);
             this.Controls.Add(this.btnPlan);
             this.Controls.Add(this.btnJihyea);
-            this.ClientSize = new System.Drawing.Size(918, 583);
             this.Controls.Add(this.btnTourInfo);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -84,6 +106,8 @@
         private System.Windows.Forms.Button btnJihyea;
         private System.Windows.Forms.Button btnPlan;
         private System.Windows.Forms.Button btnTourInfo;
+        private System.Windows.Forms.Button btnTra;
+        private System.Windows.Forms.Button btnPlanView;
     }
 }
 

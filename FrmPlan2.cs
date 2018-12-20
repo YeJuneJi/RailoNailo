@@ -77,7 +77,6 @@ namespace RailoNailo
 
         private void ButtonClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -72,6 +72,12 @@
   <ItemGroup>
     <Compile Include="AreaBased.cs" />
     <Compile Include="DetailCommon.cs" />
+    <Compile Include="FrmPlanView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlanView.Designer.cs">
+      <DependentUpon>FrmPlanView.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTrain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,7 @@
     <Compile Include="FormTourInformation.Designer.cs">
       <DependentUpon>FormTourInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlDbConnection.cs" />
@@ -119,6 +126,7 @@
     <Compile Include="TourListDetail.Designer.cs">
       <DependentUpon>TourListDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Train.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTourInformation.resx">
       <DependentUpon>FormTourInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlanView.resx">
+      <DependentUpon>FrmPlanView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTrain.resx">
+      <DependentUpon>FrmTrain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -169,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\noImage.jpg" />
+    <Content Include="Images\Paradis tropical, soleil, plage, côte, mer, palmiers 1920x1440 Fond d%27écran [fr.best-wallpaper.net].jpg" />
     <Content Include="Images\가평.png" />
     <Content Include="Images\강릉.png" />
     <Content Include="Images\경주.png" />

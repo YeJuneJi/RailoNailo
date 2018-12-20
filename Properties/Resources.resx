@@ -127,10 +127,13 @@
   <data name="iconfinder_arrow-left_227602" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_arrow-left_227602.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_Plus_2001887 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_Plus_2001887 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_Plus_2001887" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_Plus_2001887.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_Plus_2001887 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_Plus_2001887 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Paradis tropical, soleil, plage, côte, mer, palmiers 1920x1440 Fond d'écran [fr.best-wallpaper.net]" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Paradis tropical, soleil, plage, côte, mer, palmiers 1920x1440 Fond d'écran [fr.best-wallpaper.net].jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

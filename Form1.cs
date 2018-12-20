@@ -33,5 +33,17 @@ namespace RailoNailo
             FormTourInformation formTourInformation = new FormTourInformation();
             formTourInformation.Show();
         }
+
+        private void btnTra_Click(object sender, EventArgs e)
+        {
+            FrmTrain ft = new FrmTrain();
+            ft.ShowDialog();
+        }
+
+        private void btnPlanView_Click(object sender, EventArgs e)
+        {
+            FrmPlanView fpv = new FrmPlanView();
+            fpv.ShowDialog();
+        }
     }
 }

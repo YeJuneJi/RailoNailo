@@ -109,5 +109,16 @@ namespace RailoNailo.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap Paradis_tropical__soleil__plage__côte__mer__palmiers_1920x1440_Fond_d_écran__fr_best_wallpaper_net_ {
+            get {
+                object obj = ResourceManager.GetObject("Paradis tropical, soleil, plage, côte, mer, palmiers 1920x1440 Fond d\'écran [fr.b" +
+                        "est-wallpaper.net]", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
