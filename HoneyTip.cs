@@ -30,7 +30,7 @@ namespace RailoNailo
         {
             InitializeComponent();
             PrivateFontCollection privateFonts = new PrivateFontCollection();
-            privateFonts.AddFontFile(@"C:\Railo\한나체Pro.ttf");
+            privateFonts.AddFontFile(Application.StartupPath+"\\Font\\Hanna.ttf");
             Font font = new Font(privateFonts.Families[0], 14f);
             Font font2 = new Font(privateFonts.Families[0], 9f);
             Font font3 = new Font(privateFonts.Families[0], 11f);
