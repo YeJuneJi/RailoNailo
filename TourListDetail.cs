@@ -41,6 +41,7 @@ namespace RailoNailo
         }
         private void TourListDetail_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\FormDetailBack.jpg");
             button7.BackgroundImage = Properties.Resources.close.ToImage();
             this.Text = "세부정보";
             imgList.ImageSize = new Size(256, 256);

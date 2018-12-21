@@ -64,8 +64,12 @@ namespace RailoNailo
 
         private void FormTourInformation_Load(object sender, EventArgs e)
         {
-            btnSearch.BackgroundImage = Properties.Resources.search.ToImage();
-            button5.BackgroundImage = Properties.Resources.close.ToImage();
+
+            btnSearch.Image = Properties.Resources.search.ToImage();
+            btnClose.Image = Properties.Resources.close.ToImage();
+            btnNext.Image = Properties.Resources.next.ToImage();
+            btnPrev.Image = Properties.Resources.prev.ToImage();
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\TourInfo.jpg");
             this.Text = "전국관광정보";
             cbxAreas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxAreaDetails.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -440,7 +444,7 @@ namespace RailoNailo
             tourDetail.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

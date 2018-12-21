@@ -42,7 +42,6 @@
             this.pbxPlusImg = new System.Windows.Forms.PictureBox();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.plusImageTrackBar = new System.Windows.Forms.TrackBar();
-            this.btnExit = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlusImg)).BeginInit();
@@ -179,26 +178,15 @@
             this.plusImageTrackBar.TabIndex = 16;
             this.plusImageTrackBar.Scroll += new System.EventHandler(this.plusImageTrackBar_Scroll);
             // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(875, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(44, 41);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(898, 1);
+            this.button7.Location = new System.Drawing.Point(888, 1);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(17, 15);
+            this.button7.Size = new System.Drawing.Size(27, 29);
             this.button7.TabIndex = 43;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -221,7 +209,6 @@
             this.ClientSize = new System.Drawing.Size(919, 567);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.plusImageTrackBar);
             this.Controls.Add(this.pbxPlusImg);
             this.Controls.Add(this.linkLblHomePage);
@@ -259,7 +246,6 @@
         private System.Windows.Forms.PictureBox pbxPlusImg;
         private System.Windows.Forms.ImageList imgList;
         private System.Windows.Forms.TrackBar plusImageTrackBar;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
     }

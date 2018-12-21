@@ -55,7 +55,7 @@
             // 
             this.btnHoneyTip.FlatAppearance.BorderSize = 0;
             this.btnHoneyTip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHoneyTip.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnHoneyTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnHoneyTip.Location = new System.Drawing.Point(381, 3);
             this.btnHoneyTip.Name = "btnHoneyTip";
             this.btnHoneyTip.Size = new System.Drawing.Size(120, 33);
@@ -68,7 +68,7 @@
             // 
             this.btn2.FlatAppearance.BorderSize = 0;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn2.Location = new System.Drawing.Point(205, 3);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(170, 33);
@@ -81,7 +81,7 @@
             // 
             this.btn4.FlatAppearance.BorderSize = 0;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn4.Location = new System.Drawing.Point(507, 3);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(152, 33);
@@ -94,13 +94,14 @@
             // 
             this.btn1.FlatAppearance.BorderSize = 0;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn1.Location = new System.Drawing.Point(25, 3);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(174, 33);
             this.btn1.TabIndex = 5;
             this.btn1.Text = "전국 관광정보";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btnTourInfo_Click);
             // 
             // panel1
             // 
@@ -118,10 +119,10 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl1.Location = new System.Drawing.Point(256, 74);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(92, 18);
+            this.lbl1.Size = new System.Drawing.Size(85, 20);
             this.lbl1.TabIndex = 8;
             this.lbl1.Text = "티켓 발권하기";
             this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
@@ -130,10 +131,10 @@
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl2.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl2.Location = new System.Drawing.Point(392, 74);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(73, 18);
+            this.lbl2.Size = new System.Drawing.Size(69, 20);
             this.lbl2.TabIndex = 9;
             this.lbl2.Text = "기차노선도";
             this.lbl2.Click += new System.EventHandler(this.lbl2_Click);
@@ -142,10 +143,10 @@
             // 
             this.lbl3.AutoSize = true;
             this.lbl3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl3.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl3.Location = new System.Drawing.Point(510, 74);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(74, 18);
+            this.lbl3.Size = new System.Drawing.Size(69, 20);
             this.lbl3.TabIndex = 10;
             this.lbl3.Text = "열차시간표";
             this.lbl3.Click += new System.EventHandler(this.lbl3_Click);
@@ -229,10 +230,10 @@
             // 
             this.lbl4.AutoSize = true;
             this.lbl4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl4.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbl4.Location = new System.Drawing.Point(800, 73);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(107, 18);
+            this.lbl4.Size = new System.Drawing.Size(97, 20);
             this.lbl4.TabIndex = 16;
             this.lbl4.Text = "내 여행계획보기";
             this.lbl4.Click += new System.EventHandler(this.lbl4_Click);
