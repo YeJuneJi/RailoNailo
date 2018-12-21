@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,13 @@ namespace RailoNailo
 {
     public partial class TourListDetail : Form
     {
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public readonly int WM_NLBUTTONDOWN = 0xA1;
+        public readonly int HT_CAPTION = 0x2;
+
         private string contentID;
         private DetailCommon detailCommon;
         private List<DetailCommon> detailCommonList = new List<DetailCommon>();
@@ -33,6 +41,8 @@ namespace RailoNailo
         }
         private void TourListDetail_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\FormDetailBack.jpg");
+            button7.BackgroundImage = Properties.Resources.close.ToImage();
             this.Text = "세부정보";
             imgList.ImageSize = new Size(256, 256);
             imgList.ColorDepth = ColorDepth.Depth32Bit;
@@ -167,6 +177,25 @@ namespace RailoNailo
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
+                ReleaseCapture();
+
+                // 타이틀 바의 다운 이벤트처럼 보냄
+                SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
+            }
+
+            base.OnMouseDown(e);
         }
     }
 }

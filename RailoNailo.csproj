@@ -72,6 +72,12 @@
   <ItemGroup>
     <Compile Include="AreaBased.cs" />
     <Compile Include="DetailCommon.cs" />
+    <Compile Include="FrmPlanView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlanView.Designer.cs">
+      <DependentUpon>FrmPlanView.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailImage.cs" />
     <Compile Include="FrmTrain.cs">
       <SubType>Form</SubType>
@@ -79,6 +85,7 @@
     <Compile Include="FrmTrain.Designer.cs">
       <DependentUpon>FrmTrain.cs</DependentUpon>
     </Compile>
+    <Compile Include="IconToImage.cs" />
     <Compile Include="JsonCodes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -86,6 +93,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoneyTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoneyTip.Designer.cs">
+      <DependentUpon>HoneyTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoneyTipInfo.cs" />
     <Compile Include="FrmJiHyea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +125,7 @@
     <Compile Include="FormTourInformation.Designer.cs">
       <DependentUpon>FormTourInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -126,8 +141,12 @@
     <Compile Include="TourListDetail.Designer.cs">
       <DependentUpon>TourListDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Train.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoneyTip.resx">
+      <DependentUpon>HoneyTip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmJiHyea.resx">
       <DependentUpon>FrmJiHyea.cs</DependentUpon>
@@ -141,9 +160,16 @@
     <EmbeddedResource Include="FormTourInformation.resx">
       <DependentUpon>FormTourInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlanView.resx">
+      <DependentUpon>FrmPlanView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTrain.resx">
+      <DependentUpon>FrmTrain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TourListDetail.resx">
@@ -166,61 +192,230 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="한나체!.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="한나체Pro.ttf" />
     <None Include="searchKeword.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\noImage.jpg" />
-    <Content Include="Images\가평.png" />
-    <Content Include="Images\강릉.png" />
-    <Content Include="Images\경주.png" />
-    <Content Include="Images\광명.png" />
-    <Content Include="Images\광주.png" />
-    <Content Include="Images\광주송정.png" />
-    <Content Include="Images\구미.png" />
-    <Content Include="Images\김천%28구미%29.png" />
-    <Content Include="Images\나주.png" />
-    <Content Include="Images\남원.png" />
-    <Content Include="Images\단양.png" />
-    <Content Include="Images\대구.png" />
-    <Content Include="Images\대전.png" />
-    <Content Include="Images\동대구.png" />
-    <Content Include="Images\동해.png" />
-    <Content Include="Images\마산.png" />
-    <Content Include="Images\목포.png" />
-    <Content Include="Images\민둥산.png" />
-    <Content Include="Images\부산.png" />
-    <Content Include="Images\부전.png" />
-    <Content Include="Images\서울.png" />
-    <Content Include="Images\수원.png" />
-    <Content Include="Images\순천.png" />
-    <Content Include="Images\신경주.png" />
-    <Content Include="Images\안동.png" />
-    <Content Include="Images\여수엑스포.png" />
-    <Content Include="Images\영등포.png" />
-    <Content Include="Images\영월.png" />
-    <Content Include="Images\영전.png" />
-    <Content Include="Images\영주.png" />
-    <Content Include="Images\영천.png" />
-    <Content Include="Images\용산.png" />
-    <Content Include="Images\울산.png" />
-    <Content Include="Images\익산.png" />
-    <Content Include="Images\전주.png" />
-    <Content Include="Images\점촌.png" />
-    <Content Include="Images\정읍.png" />
-    <Content Include="Images\제천.png" />
-    <Content Include="Images\진주.png" />
-    <Content Include="Images\천안.png" />
-    <Content Include="Images\천안아산.png" />
-    <Content Include="Images\청량리.png" />
-    <Content Include="Images\춘양.png" />
-    <Content Include="Images\춘천.png" />
-    <Content Include="Images\충주.png" />
-    <Content Include="Images\태백.png" />
-    <Content Include="Images\평창.png" />
-    <Content Include="Images\포항.png" />
+    <Content Include="honeyTipImage\1.PNG" />
+    <Content Include="honeyTipImage\2.png" />
+    <Content Include="honeyTipImage\빠른좌.png" />
+    <Content Include="honeyTipImage\빠른우.png" />
+    <Content Include="honeyTipImage\좌.png" />
+    <Content Include="honeyTipImage\우.png" />
+    <Content Include="honeyTipImage\Main.PNG" />
+    <Content Include="honeyTipImage\main2.PNG" />
+    <Content Include="honeyTipImage\Main22.png" />
+    <Content Include="honeyTipImage\main3.PNG" />
+    <Content Include="honeyTipImage\main4.PNG" />
+    <Content Include="Images\1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Images\Close.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Map.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\next.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Images\FormDetailBack.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\noImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Paradis tropical, soleil, plage, côte, mer, palmiers 1920x1440 Fond d%27écran [fr.best-wallpaper.net].jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Images\Ticket.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Time.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Train.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Retry.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\search.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\prev.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Images\TourInfo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\가평.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\강릉.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\경주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\광명.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\광주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\광주송정.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\구미.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\김천%28구미%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\나주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\남원.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\단양.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\대구.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\대전.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\동대구.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\동해.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\마산.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\목포.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\민둥산.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\부산.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\부전.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\서울.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\수원.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\순천.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\신경주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\안동.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\여수엑스포.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\영등포.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\영월.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\영전.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\영주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\영천.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\용산.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\울산.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\익산.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\전주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\점촌.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\정읍.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\제천.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\진주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\천안.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\천안아산.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\청량리.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\춘양.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\춘천.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\충주.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\태백.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\평창.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\포항.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Railo_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -228,16 +423,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Railo_DB.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\photographer-407068_1280.jpg" />
-    <None Include="Resources\gogo.bmp" />
-    <None Include="Resources\calm-2317269_1920.jpg" />
-    <Content Include="Resources\FormDetailBack.jpg" />
-    <Content Include="Resources\iconfinder_arrow-down_227604.png" />
-    <Content Include="Resources\iconfinder_arrow-left_227602.png" />
-    <Content Include="Resources\iconfinder_arrow-right_227601.png" />
-    <Content Include="Resources\iconfinder_Plus_2001887 %282%29.png" />
-    <Content Include="Resources\iconfinder_Plus_2001887.png" />
-    <None Include="Resources\icons8_Delete.ico" />
+    <Content Include="honeyTipImage\캡처.PNG" />
+    <Content Include="RandomPhoto\a.png" />
+    <Content Include="RandomPhoto\b.png" />
+    <Content Include="RandomPhoto\c.png" />
+    <Content Include="RandomPhoto\d.png" />
+    <Content Include="RandomPhoto\e.png" />
+    <Content Include="RandomPhoto\f.png" />
+    <Content Include="RandomPhoto\g.png" />
+    <Content Include="RandomPhoto\h.png" />
+    <Content Include="RandomPhoto\i.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -250,6 +445,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

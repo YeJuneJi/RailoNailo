@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -19,6 +20,13 @@ namespace RailoNailo
 {
     public partial class FrmPlan2 : Form
     {
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public readonly int WM_NLBUTTONDOWN = 0xA1;
+        public readonly int HT_CAPTION = 0x2;
+
         string keyword = string.Empty;
         FormTourInformation ftif = new FormTourInformation();
         SearchKeyword searchkeyword;
@@ -38,6 +46,7 @@ namespace RailoNailo
         }
         private void FrmPlan2_Load(object sender, EventArgs e)
         {
+            button5.BackgroundImage = Properties.Resources.close.ToImage();
             locList = new List<Location>();
             tourListView.View = View.LargeIcon;
             string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
@@ -90,7 +99,9 @@ namespace RailoNailo
 
         private void ButtonClick(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
+
+            
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -230,5 +241,26 @@ namespace RailoNailo
             TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
             tourDetail.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
+                ReleaseCapture();
+
+                // 타이틀 바의 다운 이벤트처럼 보냄
+                SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
+            }
+
+            base.OnMouseDown(e);
+
+            
+    }
     }
 }

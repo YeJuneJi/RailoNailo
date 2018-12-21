@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,13 @@ namespace RailoNailo
 {
     public partial class FrmJiHyea : Form
     {
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public readonly int WM_NLBUTTONDOWN = 0xA1;
+        public readonly int HT_CAPTION = 0x2;
+
         Uri uri;
         HttpWebRequest request;
         HttpWebResponse response;
@@ -28,6 +36,7 @@ namespace RailoNailo
         Location loc;
         private void FrmJiHyea_Load(object sender, EventArgs e)
         {
+            button1.BackgroundImage = Properties.Resources.close.ToImage();
         }
         //private void Back() {
         //    foreach (Control item in Controls)
@@ -50,11 +59,7 @@ namespace RailoNailo
         //}
         private void Display()
         {
-
-            listPic.SendToBack();
             locList = new List<Location>();
-            listPic.Image = null;
-            timer1.Enabled = false;
             foreach (Control item in Controls)
             {
                 if (item.GetType().ToString() == "System.Windows.Forms.Label")
@@ -100,12 +105,14 @@ namespace RailoNailo
                         {
                             try
                             {
-                                ((PictureBox)item2).Image = Image.FromFile(@"C:\C#\RailoNailo\Images\" + item.InnerText.Trim() + ".png");
+
+                                ((PictureBox)item2).Image = Image.FromFile(@"C:\Railo\Images\" + item.InnerText.Trim() + ".png");
                             }
                             catch (Exception)
                             {
-                                ((PictureBox)item2).Image = Image.FromFile(@"C:\C#\RailoNailo\Images\noImage.jpg");
+                                ((PictureBox)item2).Image = Image.FromFile(@"C:\C#\RailoNailo\Images\" + item.InnerText.Trim() + ".png");
                             }
+                            
                             ((PictureBox)item2).Click += FrmJiHyea_Click;
                             pNum++;
                             break;
@@ -160,11 +167,23 @@ namespace RailoNailo
             }
         }
 
-        private void timer1_Tick_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            int num = rand.Next(0, imageList1.Images.Count - 1);
-            listPic.Image = imageList1.Images[num];
+            this.Close();
+        }
+
+        private void panelMove_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
+                ReleaseCapture();
+
+                // 타이틀 바의 다운 이벤트처럼 보냄
+                SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
+            }
+
+            base.OnMouseDown(e);
         }
     }
 }

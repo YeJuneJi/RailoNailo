@@ -38,6 +38,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.firstLbl = new System.Windows.Forms.Label();
+            this.secondLbl = new System.Windows.Forms.Label();
+            this.thirdLbl = new System.Windows.Forms.Label();
+            this.fourthLbl = new System.Windows.Forms.Label();
+            this.fifthLbl = new System.Windows.Forms.Label();
+            this.sixthLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sixth = new System.Windows.Forms.PictureBox();
             this.fifth = new System.Windows.Forms.PictureBox();
@@ -50,14 +56,10 @@
             this.imgCross2 = new System.Windows.Forms.PictureBox();
             this.imgCross1 = new System.Windows.Forms.PictureBox();
             this.first = new System.Windows.Forms.PictureBox();
-            this.sixthLbl = new System.Windows.Forms.Label();
-            this.fifthLbl = new System.Windows.Forms.Label();
-            this.fourthLbl = new System.Windows.Forms.Label();
-            this.thirdLbl = new System.Windows.Forms.Label();
-            this.secondLbl = new System.Windows.Forms.Label();
-            this.firstLbl = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -111,12 +113,13 @@
             this.groupBox1.Controls.Add(this.rdoDay3);
             this.groupBox1.Controls.Add(this.rdoDay7);
             this.groupBox1.Controls.Add(this.rdoDay5);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(562, 69);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "티켓 선택";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dateStart
             // 
@@ -140,7 +143,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.dateStart);
             this.groupBox2.Controls.Add(this.dateFinal);
-            this.groupBox2.Location = new System.Drawing.Point(12, 103);
+            this.groupBox2.Location = new System.Drawing.Point(12, 112);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(562, 113);
             this.groupBox2.TabIndex = 4;
@@ -193,6 +196,54 @@
             this.groupBox3.Text = "여행지 선택";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // firstLbl
+            // 
+            this.firstLbl.AutoSize = true;
+            this.firstLbl.Location = new System.Drawing.Point(68, 228);
+            this.firstLbl.Name = "firstLbl";
+            this.firstLbl.Size = new System.Drawing.Size(0, 12);
+            this.firstLbl.TabIndex = 22;
+            // 
+            // secondLbl
+            // 
+            this.secondLbl.AutoSize = true;
+            this.secondLbl.Location = new System.Drawing.Point(261, 228);
+            this.secondLbl.Name = "secondLbl";
+            this.secondLbl.Size = new System.Drawing.Size(0, 12);
+            this.secondLbl.TabIndex = 21;
+            // 
+            // thirdLbl
+            // 
+            this.thirdLbl.AutoSize = true;
+            this.thirdLbl.Location = new System.Drawing.Point(453, 228);
+            this.thirdLbl.Name = "thirdLbl";
+            this.thirdLbl.Size = new System.Drawing.Size(0, 12);
+            this.thirdLbl.TabIndex = 20;
+            // 
+            // fourthLbl
+            // 
+            this.fourthLbl.AutoSize = true;
+            this.fourthLbl.Location = new System.Drawing.Point(453, 438);
+            this.fourthLbl.Name = "fourthLbl";
+            this.fourthLbl.Size = new System.Drawing.Size(0, 12);
+            this.fourthLbl.TabIndex = 19;
+            // 
+            // fifthLbl
+            // 
+            this.fifthLbl.AutoSize = true;
+            this.fifthLbl.Location = new System.Drawing.Point(250, 438);
+            this.fifthLbl.Name = "fifthLbl";
+            this.fifthLbl.Size = new System.Drawing.Size(0, 12);
+            this.fifthLbl.TabIndex = 18;
+            // 
+            // sixthLbl
+            // 
+            this.sixthLbl.AutoSize = true;
+            this.sixthLbl.Location = new System.Drawing.Point(68, 438);
+            this.sixthLbl.Name = "sixthLbl";
+            this.sixthLbl.Size = new System.Drawing.Size(0, 12);
+            this.sixthLbl.TabIndex = 17;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -205,7 +256,6 @@
             // sixth
             // 
             this.sixth.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.sixth.Image = global::RailoNailo.Properties.Resources.iconfinder_Plus_2001887__2_;
             this.sixth.Location = new System.Drawing.Point(13, 287);
             this.sixth.Name = "sixth";
             this.sixth.Size = new System.Drawing.Size(147, 148);
@@ -216,7 +266,6 @@
             // fifth
             // 
             this.fifth.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fifth.Image = global::RailoNailo.Properties.Resources.iconfinder_Plus_2001887__2_;
             this.fifth.Location = new System.Drawing.Point(206, 287);
             this.fifth.Name = "fifth";
             this.fifth.Size = new System.Drawing.Size(147, 148);
@@ -227,7 +276,6 @@
             // fourth
             // 
             this.fourth.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fourth.Image = global::RailoNailo.Properties.Resources.iconfinder_Plus_2001887__2_;
             this.fourth.Location = new System.Drawing.Point(398, 287);
             this.fourth.Name = "fourth";
             this.fourth.Size = new System.Drawing.Size(147, 148);
@@ -238,7 +286,6 @@
             // third
             // 
             this.third.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.third.Image = global::RailoNailo.Properties.Resources.iconfinder_Plus_2001887__2_;
             this.third.Location = new System.Drawing.Point(398, 77);
             this.third.Name = "third";
             this.third.Size = new System.Drawing.Size(147, 148);
@@ -249,7 +296,6 @@
             // second
             // 
             this.second.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.second.Image = global::RailoNailo.Properties.Resources.iconfinder_Plus_2001887__2_;
             this.second.Location = new System.Drawing.Point(206, 77);
             this.second.Name = "second";
             this.second.Size = new System.Drawing.Size(147, 148);
@@ -259,7 +305,6 @@
             // 
             // imgCross5
             // 
-            this.imgCross5.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_left_227602;
             this.imgCross5.Location = new System.Drawing.Point(166, 339);
             this.imgCross5.Name = "imgCross5";
             this.imgCross5.Size = new System.Drawing.Size(34, 43);
@@ -269,7 +314,6 @@
             // 
             // imgCross4
             // 
-            this.imgCross4.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_left_227602;
             this.imgCross4.Location = new System.Drawing.Point(359, 339);
             this.imgCross4.Name = "imgCross4";
             this.imgCross4.Size = new System.Drawing.Size(34, 43);
@@ -279,7 +323,6 @@
             // 
             // imgCross3
             // 
-            this.imgCross3.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_down_227604;
             this.imgCross3.Location = new System.Drawing.Point(455, 245);
             this.imgCross3.Name = "imgCross3";
             this.imgCross3.Size = new System.Drawing.Size(34, 41);
@@ -289,7 +332,6 @@
             // 
             // imgCross2
             // 
-            this.imgCross2.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_right_227601;
             this.imgCross2.Location = new System.Drawing.Point(358, 137);
             this.imgCross2.Name = "imgCross2";
             this.imgCross2.Size = new System.Drawing.Size(34, 43);
@@ -299,7 +341,6 @@
             // 
             // imgCross1
             // 
-            this.imgCross1.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_right_227601;
             this.imgCross1.Location = new System.Drawing.Point(166, 137);
             this.imgCross1.Name = "imgCross1";
             this.imgCross1.Size = new System.Drawing.Size(34, 43);
@@ -310,61 +351,12 @@
             // first
             // 
             this.first.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.first.Image = global::RailoNailo.Properties.Resources.iconfinder_Plus_2001887__2_;
             this.first.Location = new System.Drawing.Point(15, 77);
             this.first.Name = "first";
             this.first.Size = new System.Drawing.Size(147, 148);
             this.first.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.first.TabIndex = 0;
             this.first.TabStop = false;
-            // 
-            // sixthLbl
-            // 
-            this.sixthLbl.AutoSize = true;
-            this.sixthLbl.Location = new System.Drawing.Point(68, 438);
-            this.sixthLbl.Name = "sixthLbl";
-            this.sixthLbl.Size = new System.Drawing.Size(0, 12);
-            this.sixthLbl.TabIndex = 17;
-            // 
-            // fifthLbl
-            // 
-            this.fifthLbl.AutoSize = true;
-            this.fifthLbl.Location = new System.Drawing.Point(250, 438);
-            this.fifthLbl.Name = "fifthLbl";
-            this.fifthLbl.Size = new System.Drawing.Size(0, 12);
-            this.fifthLbl.TabIndex = 18;
-            // 
-            // fourthLbl
-            // 
-            this.fourthLbl.AutoSize = true;
-            this.fourthLbl.Location = new System.Drawing.Point(453, 438);
-            this.fourthLbl.Name = "fourthLbl";
-            this.fourthLbl.Size = new System.Drawing.Size(0, 12);
-            this.fourthLbl.TabIndex = 19;
-            // 
-            // thirdLbl
-            // 
-            this.thirdLbl.AutoSize = true;
-            this.thirdLbl.Location = new System.Drawing.Point(453, 228);
-            this.thirdLbl.Name = "thirdLbl";
-            this.thirdLbl.Size = new System.Drawing.Size(0, 12);
-            this.thirdLbl.TabIndex = 20;
-            // 
-            // secondLbl
-            // 
-            this.secondLbl.AutoSize = true;
-            this.secondLbl.Location = new System.Drawing.Point(261, 228);
-            this.secondLbl.Name = "secondLbl";
-            this.secondLbl.Size = new System.Drawing.Size(0, 12);
-            this.secondLbl.TabIndex = 21;
-            // 
-            // firstLbl
-            // 
-            this.firstLbl.AutoSize = true;
-            this.firstLbl.Location = new System.Drawing.Point(68, 228);
-            this.firstLbl.Name = "firstLbl";
-            this.firstLbl.Size = new System.Drawing.Size(0, 12);
-            this.firstLbl.TabIndex = 22;
             // 
             // btnSave
             // 
@@ -385,16 +377,42 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(4, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(555, 19);
+            this.panel2.TabIndex = 33;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(565, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(17, 15);
+            this.button7.TabIndex = 32;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FrmPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 784);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPlan";
             this.Text = "FrmPlan";
             this.Load += new System.EventHandler(this.FrmPlan_Load);
@@ -451,5 +469,7 @@
         private System.Windows.Forms.Label sixthLbl;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button7;
     }
 }

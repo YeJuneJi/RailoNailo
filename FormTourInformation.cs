@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,13 @@ namespace RailoNailo
 {
     public partial class FormTourInformation : Form
     {
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public readonly int WM_NLBUTTONDOWN = 0xA1;
+        public readonly int HT_CAPTION = 0x2;
+
         private string serviceKey = "Sf8fjXzeJx8CxVqHJ5cDq2WSEO%2B7Gfor9J8ubISBAGIJIidA2L8rVXoAWxCx59Jo4PERKpiKGrqRLF2oMtTy%2Bw%3D%3D"; //서비스 키
         //private string areaCode = string.Empty; //지역코드조회 . 지역코드는 areaCode.json 참조.
         //private string categoryCode = string.Empty; //서비스 분류코드 조회
@@ -56,6 +64,12 @@ namespace RailoNailo
 
         private void FormTourInformation_Load(object sender, EventArgs e)
         {
+
+            btnSearch.Image = Properties.Resources.search.ToImage();
+            btnClose.Image = Properties.Resources.close.ToImage();
+            btnNext.Image = Properties.Resources.next.ToImage();
+            btnPrev.Image = Properties.Resources.prev.ToImage();
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\TourInfo.jpg");
             this.Text = "전국관광정보";
             cbxAreas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxAreaDetails.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -188,7 +202,6 @@ namespace RailoNailo
 
             return jsonList;
         }
-
         private void cbxCategory2_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbxCategory3.Items.Clear();
@@ -429,6 +442,25 @@ namespace RailoNailo
         {
             TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
             tourDetail.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelMove_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
+                ReleaseCapture();
+
+                // 타이틀 바의 다운 이벤트처럼 보냄
+                SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
+            }
+
+            base.OnMouseDown(e);
         }
     }
 }

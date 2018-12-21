@@ -43,6 +43,8 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.lblPage = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.panelMove = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbxAreas
@@ -113,11 +115,10 @@
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(879, 55);
+            this.btnSearch.Location = new System.Drawing.Point(875, 55);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(71, 23);
             this.btnSearch.TabIndex = 8;
-            this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -146,7 +147,6 @@
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 11;
-            this.btnPrev.Text = "이전";
             this.btnPrev.UseVisualStyleBackColor = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
@@ -160,16 +160,18 @@
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 12;
-            this.btnNext.Text = "다음";
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // lblPage
             // 
             this.lblPage.AutoSize = true;
+            this.lblPage.BackColor = System.Drawing.Color.Transparent;
+            this.lblPage.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblPage.ForeColor = System.Drawing.Color.White;
             this.lblPage.Location = new System.Drawing.Point(468, 562);
             this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(0, 12);
+            this.lblPage.Size = new System.Drawing.Size(0, 19);
             this.lblPage.TabIndex = 13;
             // 
             // lblInfo
@@ -182,15 +184,38 @@
             this.lblInfo.TabIndex = 14;
             this.lblInfo.Text = "세부사항을 보시려면 그림을 클릭해 주세요!";
             // 
+            // panelMove
+            // 
+            this.panelMove.BackColor = System.Drawing.Color.Transparent;
+            this.panelMove.Location = new System.Drawing.Point(1, 0);
+            this.panelMove.Name = "panelMove";
+            this.panelMove.Size = new System.Drawing.Size(945, 19);
+            this.panelMove.TabIndex = 31;
+            this.panelMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseDown);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(950, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(17, 15);
+            this.btnClose.TabIndex = 30;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FormTourInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::RailoNailo.Properties.Resources.photographer_407068_1280;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(971, 592);
+            this.Controls.Add(this.panelMove);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnNext);
@@ -228,5 +253,7 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblPage;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Panel panelMove;
+        private System.Windows.Forms.Button btnClose;
     }
 }

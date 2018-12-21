@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmJiHyea));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -61,9 +59,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.cbbLocation = new System.Windows.Forms.ComboBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.listPic = new System.Windows.Forms.PictureBox();
+            this.panelMove = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -79,12 +76,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listPic)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +100,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(248, 12);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(270, 62);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(166, 177);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,14 +113,15 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("굵은안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(244, 192);
+            this.label2.Location = new System.Drawing.Point(266, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 5;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(470, 12);
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Location = new System.Drawing.Point(492, 62);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(166, 177);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,14 +133,15 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("굵은안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(466, 192);
+            this.label3.Location = new System.Drawing.Point(488, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 21);
             this.label3.TabIndex = 7;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(692, 12);
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Location = new System.Drawing.Point(714, 62);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(166, 177);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,14 +153,15 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("굵은안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(688, 192);
+            this.label4.Location = new System.Drawing.Point(710, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 21);
             this.label4.TabIndex = 15;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(26, 266);
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Location = new System.Drawing.Point(48, 316);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(166, 177);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,7 +180,8 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(248, 266);
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Location = new System.Drawing.Point(270, 316);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(166, 177);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,14 +193,15 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("굵은안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(244, 455);
+            this.label6.Location = new System.Drawing.Point(266, 505);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 21);
             this.label6.TabIndex = 11;
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(470, 266);
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Location = new System.Drawing.Point(492, 316);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(166, 177);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,14 +213,15 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("굵은안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(466, 455);
+            this.label7.Location = new System.Drawing.Point(488, 505);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 21);
             this.label7.TabIndex = 9;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(692, 266);
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Location = new System.Drawing.Point(714, 316);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(166, 177);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,14 +233,15 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("굵은안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(688, 455);
+            this.label8.Location = new System.Drawing.Point(710, 505);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 21);
             this.label8.TabIndex = 23;
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(26, 536);
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Location = new System.Drawing.Point(48, 586);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(166, 177);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -255,7 +260,8 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(247, 536);
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Location = new System.Drawing.Point(269, 586);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(166, 177);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -274,7 +280,8 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Location = new System.Drawing.Point(470, 536);
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Location = new System.Drawing.Point(492, 586);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(166, 177);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,7 +300,8 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Location = new System.Drawing.Point(692, 536);
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Location = new System.Drawing.Point(714, 586);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(166, 177);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -322,7 +330,8 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Location = new System.Drawing.Point(26, 791);
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Location = new System.Drawing.Point(48, 841);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(166, 177);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -341,7 +350,8 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Location = new System.Drawing.Point(248, 791);
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Location = new System.Drawing.Point(270, 841);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(166, 177);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -360,7 +370,8 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Location = new System.Drawing.Point(470, 791);
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Location = new System.Drawing.Point(492, 841);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(166, 177);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -377,87 +388,43 @@
             "충청권",
             "전라권",
             "경상권"});
-            this.cbbLocation.Location = new System.Drawing.Point(886, 12);
+            this.cbbLocation.Location = new System.Drawing.Point(910, 62);
             this.cbbLocation.Name = "cbbLocation";
             this.cbbLocation.Size = new System.Drawing.Size(121, 20);
             this.cbbLocation.TabIndex = 31;
             this.cbbLocation.SelectedIndexChanged += new System.EventHandler(this.cbbLocation_SelectedIndexChanged);
             // 
-            // imageList1
+            // panelMove
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "가평.png");
-            this.imageList1.Images.SetKeyName(1, "강릉.png");
-            this.imageList1.Images.SetKeyName(2, "경주.png");
-            this.imageList1.Images.SetKeyName(3, "광명.png");
-            this.imageList1.Images.SetKeyName(4, "광주.png");
-            this.imageList1.Images.SetKeyName(5, "광주송정.png");
-            this.imageList1.Images.SetKeyName(6, "구미.png");
-            this.imageList1.Images.SetKeyName(7, "김천(구미).png");
-            this.imageList1.Images.SetKeyName(8, "나주.png");
-            this.imageList1.Images.SetKeyName(9, "남원.png");
-            this.imageList1.Images.SetKeyName(10, "단양.png");
-            this.imageList1.Images.SetKeyName(11, "대구.png");
-            this.imageList1.Images.SetKeyName(12, "대전.png");
-            this.imageList1.Images.SetKeyName(13, "동대구.png");
-            this.imageList1.Images.SetKeyName(14, "동해.png");
-            this.imageList1.Images.SetKeyName(15, "마산.png");
-            this.imageList1.Images.SetKeyName(16, "목포.png");
-            this.imageList1.Images.SetKeyName(17, "민둥산.png");
-            this.imageList1.Images.SetKeyName(18, "부산.png");
-            this.imageList1.Images.SetKeyName(19, "부전.png");
-            this.imageList1.Images.SetKeyName(20, "서울.png");
-            this.imageList1.Images.SetKeyName(21, "수원.png");
-            this.imageList1.Images.SetKeyName(22, "순천.png");
-            this.imageList1.Images.SetKeyName(23, "신경주.png");
-            this.imageList1.Images.SetKeyName(24, "안동.png");
-            this.imageList1.Images.SetKeyName(25, "여수엑스포.png");
-            this.imageList1.Images.SetKeyName(26, "영등포.png");
-            this.imageList1.Images.SetKeyName(27, "영월.png");
-            this.imageList1.Images.SetKeyName(28, "영전.png");
-            this.imageList1.Images.SetKeyName(29, "영주.png");
-            this.imageList1.Images.SetKeyName(30, "영천.png");
-            this.imageList1.Images.SetKeyName(31, "용산.png");
-            this.imageList1.Images.SetKeyName(32, "울산.png");
-            this.imageList1.Images.SetKeyName(33, "익산.png");
-            this.imageList1.Images.SetKeyName(34, "전주.png");
-            this.imageList1.Images.SetKeyName(35, "점촌.png");
-            this.imageList1.Images.SetKeyName(36, "정읍.png");
-            this.imageList1.Images.SetKeyName(37, "제천.png");
-            this.imageList1.Images.SetKeyName(38, "진주.png");
-            this.imageList1.Images.SetKeyName(39, "천안.png");
-            this.imageList1.Images.SetKeyName(40, "천안아산.png");
-            this.imageList1.Images.SetKeyName(41, "청량리.png");
-            this.imageList1.Images.SetKeyName(42, "춘양.png");
-            this.imageList1.Images.SetKeyName(43, "춘천.png");
-            this.imageList1.Images.SetKeyName(44, "충주.png");
-            this.imageList1.Images.SetKeyName(45, "태백.png");
-            this.imageList1.Images.SetKeyName(46, "평창.png");
-            this.imageList1.Images.SetKeyName(47, "포항.png");
+            this.panelMove.BackColor = System.Drawing.Color.Transparent;
+            this.panelMove.Location = new System.Drawing.Point(4, 2);
+            this.panelMove.Name = "panelMove";
+            this.panelMove.Size = new System.Drawing.Size(1055, 19);
+            this.panelMove.TabIndex = 33;
+            this.panelMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseDown);
             // 
-            // timer1
+            // button1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // listPic
-            // 
-            this.listPic.Location = new System.Drawing.Point(26, 12);
-            this.listPic.Name = "listPic";
-            this.listPic.Size = new System.Drawing.Size(832, 431);
-            this.listPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.listPic.TabIndex = 32;
-            this.listPic.TabStop = false;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1065, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(17, 15);
+            this.button1.TabIndex = 32;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmJiHyea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1019, 515);
-            this.Controls.Add(this.listPic);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1096, 666);
+            this.Controls.Add(this.panelMove);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbbLocation);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox15);
@@ -489,6 +456,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmJiHyea";
             this.Text = "FrmJiHyea";
             this.Load += new System.EventHandler(this.FrmJiHyea_Load);
@@ -507,7 +475,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,8 +513,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.ComboBox cbbLocation;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox listPic;
+        private System.Windows.Forms.Panel panelMove;
+        private System.Windows.Forms.Button button1;
     }
 }
