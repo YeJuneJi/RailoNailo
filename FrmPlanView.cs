@@ -29,8 +29,9 @@ namespace RailoNailo
 
         private void FrmPlanView_Load(object sender, EventArgs e)
         {
+            //this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\ViewBack.jpg");
             button7.BackgroundImage = Properties.Resources.close.ToImage();
-            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
+            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
             using (SqlConnection con = new SqlConnection(conStr))
             {
                 con.Open();
