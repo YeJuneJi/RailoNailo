@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,13 @@ namespace RailoNailo
 {
     public partial class FormTourInformation : Form
     {
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public readonly int WM_NLBUTTONDOWN = 0xA1;
+        public readonly int HT_CAPTION = 0x2;
+
         private string serviceKey = "Sf8fjXzeJx8CxVqHJ5cDq2WSEO%2B7Gfor9J8ubISBAGIJIidA2L8rVXoAWxCx59Jo4PERKpiKGrqRLF2oMtTy%2Bw%3D%3D"; //서비스 키
         //private string areaCode = string.Empty; //지역코드조회 . 지역코드는 areaCode.json 참조.
         //private string categoryCode = string.Empty; //서비스 분류코드 조회
@@ -34,6 +42,11 @@ namespace RailoNailo
         private int totalDataCount = 0; // 전체 데이터 개수
         private int totalPageNo = 0;
         private int pageNo = 1; //한 페이지 번호
+        public int PageNo
+        {
+            get { return this.pageNo;  }
+            set { this.pageNo = value; }
+        }
 
 
 
@@ -51,6 +64,8 @@ namespace RailoNailo
 
         private void FormTourInformation_Load(object sender, EventArgs e)
         {
+            btnSearch.BackgroundImage = Properties.Resources.search.ToImage();
+            button5.BackgroundImage = Properties.Resources.close.ToImage();
             this.Text = "전국관광정보";
             cbxAreas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxAreaDetails.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -60,7 +75,8 @@ namespace RailoNailo
             cbxAreas.Items.Clear();
             cbxCategory1.Items.Clear();
             tourListView.View = View.LargeIcon;
-
+            btnNext.Enabled = btnPrev.Enabled = false;
+            lblInfo.Visible = false;
             DisplayComboBx("areaCode", areaList, cbxAreas);
             DisplayComboBx("categoryCode", categoryList, cbxCategory1);
 
@@ -281,13 +297,15 @@ namespace RailoNailo
                 JObject jobj = JObject.Parse(GetJson("areaBasedList", "&areaCode=" + requestName1 + "&sigunguCode=" + requestName2 + "&cat1=" + requestName3 + "&cat2=" + requestName4 + "&cat3=" + requestName5, 10));
                 FindTourInformation(jobj);
             }
+            lblInfo.Visible = true;
+            btnPrev.Enabled = btnNext.Enabled = true;
         }
 
         /// <summary>
         /// 관광정보를 찾아 이미지로 출력해주는 메서드
         /// </summary>
         /// <param name="jobj">경로가 담긴 jobject 객체</param>
-        private void FindTourInformation(JObject jobj)
+        internal void FindTourInformation(JObject jobj)
         {
             areaBasedlist.Clear();
             JArray jarray;
@@ -301,7 +319,7 @@ namespace RailoNailo
             }
             catch (Exception)
             {
-                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "전광정", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "여행을 떠나자^ㅡ^", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tourListView.Clear();
                 tourimgList.Images.Clear();
                 cbxAreas.SelectedIndex = cbxCategory1.SelectedIndex = 0;
@@ -352,7 +370,6 @@ namespace RailoNailo
 
                 areaBasedlist.Add(areaBased);
                 //tbxResult.Text += areaBasedlist.Count + "\r\n";
-                
             }
         }
 
@@ -421,7 +438,25 @@ namespace RailoNailo
         {
             TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
             tourDetail.ShowDialog();
-            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelMove_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
+                ReleaseCapture();
+
+                // 타이틀 바의 다운 이벤트처럼 보냄
+                SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
+            }
+
+            base.OnMouseDown(e);
         }
     }
 }

@@ -29,8 +29,12 @@ namespace RailoNailo
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            MainImageTry();
-
+            MainImageTry();            
+            button1.Image = Properties.Resources.close.ToImage();
+            btnTry.Image = Properties.Resources.Retry.ToImage();
+            pictureBox3.Image = Properties.Resources.map.ToImage();
+            pictureBox2.Image = Properties.Resources.ticket.ToImage();
+            pictureBox4.Image = Properties.Resources.time.ToImage();
             
             //폰트변경
             //PrivateFontCollection privateFonts = new PrivateFontCollection();      
@@ -43,7 +47,7 @@ namespace RailoNailo
         private void MainImageTry() //메인 배경 랜덤으로 출력
         {
             Random r = new Random();
-            this.BackgroundImage = Image.FromFile(@"C:\Railo\mainForm\" + r.Next(1, 7) + ".jpg");
+            this.BackgroundImage = Image.FromFile(Application.StartupPath+"//Images//" + r.Next(1, 7) + ".jpg");
         }
 
         private void btnHoneyTip_Click(object sender, EventArgs e)

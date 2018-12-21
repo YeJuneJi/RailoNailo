@@ -50,7 +50,7 @@ namespace RailoNailo
         private void HoneyTip_Load(object sender, EventArgs e) //내일로,내일로 여행후기 구분
         {            
             btnImg1.FlatStyle = FlatStyle.Flat;
-
+            button5.Image = Properties.Resources.close.ToImage();
             
             //뒷배경을 투명처리(transparent)로 하실려면 아래 추가해주면됩니다. 
             //btnImg1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
@@ -275,6 +275,8 @@ namespace RailoNailo
             }
 
             base.OnMouseDown(e);
+
+
         }
     }
 }

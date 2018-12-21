@@ -36,6 +36,7 @@ namespace RailoNailo
         Location loc;
         private void FrmJiHyea_Load(object sender, EventArgs e)
         {
+            button1.BackgroundImage = Properties.Resources.close.ToImage();
         }
         //private void Back() {
         //    foreach (Control item in Controls)
@@ -104,12 +105,14 @@ namespace RailoNailo
                         {
                             try
                             {
+
                                 ((PictureBox)item2).Image = Image.FromFile(@"C:\Railo\Images\" + item.InnerText.Trim() + ".png");
                             }
                             catch (Exception)
                             {
-                                ((PictureBox)item2).Image = Image.FromFile(@"C:\Railo\Images\noImage.jpg");
+                                ((PictureBox)item2).Image = Image.FromFile(@"C:\C#\RailoNailo\Images\" + item.InnerText.Trim() + ".png");
                             }
+                            
                             ((PictureBox)item2).Click += FrmJiHyea_Click;
                             pNum++;
                             break;

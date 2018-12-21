@@ -42,7 +42,9 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.lblPage = new System.Windows.Forms.Label();
-            this.tbxResult = new System.Windows.Forms.TextBox();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.panelMove = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbxAreas
@@ -65,6 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
@@ -74,7 +77,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(325, 31);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(462, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 4;
@@ -83,7 +87,7 @@
             // cbxCategory1
             // 
             this.cbxCategory1.FormattingEnabled = true;
-            this.cbxCategory1.Location = new System.Drawing.Point(327, 57);
+            this.cbxCategory1.Location = new System.Drawing.Point(464, 57);
             this.cbxCategory1.Name = "cbxCategory1";
             this.cbxCategory1.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory1.TabIndex = 5;
@@ -92,7 +96,7 @@
             // cbxCategory2
             // 
             this.cbxCategory2.FormattingEnabled = true;
-            this.cbxCategory2.Location = new System.Drawing.Point(454, 57);
+            this.cbxCategory2.Location = new System.Drawing.Point(591, 57);
             this.cbxCategory2.Name = "cbxCategory2";
             this.cbxCategory2.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory2.TabIndex = 6;
@@ -101,26 +105,29 @@
             // cbxCategory3
             // 
             this.cbxCategory3.FormattingEnabled = true;
-            this.cbxCategory3.Location = new System.Drawing.Point(581, 57);
+            this.cbxCategory3.Location = new System.Drawing.Point(718, 57);
             this.cbxCategory3.Name = "cbxCategory3";
             this.cbxCategory3.Size = new System.Drawing.Size(121, 20);
             this.cbxCategory3.TabIndex = 7;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(742, 55);
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(879, 55);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "검색";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tourListView
             // 
-            this.tourListView.Location = new System.Drawing.Point(12, 83);
+            this.tourListView.Location = new System.Drawing.Point(12, 116);
             this.tourListView.Name = "tourListView";
-            this.tourListView.Size = new System.Drawing.Size(642, 464);
+            this.tourListView.Size = new System.Drawing.Size(943, 431);
             this.tourListView.TabIndex = 9;
             this.tourListView.UseCompatibleStateImageBehavior = false;
             this.tourListView.Click += new System.EventHandler(this.tourListView_Click);
@@ -133,46 +140,83 @@
             // 
             // btnPrev
             // 
-            this.btnPrev.Location = new System.Drawing.Point(91, 553);
+            this.btnPrev.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrev.FlatAppearance.BorderSize = 0;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.ForeColor = System.Drawing.Color.Black;
+            this.btnPrev.Location = new System.Drawing.Point(254, 557);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 11;
             this.btnPrev.Text = "이전";
-            this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.UseVisualStyleBackColor = false;
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(444, 553);
+            this.btnNext.BackColor = System.Drawing.Color.Transparent;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.Location = new System.Drawing.Point(607, 557);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 12;
             this.btnNext.Text = "다음";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // lblPage
             // 
             this.lblPage.AutoSize = true;
-            this.lblPage.Location = new System.Drawing.Point(305, 564);
+            this.lblPage.Location = new System.Drawing.Point(468, 562);
             this.lblPage.Name = "lblPage";
             this.lblPage.Size = new System.Drawing.Size(0, 12);
             this.lblPage.TabIndex = 13;
             // 
-            // tbxResult
+            // lblInfo
             // 
-            this.tbxResult.Location = new System.Drawing.Point(660, 83);
-            this.tbxResult.Multiline = true;
-            this.tbxResult.Name = "tbxResult";
-            this.tbxResult.Size = new System.Drawing.Size(277, 464);
-            this.tbxResult.TabIndex = 14;
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblInfo.Location = new System.Drawing.Point(713, 101);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(241, 12);
+            this.lblInfo.TabIndex = 14;
+            this.lblInfo.Text = "세부사항을 보시려면 그림을 클릭해 주세요!";
+            // 
+            // panelMove
+            // 
+            this.panelMove.BackColor = System.Drawing.Color.Transparent;
+            this.panelMove.Location = new System.Drawing.Point(1, 0);
+            this.panelMove.Name = "panelMove";
+            this.panelMove.Size = new System.Drawing.Size(945, 19);
+            this.panelMove.TabIndex = 31;
+            this.panelMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseDown);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(952, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(17, 15);
+            this.button5.TabIndex = 30;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // FormTourInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 592);
-            this.Controls.Add(this.tbxResult);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(971, 592);
+            this.Controls.Add(this.panelMove);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
@@ -185,6 +229,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxAreaDetails);
             this.Controls.Add(this.cbxAreas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTourInformation";
             this.Text = "FormTourInformation";
             this.Load += new System.EventHandler(this.FormTourInformation_Load);
@@ -207,6 +252,8 @@
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblPage;
-        private System.Windows.Forms.TextBox tbxResult;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Panel panelMove;
+        private System.Windows.Forms.Button button5;
     }
 }

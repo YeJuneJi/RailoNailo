@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnJihyea = new System.Windows.Forms.Button();
-            this.btnPlan = new System.Windows.Forms.Button();
-            this.btnTourInfo = new System.Windows.Forms.Button();
             this.btnHoneyTip = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
@@ -47,44 +44,12 @@
             this.panelMove = new System.Windows.Forms.Panel();
             this.btnTry = new System.Windows.Forms.Button();
             this.lbl4 = new System.Windows.Forms.Label();
-            this.btnTra = new System.Windows.Forms.Button();
-            this.btnPlanView = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnJihyea
-            // 
-            this.btnJihyea.Location = new System.Drawing.Point(212, 142);
-            this.btnJihyea.Name = "btnJihyea";
-            this.btnJihyea.Size = new System.Drawing.Size(124, 23);
-            this.btnJihyea.TabIndex = 0;
-            this.btnJihyea.Text = "button1";
-            this.btnJihyea.UseVisualStyleBackColor = true;
-            this.btnJihyea.Click += new System.EventHandler(this.btnJihyea_Click);
-            // 
-            // btnPlan
-            // 
-            this.btnPlan.Location = new System.Drawing.Point(500, 143);
-            this.btnPlan.Name = "btnPlan";
-            this.btnPlan.Size = new System.Drawing.Size(142, 22);
-            this.btnPlan.TabIndex = 1;
-            this.btnPlan.Text = "button2";
-            this.btnPlan.UseVisualStyleBackColor = true;
-            this.btnPlan.Click += new System.EventHandler(this.btnPlan_Click);
-            // 
-            // btnTourInfo
-            // 
-            this.btnTourInfo.Location = new System.Drawing.Point(45, 143);
-            this.btnTourInfo.Name = "btnTourInfo";
-            this.btnTourInfo.Size = new System.Drawing.Size(126, 38);
-            this.btnTourInfo.TabIndex = 0;
-            this.btnTourInfo.Text = "전국관광정보";
-            this.btnTourInfo.UseVisualStyleBackColor = true;
-            this.btnTourInfo.Click += new System.EventHandler(this.btnTourInfo_Click);
             // 
             // btnHoneyTip
             // 
@@ -144,7 +109,6 @@
             this.panel1.Controls.Add(this.btn4);
             this.panel1.Controls.Add(this.btn2);
             this.panel1.Controls.Add(this.btnHoneyTip);
-            this.panel1.Controls.Add(this.btnPlanView);
             this.panel1.Location = new System.Drawing.Point(-7, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 37);
@@ -189,7 +153,6 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::RailoNailo.Properties.Resources.시간표2;
             this.pictureBox4.Location = new System.Drawing.Point(470, 58);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 33);
@@ -200,7 +163,6 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::RailoNailo.Properties.Resources.노선도2;
             this.pictureBox3.Location = new System.Drawing.Point(352, 58);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 33);
@@ -211,7 +173,6 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::RailoNailo.Properties.Resources.티켓3;
             this.pictureBox2.Location = new System.Drawing.Point(212, 58);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 33);
@@ -222,7 +183,6 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::RailoNailo.Properties.Resources.close2;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -236,7 +196,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::RailoNailo.Properties.Resources._2243;
             this.pictureBox1.Location = new System.Drawing.Point(17, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 75);
@@ -256,8 +215,7 @@
             // btnTry
             // 
             this.btnTry.BackColor = System.Drawing.Color.Transparent;
-            this.btnTry.BackgroundImage = global::RailoNailo.Properties.Resources.Try1;
-            this.btnTry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTry.FlatAppearance.BorderSize = 0;
             this.btnTry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTry.Location = new System.Drawing.Point(873, 3);
@@ -279,32 +237,11 @@
             this.lbl4.Text = "내 여행계획보기";
             this.lbl4.Click += new System.EventHandler(this.lbl4_Click);
             // 
-            // btnTra
-            // 
-            this.btnTra.Location = new System.Drawing.Point(714, 383);
-            this.btnTra.Name = "btnTra";
-            this.btnTra.Size = new System.Drawing.Size(142, 91);
-            this.btnTra.TabIndex = 2;
-            this.btnTra.Text = "button3";
-            this.btnTra.UseVisualStyleBackColor = true;
-            this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
-            // 
-            // btnPlanView
-            // 
-            this.btnPlanView.Location = new System.Drawing.Point(778, -6);
-            this.btnPlanView.Name = "btnPlanView";
-            this.btnPlanView.Size = new System.Drawing.Size(142, 56);
-            this.btnPlanView.TabIndex = 3;
-            this.btnPlanView.Text = "나의 여행 정보 보기";
-            this.btnPlanView.UseVisualStyleBackColor = true;
-            this.btnPlanView.Click += new System.EventHandler(this.btnPlanView_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(166)))), ((int)(((byte)(209)))));
-            this.BackgroundImage = global::RailoNailo.Properties.Resources._13;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 583);
             this.Controls.Add(this.lbl4);
@@ -318,10 +255,6 @@
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnTra);
-            this.Controls.Add(this.btnPlan);
-            this.Controls.Add(this.btnJihyea);
-            this.Controls.Add(this.btnTourInfo);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -339,10 +272,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnJihyea;
-        private System.Windows.Forms.Button btnPlan;
-        private System.Windows.Forms.Button btnTourInfo;
-
         private System.Windows.Forms.Button btnHoneyTip;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -359,9 +288,6 @@
         private System.Windows.Forms.Panel panelMove;
         private System.Windows.Forms.Button btnTry;
         private System.Windows.Forms.Label lbl4;
-
-        private System.Windows.Forms.Button btnTra;
-        private System.Windows.Forms.Button btnPlanView;
 
     }
 }

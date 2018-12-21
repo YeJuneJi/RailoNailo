@@ -58,6 +58,10 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button5 = new System.Windows.Forms.Button();
             this.panelMove = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnImg1
@@ -418,7 +422,6 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::RailoNailo.Properties.Resources.close2;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -438,6 +441,46 @@
             this.panelMove.TabIndex = 29;
             this.panelMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseDown);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(1263, 245);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(111, 19);
+            this.panel1.TabIndex = 31;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(1380, 247);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(17, 15);
+            this.button6.TabIndex = 30;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(716, 105);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(60, 19);
+            this.panel2.TabIndex = 31;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(782, 107);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(17, 15);
+            this.button7.TabIndex = 30;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
             // HoneyTip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -445,6 +488,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(803, 637);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.panelMove);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.radioButton1);
@@ -515,5 +562,9 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panelMove;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button7;
     }
 }

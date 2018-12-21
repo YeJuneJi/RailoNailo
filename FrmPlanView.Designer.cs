@@ -46,6 +46,8 @@
             this.imgCross2 = new System.Windows.Forms.PictureBox();
             this.imgCross1 = new System.Windows.Forms.PictureBox();
             this.first = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.sixth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fifth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourth)).BeginInit();
@@ -168,7 +170,6 @@
             // 
             // imgCross5
             // 
-            this.imgCross5.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_left_227602;
             this.imgCross5.Location = new System.Drawing.Point(177, 348);
             this.imgCross5.Name = "imgCross5";
             this.imgCross5.Size = new System.Drawing.Size(34, 43);
@@ -178,7 +179,6 @@
             // 
             // imgCross4
             // 
-            this.imgCross4.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_left_227602;
             this.imgCross4.Location = new System.Drawing.Point(370, 348);
             this.imgCross4.Name = "imgCross4";
             this.imgCross4.Size = new System.Drawing.Size(34, 43);
@@ -188,7 +188,6 @@
             // 
             // imgCross3
             // 
-            this.imgCross3.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_down_227604;
             this.imgCross3.Location = new System.Drawing.Point(466, 254);
             this.imgCross3.Name = "imgCross3";
             this.imgCross3.Size = new System.Drawing.Size(34, 41);
@@ -198,7 +197,6 @@
             // 
             // imgCross2
             // 
-            this.imgCross2.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_right_227601;
             this.imgCross2.Location = new System.Drawing.Point(369, 146);
             this.imgCross2.Name = "imgCross2";
             this.imgCross2.Size = new System.Drawing.Size(34, 43);
@@ -208,7 +206,6 @@
             // 
             // imgCross1
             // 
-            this.imgCross1.Image = global::RailoNailo.Properties.Resources.iconfinder_arrow_right_227601;
             this.imgCross1.Location = new System.Drawing.Point(177, 146);
             this.imgCross1.Name = "imgCross1";
             this.imgCross1.Size = new System.Drawing.Size(34, 43);
@@ -226,11 +223,35 @@
             this.first.TabIndex = 23;
             this.first.TabStop = false;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(564, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(17, 15);
+            this.button7.TabIndex = 41;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(1, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(555, 19);
+            this.panel2.TabIndex = 42;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
             // FrmPlanView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 465);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.firstLbl);
             this.Controls.Add(this.secondLbl);
             this.Controls.Add(this.thirdLbl);
@@ -249,6 +270,7 @@
             this.Controls.Add(this.imgCross2);
             this.Controls.Add(this.imgCross1);
             this.Controls.Add(this.first);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPlanView";
             this.Text = "FrmPlanView";
             this.Load += new System.EventHandler(this.FrmPlanView_Load);
@@ -288,5 +310,7 @@
         private System.Windows.Forms.PictureBox imgCross2;
         private System.Windows.Forms.PictureBox imgCross1;
         private System.Windows.Forms.PictureBox first;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel panel2;
     }
 }
