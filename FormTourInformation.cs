@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -83,7 +84,12 @@ namespace RailoNailo
             lblInfo.Visible = false;
             DisplayComboBx("areaCode", areaList, cbxAreas);
             DisplayComboBx("categoryCode", categoryList, cbxCategory1);
-
+            PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            Font font = new Font(privateFonts.Families[0], 14f);
+   
+            lblArea.Font = lblCategory.Font = lblInfo.Font = font;
+            lblName.Font = new Font(privateFonts.Families[0], 24f);
         }
 
         private void DisplayComboBx(string operationName, List<JsonCodes> jsonlist, ComboBox cbx)
