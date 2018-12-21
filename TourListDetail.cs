@@ -34,6 +34,7 @@ namespace RailoNailo
         {
             InitializeComponent();
         }
+         
 
         public TourListDetail(string contentID) : this()
         {
