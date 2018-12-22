@@ -57,7 +57,7 @@
             this.imgCross1 = new System.Windows.Forms.PictureBox();
             this.first = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancle = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -110,7 +110,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.rdoDay3);
             this.groupBox1.Controls.Add(this.rdoDay7);
             this.groupBox1.Controls.Add(this.rdoDay5);
@@ -140,7 +139,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.dateStart);
@@ -172,7 +170,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.firstLbl);
             this.groupBox3.Controls.Add(this.secondLbl);
             this.groupBox3.Controls.Add(this.thirdLbl);
@@ -258,7 +255,7 @@
             // 
             // sixth
             // 
-            this.sixth.BackColor = System.Drawing.Color.White;
+            this.sixth.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.sixth.Location = new System.Drawing.Point(13, 287);
             this.sixth.Name = "sixth";
             this.sixth.Size = new System.Drawing.Size(147, 148);
@@ -268,7 +265,7 @@
             // 
             // fifth
             // 
-            this.fifth.BackColor = System.Drawing.Color.White;
+            this.fifth.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.fifth.Location = new System.Drawing.Point(206, 287);
             this.fifth.Name = "fifth";
             this.fifth.Size = new System.Drawing.Size(147, 148);
@@ -278,7 +275,7 @@
             // 
             // fourth
             // 
-            this.fourth.BackColor = System.Drawing.Color.White;
+            this.fourth.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.fourth.Location = new System.Drawing.Point(398, 287);
             this.fourth.Name = "fourth";
             this.fourth.Size = new System.Drawing.Size(147, 148);
@@ -288,7 +285,7 @@
             // 
             // third
             // 
-            this.third.BackColor = System.Drawing.Color.White;
+            this.third.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.third.Location = new System.Drawing.Point(398, 77);
             this.third.Name = "third";
             this.third.Size = new System.Drawing.Size(147, 148);
@@ -298,7 +295,7 @@
             // 
             // second
             // 
-            this.second.BackColor = System.Drawing.Color.White;
+            this.second.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.second.Location = new System.Drawing.Point(206, 77);
             this.second.Name = "second";
             this.second.Size = new System.Drawing.Size(147, 148);
@@ -353,7 +350,7 @@
             // 
             // first
             // 
-            this.first.BackColor = System.Drawing.Color.White;
+            this.first.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.first.Location = new System.Drawing.Point(15, 77);
             this.first.Name = "first";
             this.first.Size = new System.Drawing.Size(147, 148);
@@ -371,15 +368,14 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnCancle
+            // button2
             // 
-            this.btnCancle.Location = new System.Drawing.Point(166, 729);
-            this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(94, 33);
-            this.btnCancle.TabIndex = 9;
-            this.btnCancle.Text = "취소";
-            this.btnCancle.UseVisualStyleBackColor = true;
-            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
+            this.button2.Location = new System.Drawing.Point(166, 729);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 33);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -411,7 +407,7 @@
             this.ClientSize = new System.Drawing.Size(586, 784);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.btnCancle);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -472,7 +468,7 @@
         private System.Windows.Forms.Label fifthLbl;
         private System.Windows.Forms.Label sixthLbl;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCancle;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button7;
     }

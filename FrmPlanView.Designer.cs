@@ -48,8 +48,6 @@
             this.first = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sixth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fifth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fourth)).BeginInit();
@@ -61,13 +59,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgCross2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCross1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.first)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstLbl
             // 
             this.firstLbl.AutoSize = true;
-            this.firstLbl.Location = new System.Drawing.Point(79, 254);
+            this.firstLbl.Location = new System.Drawing.Point(79, 237);
             this.firstLbl.Name = "firstLbl";
             this.firstLbl.Size = new System.Drawing.Size(0, 12);
             this.firstLbl.TabIndex = 40;
@@ -75,7 +72,7 @@
             // secondLbl
             // 
             this.secondLbl.AutoSize = true;
-            this.secondLbl.Location = new System.Drawing.Point(272, 254);
+            this.secondLbl.Location = new System.Drawing.Point(272, 237);
             this.secondLbl.Name = "secondLbl";
             this.secondLbl.Size = new System.Drawing.Size(0, 12);
             this.secondLbl.TabIndex = 39;
@@ -83,7 +80,7 @@
             // thirdLbl
             // 
             this.thirdLbl.AutoSize = true;
-            this.thirdLbl.Location = new System.Drawing.Point(464, 254);
+            this.thirdLbl.Location = new System.Drawing.Point(464, 237);
             this.thirdLbl.Name = "thirdLbl";
             this.thirdLbl.Size = new System.Drawing.Size(0, 12);
             this.thirdLbl.TabIndex = 38;
@@ -91,7 +88,7 @@
             // fourthLbl
             // 
             this.fourthLbl.AutoSize = true;
-            this.fourthLbl.Location = new System.Drawing.Point(464, 464);
+            this.fourthLbl.Location = new System.Drawing.Point(464, 447);
             this.fourthLbl.Name = "fourthLbl";
             this.fourthLbl.Size = new System.Drawing.Size(0, 12);
             this.fourthLbl.TabIndex = 37;
@@ -99,7 +96,7 @@
             // fifthLbl
             // 
             this.fifthLbl.AutoSize = true;
-            this.fifthLbl.Location = new System.Drawing.Point(261, 464);
+            this.fifthLbl.Location = new System.Drawing.Point(261, 447);
             this.fifthLbl.Name = "fifthLbl";
             this.fifthLbl.Size = new System.Drawing.Size(0, 12);
             this.fifthLbl.TabIndex = 36;
@@ -107,7 +104,7 @@
             // sixthLbl
             // 
             this.sixthLbl.AutoSize = true;
-            this.sixthLbl.Location = new System.Drawing.Point(79, 464);
+            this.sixthLbl.Location = new System.Drawing.Point(79, 447);
             this.sixthLbl.Name = "sixthLbl";
             this.sixthLbl.Size = new System.Drawing.Size(0, 12);
             this.sixthLbl.TabIndex = 35;
@@ -116,15 +113,15 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("양재튼튼체B", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(22, 79);
+            this.label3.Location = new System.Drawing.Point(22, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 19);
             this.label3.TabIndex = 34;
             // 
             // sixth
             // 
-            this.sixth.BackColor = System.Drawing.Color.Transparent;
-            this.sixth.Location = new System.Drawing.Point(24, 313);
+            this.sixth.BackColor = System.Drawing.SystemColors.Control;
+            this.sixth.Location = new System.Drawing.Point(24, 296);
             this.sixth.Name = "sixth";
             this.sixth.Size = new System.Drawing.Size(147, 148);
             this.sixth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,8 +130,8 @@
             // 
             // fifth
             // 
-            this.fifth.BackColor = System.Drawing.Color.Transparent;
-            this.fifth.Location = new System.Drawing.Point(217, 313);
+            this.fifth.BackColor = System.Drawing.SystemColors.Control;
+            this.fifth.Location = new System.Drawing.Point(217, 296);
             this.fifth.Name = "fifth";
             this.fifth.Size = new System.Drawing.Size(147, 148);
             this.fifth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,8 +140,8 @@
             // 
             // fourth
             // 
-            this.fourth.BackColor = System.Drawing.Color.Transparent;
-            this.fourth.Location = new System.Drawing.Point(409, 313);
+            this.fourth.BackColor = System.Drawing.SystemColors.Control;
+            this.fourth.Location = new System.Drawing.Point(409, 296);
             this.fourth.Name = "fourth";
             this.fourth.Size = new System.Drawing.Size(147, 148);
             this.fourth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,8 +150,8 @@
             // 
             // third
             // 
-            this.third.BackColor = System.Drawing.Color.Transparent;
-            this.third.Location = new System.Drawing.Point(409, 103);
+            this.third.BackColor = System.Drawing.SystemColors.Control;
+            this.third.Location = new System.Drawing.Point(409, 86);
             this.third.Name = "third";
             this.third.Size = new System.Drawing.Size(147, 148);
             this.third.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,8 +160,8 @@
             // 
             // second
             // 
-            this.second.BackColor = System.Drawing.Color.Transparent;
-            this.second.Location = new System.Drawing.Point(217, 103);
+            this.second.BackColor = System.Drawing.SystemColors.Control;
+            this.second.Location = new System.Drawing.Point(217, 86);
             this.second.Name = "second";
             this.second.Size = new System.Drawing.Size(147, 148);
             this.second.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,8 +170,7 @@
             // 
             // imgCross5
             // 
-            this.imgCross5.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross5.Location = new System.Drawing.Point(177, 365);
+            this.imgCross5.Location = new System.Drawing.Point(177, 348);
             this.imgCross5.Name = "imgCross5";
             this.imgCross5.Size = new System.Drawing.Size(34, 43);
             this.imgCross5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -183,8 +179,7 @@
             // 
             // imgCross4
             // 
-            this.imgCross4.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross4.Location = new System.Drawing.Point(370, 365);
+            this.imgCross4.Location = new System.Drawing.Point(370, 348);
             this.imgCross4.Name = "imgCross4";
             this.imgCross4.Size = new System.Drawing.Size(34, 43);
             this.imgCross4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,8 +188,7 @@
             // 
             // imgCross3
             // 
-            this.imgCross3.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross3.Location = new System.Drawing.Point(466, 271);
+            this.imgCross3.Location = new System.Drawing.Point(466, 254);
             this.imgCross3.Name = "imgCross3";
             this.imgCross3.Size = new System.Drawing.Size(34, 41);
             this.imgCross3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,8 +197,7 @@
             // 
             // imgCross2
             // 
-            this.imgCross2.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross2.Location = new System.Drawing.Point(369, 163);
+            this.imgCross2.Location = new System.Drawing.Point(369, 146);
             this.imgCross2.Name = "imgCross2";
             this.imgCross2.Size = new System.Drawing.Size(34, 43);
             this.imgCross2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,8 +206,7 @@
             // 
             // imgCross1
             // 
-            this.imgCross1.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross1.Location = new System.Drawing.Point(177, 163);
+            this.imgCross1.Location = new System.Drawing.Point(177, 146);
             this.imgCross1.Name = "imgCross1";
             this.imgCross1.Size = new System.Drawing.Size(34, 43);
             this.imgCross1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -223,8 +215,8 @@
             // 
             // first
             // 
-            this.first.BackColor = System.Drawing.Color.Transparent;
-            this.first.Location = new System.Drawing.Point(26, 103);
+            this.first.BackColor = System.Drawing.SystemColors.Control;
+            this.first.Location = new System.Drawing.Point(26, 86);
             this.first.Name = "first";
             this.first.Size = new System.Drawing.Size(147, 148);
             this.first.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -253,34 +245,11 @@
             this.panel2.TabIndex = 42;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-13, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(603, 41);
-            this.panel1.TabIndex = 43;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굵은안상수체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(257, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "여행 계획표";
-            // 
             // FrmPlanView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(587, 486);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(585, 465);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.firstLbl);
@@ -316,8 +285,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgCross2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCross1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.first)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,7 +312,5 @@
         private System.Windows.Forms.PictureBox first;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
     }
 }

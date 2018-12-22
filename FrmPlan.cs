@@ -29,13 +29,6 @@ namespace RailoNailo
         public FrmPlan()
         {
             InitializeComponent();
-            foreach (Control item in groupBox3.Controls)
-            {
-                if (item.GetType().ToString()=="System.Windows.Forms.PictureBox" && !(item.Name.Contains("Cross")))
-                {
-                    ((PictureBox)item).ImageLocation = Application.StartupPath + "\\Images\\plus.png";
-                }
-            }
         }
 
         private void dateStart_ValueChanged(object sender, EventArgs e)
@@ -79,12 +72,6 @@ namespace RailoNailo
                     item.Click += PictureBoxClick;
                 }
             }
-            imgCross1.Image = Image.FromFile(Application.StartupPath + "\\Images\\right.png");
-            imgCross2.Image = Image.FromFile(Application.StartupPath + "\\Images\\right.png");
-            imgCross3.Image = Image.FromFile(Application.StartupPath + "\\Images\\down.png");
-            imgCross4.Image = Image.FromFile(Application.StartupPath + "\\Images\\left.png");
-            imgCross5.Image = Image.FromFile(Application.StartupPath + "\\Images\\left.png");
-            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\planBack.jpg");
         }
 
         private void PictureBoxClick(object sender, EventArgs e)
@@ -98,12 +85,12 @@ namespace RailoNailo
                 ((PictureBox)sender).SizeMode = PictureBoxSizeMode.StretchImage;
                 try
                 {
-                    ((PictureBox)sender).Image = Image.FromFile(Application.StartupPath+"\\Images\\" + locString + ".png");
+                    ((PictureBox)sender).Image = Image.FromFile(@"C:\Users\gd12\source\repos\railro.cs\railro.cs\Images\" + locString + ".png");
                     ((PictureBox)sender).Image.Tag = LocString;
                 }
                 catch (Exception)
                 {
-                    ((PictureBox)sender).Image = Image.FromFile(Application.StartupPath + "\\Images\\noImage.jpg");
+                    ((PictureBox)sender).Image = Image.FromFile(@"C:\Users\gd12\source\repos\railro.cs\railro.cs\Images\noImage.jpg");
                     ((PictureBox)sender).Image.Tag = LocString;
                 }
                 foreach (Control item in groupBox3.Controls)
@@ -121,62 +108,53 @@ namespace RailoNailo
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(label3.Text))
+            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
+            string[] planArr = new string[6];
+            int count = 0;
+            foreach (Control item in groupBox3.Controls)
             {
-                MessageBox.Show("날짜를 선택하셔야 됩니다.");
+                if (item.GetType().ToString() == "System.Windows.Forms.Label"&&item.Name!="label3")
+                {
+                    if (!string.IsNullOrEmpty(item.Text))
+                    {
+                        planArr[count] = item.Text;
+                        count++;
+                    }
+                }
             }
-            else
+            for (int i = 0; i < planArr.Length; i++)
             {
-                string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
-                string[] planArr = new string[6];
-                int count = 0;
-                foreach (Control item in groupBox3.Controls)
+                if (planArr[i]==null)
                 {
-                    if (item.GetType().ToString() == "System.Windows.Forms.Label" && item.Name != "label3")
-                    {
-                        if (!string.IsNullOrEmpty(item.Text))
-                        {
-                            planArr[count] = item.Text;
-                            count++;
-                        }
-                    }
+                    planArr[i] = "NULL";
                 }
-                for (int i = 0; i < planArr.Length; i++)
-                {
-                    if (planArr[i] == null)
-                    {
-                        planArr[i] = "NULL";
-                    }
-                }
-                using (SqlConnection con = new SqlConnection(conStr))
-                {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "InsertPlan";
-                    cmd.Parameters.AddWithValue("loc1", planArr[0]);
-                    cmd.Parameters.AddWithValue("loc2", planArr[1]);
-                    cmd.Parameters.AddWithValue("loc3", planArr[2]);
-                    cmd.Parameters.AddWithValue("loc4", planArr[3]);
-                    cmd.Parameters.AddWithValue("loc5", planArr[4]);
-                    cmd.Parameters.AddWithValue("loc6", planArr[5]);
-                    cmd.Parameters.AddWithValue("date", label3.Text);
+            }
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "InsertPlan";
+                cmd.Parameters.AddWithValue("loc1", planArr[0]);
+                cmd.Parameters.AddWithValue("loc2", planArr[1]);
+                cmd.Parameters.AddWithValue("loc3", planArr[2]);
+                cmd.Parameters.AddWithValue("loc4", planArr[3]);
+                cmd.Parameters.AddWithValue("loc5", planArr[4]);
+                cmd.Parameters.AddWithValue("loc6", planArr[5]);
+                cmd.Parameters.AddWithValue("date", label3.Text);
 
-                    int result = cmd.ExecuteNonQuery();
-                    if (result == 1)
-                    {
-                        MessageBox.Show("저장 성공!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("저장 실패");
-                    }
-                    con.Close();
+                int result = cmd.ExecuteNonQuery();
+                if (result==1)
+                {
+                    MessageBox.Show("저장 성공!");
                 }
-                this.Close();
+                else
+                {
+                    MessageBox.Show("저장 실패");
+                }
+                con.Close();
             }
-            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -206,11 +184,6 @@ namespace RailoNailo
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnCancle_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

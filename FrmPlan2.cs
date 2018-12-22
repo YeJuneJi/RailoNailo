@@ -46,11 +46,10 @@ namespace RailoNailo
         }
         private void FrmPlan2_Load(object sender, EventArgs e)
         {
-            this.BackgroundImage = Image.FromFile(Application.StartupPath+"\\Images\\happy.jpg");
-
+            button5.BackgroundImage = Properties.Resources.close.ToImage();
             locList = new List<Location>();
             tourListView.View = View.LargeIcon;
-            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
+            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
             locTable = new DataTable();
             locTable.Columns.Add("역 이름");
             
@@ -189,6 +188,8 @@ namespace RailoNailo
         {
             FrmPlan fp = (FrmPlan)Owner;
             fp.LocString = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+            //역 이름
+            MessageBox.Show(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
             this.Close();
         }
 
