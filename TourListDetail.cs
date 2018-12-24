@@ -84,7 +84,6 @@ namespace RailoNailo
                     };
                     //detailImagesList.Add(detailImage);
                     AddImageList(detailImage);
-
                 }
 
             }
