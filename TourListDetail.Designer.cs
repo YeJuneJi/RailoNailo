@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblAddr = new System.Windows.Forms.Label();
             this.lblZipcode = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbxOverView = new System.Windows.Forms.TextBox();
+            this.lblAddr = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlusImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusImageTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -59,21 +59,12 @@
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Name";
             // 
-            // lblAddr
-            // 
-            this.lblAddr.AutoSize = true;
-            this.lblAddr.BackColor = System.Drawing.Color.Transparent;
-            this.lblAddr.Location = new System.Drawing.Point(630, 108);
-            this.lblAddr.Name = "lblAddr";
-            this.lblAddr.Size = new System.Drawing.Size(52, 12);
-            this.lblAddr.TabIndex = 2;
-            this.lblAddr.Text = "Address";
-            // 
             // lblZipcode
             // 
             this.lblZipcode.AutoSize = true;
             this.lblZipcode.BackColor = System.Drawing.Color.Transparent;
-            this.lblZipcode.Location = new System.Drawing.Point(654, 140);
+            this.lblZipcode.Location = new System.Drawing.Point(657, 156);
+            this.lblZipcode.MaximumSize = new System.Drawing.Size(240, 0);
             this.lblZipcode.Name = "lblZipcode";
             this.lblZipcode.Size = new System.Drawing.Size(51, 12);
             this.lblZipcode.TabIndex = 4;
@@ -83,7 +74,8 @@
             // 
             this.lblTel.AutoSize = true;
             this.lblTel.BackColor = System.Drawing.Color.Transparent;
-            this.lblTel.Location = new System.Drawing.Point(654, 172);
+            this.lblTel.Location = new System.Drawing.Point(657, 204);
+            this.lblTel.MaximumSize = new System.Drawing.Size(240, 0);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(23, 12);
             this.lblTel.TabIndex = 6;
@@ -93,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(587, 108);
+            this.label1.Location = new System.Drawing.Point(590, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 12);
             this.label1.TabIndex = 9;
@@ -103,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(587, 140);
+            this.label2.Location = new System.Drawing.Point(590, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 12);
             this.label2.TabIndex = 8;
@@ -113,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(587, 172);
+            this.label3.Location = new System.Drawing.Point(590, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 12);
             this.label3.TabIndex = 7;
@@ -123,7 +115,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(587, 204);
+            this.label4.Location = new System.Drawing.Point(590, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 12);
             this.label4.TabIndex = 11;
@@ -133,7 +125,8 @@
             // 
             this.linkLblHomePage.AutoSize = true;
             this.linkLblHomePage.BackColor = System.Drawing.Color.Transparent;
-            this.linkLblHomePage.Location = new System.Drawing.Point(654, 204);
+            this.linkLblHomePage.Location = new System.Drawing.Point(657, 252);
+            this.linkLblHomePage.MaximumSize = new System.Drawing.Size(240, 0);
             this.linkLblHomePage.Name = "linkLblHomePage";
             this.linkLblHomePage.Size = new System.Drawing.Size(67, 12);
             this.linkLblHomePage.TabIndex = 12;
@@ -199,6 +192,17 @@
             this.tbxOverView.Size = new System.Drawing.Size(258, 268);
             this.tbxOverView.TabIndex = 45;
             // 
+            // lblAddr
+            // 
+            this.lblAddr.AutoSize = true;
+            this.lblAddr.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddr.Location = new System.Drawing.Point(633, 108);
+            this.lblAddr.MaximumSize = new System.Drawing.Size(240, 0);
+            this.lblAddr.Name = "lblAddr";
+            this.lblAddr.Size = new System.Drawing.Size(52, 12);
+            this.lblAddr.TabIndex = 2;
+            this.lblAddr.Text = "Address";
+            // 
             // TourListDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -233,7 +237,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblAddr;
         private System.Windows.Forms.Label lblZipcode;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label label1;
@@ -247,5 +250,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbxOverView;
+        private System.Windows.Forms.Label lblAddr;
     }
 }

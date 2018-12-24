@@ -24,6 +24,7 @@ namespace RailoNailo
         public readonly int WM_NLBUTTONDOWN = 0xA1;
         public readonly int HT_CAPTION = 0x2;
 
+        PrivateFontCollection privateFonts;
         private string contentID;
         private DetailCommon detailCommon;
         private List<DetailCommon> detailCommonList = new List<DetailCommon>();
@@ -34,7 +35,7 @@ namespace RailoNailo
         {
             InitializeComponent();
         }
-         
+      
 
         public TourListDetail(string contentID) : this()
         {
@@ -43,7 +44,7 @@ namespace RailoNailo
         }
         private void TourListDetail_Load(object sender, EventArgs e)
         {
-            PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts = new PrivateFontCollection();
             privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
             privateFonts.AddFontFile(Application.StartupPath + "\\Font\\Hanna.ttf");
             lblName.Font = new Font(privateFonts.Families[0], 24f, FontStyle.Bold);
