@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -16,6 +17,7 @@ namespace RailoNailo
 {
     public partial class FrmJiHyea : Form
     {
+        PrivateFontCollection privateFonts;
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
         [DllImport("user32.dll")]
@@ -124,6 +126,19 @@ namespace RailoNailo
                     locList.Add(loc);
                 }
                 
+            }
+            privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            Font font = new Font(privateFonts.Families[0], 10f);
+
+
+
+            foreach (Control item in Controls)
+            {
+                if (item.GetType().ToString() == "System.Windows.Forms.Label")
+                {
+                    item.Font = font;
+                }
             }
         }
 

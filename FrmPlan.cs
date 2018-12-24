@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -85,6 +86,7 @@ namespace RailoNailo
             imgCross4.Image = Image.FromFile(Application.StartupPath + "\\Images\\left.png");
             imgCross5.Image = Image.FromFile(Application.StartupPath + "\\Images\\left.png");
             this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\planBack.jpg");
+            
         }
 
         private void PictureBoxClick(object sender, EventArgs e)

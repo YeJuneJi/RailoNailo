@@ -114,6 +114,7 @@
             // lblPage
             // 
             this.lblPage.AutoSize = true;
+            this.lblPage.BackColor = System.Drawing.Color.Transparent;
             this.lblPage.Location = new System.Drawing.Point(864, 561);
             this.lblPage.Name = "lblPage";
             this.lblPage.Size = new System.Drawing.Size(0, 12);
