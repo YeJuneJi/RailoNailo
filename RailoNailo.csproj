@@ -204,21 +204,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="honeyTipImage\1.PNG" />
-    <Content Include="honeyTipImage\2.png" />
-    <Content Include="honeyTipImage\빠른좌.png" />
-    <Content Include="honeyTipImage\빠른우.png" />
-    <Content Include="honeyTipImage\좌.png" />
-    <Content Include="honeyTipImage\우.png" />
-    <Content Include="honeyTipImage\Main.PNG" />
-    <Content Include="honeyTipImage\main2.PNG" />
-    <Content Include="honeyTipImage\Main22.png" />
-    <Content Include="honeyTipImage\main3.PNG" />
-    <Content Include="honeyTipImage\main4.PNG" />
     <Content Include="Images\1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\224.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\3.jpg">
@@ -239,6 +231,15 @@
     <EmbeddedResource Include="Images\Map.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Main22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\main4.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\noImage.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -411,7 +412,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Railo_DB.mdf</DependentUpon>
     </Content>
-    <Content Include="honeyTipImage\캡처.PNG" />
     <Content Include="RandomPhoto\a.png" />
     <Content Include="RandomPhoto\b.png" />
     <Content Include="RandomPhoto\c.png" />
