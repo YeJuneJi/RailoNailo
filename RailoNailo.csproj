@@ -283,10 +283,10 @@
     <EmbeddedResource Include="Images\Retry.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Images\search.ico">
+    <EmbeddedResource Include="Images\prev.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Images\prev.ico">
+    <EmbeddedResource Include="Images\search.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Images\planBack.jpg">

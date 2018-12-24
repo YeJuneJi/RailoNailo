@@ -32,7 +32,6 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddr = new System.Windows.Forms.Label();
             this.lblZipcode = new System.Windows.Forms.Label();
-            this.tbxOverView = new System.Windows.Forms.TextBox();
             this.lblTel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.plusImageTrackBar = new System.Windows.Forms.TrackBar();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbxOverView = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlusImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plusImageTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -78,18 +78,6 @@
             this.lblZipcode.Size = new System.Drawing.Size(51, 12);
             this.lblZipcode.TabIndex = 4;
             this.lblZipcode.Text = "Zipcode";
-            // 
-            // tbxOverView
-            // 
-            this.tbxOverView.BackColor = System.Drawing.Color.White;
-            this.tbxOverView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxOverView.Location = new System.Drawing.Point(12, 108);
-            this.tbxOverView.Multiline = true;
-            this.tbxOverView.Name = "tbxOverView";
-            this.tbxOverView.ReadOnly = true;
-            this.tbxOverView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxOverView.Size = new System.Drawing.Size(273, 236);
-            this.tbxOverView.TabIndex = 5;
             // 
             // lblTel
             // 
@@ -200,6 +188,17 @@
             this.panel2.TabIndex = 44;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // tbxOverView
+            // 
+            this.tbxOverView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxOverView.Location = new System.Drawing.Point(29, 108);
+            this.tbxOverView.Multiline = true;
+            this.tbxOverView.Name = "tbxOverView";
+            this.tbxOverView.ReadOnly = true;
+            this.tbxOverView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxOverView.Size = new System.Drawing.Size(258, 268);
+            this.tbxOverView.TabIndex = 45;
+            // 
             // TourListDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -207,6 +206,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(919, 567);
+            this.Controls.Add(this.tbxOverView);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.plusImageTrackBar);
@@ -217,7 +217,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTel);
-            this.Controls.Add(this.tbxOverView);
             this.Controls.Add(this.lblZipcode);
             this.Controls.Add(this.lblAddr);
             this.Controls.Add(this.lblName);
@@ -236,7 +235,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblAddr;
         private System.Windows.Forms.Label lblZipcode;
-        private System.Windows.Forms.TextBox tbxOverView;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -248,5 +246,6 @@
         private System.Windows.Forms.TrackBar plusImageTrackBar;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox tbxOverView;
     }
 }

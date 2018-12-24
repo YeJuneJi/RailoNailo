@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -33,6 +34,7 @@ namespace RailoNailo
         {
             InitializeComponent();
         }
+         
 
         public TourListDetail(string contentID) : this()
         {
@@ -41,6 +43,12 @@ namespace RailoNailo
         }
         private void TourListDetail_Load(object sender, EventArgs e)
         {
+            PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\Hanna.ttf");
+            lblName.Font = new Font(privateFonts.Families[0], 24f, FontStyle.Bold);
+            lblAddr.Font = lblTel.Font = lblZipcode.Font = label1.Font = label2.Font = label3.Font = label4.Font = new Font(privateFonts.Families[1], 11f, FontStyle.Regular);
+            tbxOverView.Font = new Font(privateFonts.Families[0], 11f, FontStyle.Regular);
             this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\FormDetailBack.jpg");
             button7.BackgroundImage = Properties.Resources.close.ToImage();
             this.Text = "세부정보";
@@ -143,7 +151,6 @@ namespace RailoNailo
                 linkLblHomePage.Enabled = false;
             }
             
-
         }
 
         private void AddImageList(DetailImage detailImage)
