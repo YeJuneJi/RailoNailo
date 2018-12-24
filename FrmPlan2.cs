@@ -237,7 +237,7 @@ namespace RailoNailo
 
         private void tourListView_Click(object sender, EventArgs e)
         {
-            TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
+            TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString(), tourListView.LargeImageList.Images[tourListView.FocusedItem.ImageKey.ToString()]);
             tourDetail.ShowDialog();
         }
 

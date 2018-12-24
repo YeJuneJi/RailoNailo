@@ -26,6 +26,7 @@ namespace RailoNailo
 
         PrivateFontCollection privateFonts;
         private string contentID;
+        private Image img;
         private DetailCommon detailCommon;
         private List<DetailCommon> detailCommonList = new List<DetailCommon>();
         private List<DetailImage> detailImagesList = new List<DetailImage>();
@@ -37,9 +38,10 @@ namespace RailoNailo
         }
       
 
-        public TourListDetail(string contentID) : this()
+        public TourListDetail(string contentID, Image img) : this()
         {
             this.contentID = contentID;
+            this.img = img;
 
         }
         private void TourListDetail_Load(object sender, EventArgs e)
@@ -102,7 +104,8 @@ namespace RailoNailo
                 AddImageList(detailImage);
                 plusImageTrackBar.Visible = false;
             }
-            pbxPlusImg.Image = imgList.Images[0];
+            //pbxPlusImg.Image = imgList.Images[0];
+            pbxPlusImg.Image = img;
             plusImageTrackBar.Maximum = imgList.Images.Count - 1;
 
 
