@@ -271,7 +271,7 @@ namespace RailoNailo
             string requestName5 = string.Empty;
             if (cbxAreas.SelectedIndex == -1 || cbxCategory1.SelectedIndex == -1)
             {
-                MessageBox.Show("항목을 선택해 주세요!. ", "전광정", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("항목을 선택해 주세요!. ", "전국관광정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else if (cbxAreas.SelectedItem.ToString() == "전체" && cbxCategory1.SelectedItem.ToString() == "전체")
@@ -329,7 +329,7 @@ namespace RailoNailo
             }
             catch (Exception)
             {
-                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "여행을 떠나자^ㅡ^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "전국관광정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tourListView.Clear();
                 tourimgList.Images.Clear();
                 cbxAreas.SelectedIndex = cbxCategory1.SelectedIndex = 0;
