@@ -30,6 +30,12 @@ namespace RailoNailo
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            Font font = new Font(privateFonts.Families[0], 12f);
+            Font font16 = new Font(privateFonts.Families[0], 16f);
+            lbl4.Font = lbl3.Font = lbl2.Font = lbl2.Font =lbl1.Font =  font;
+            btn1.Font = btn2.Font = btnHoneyTip.Font = btn4.Font = font16;
             pictureBox1.ImageLocation = Application.StartupPath + "//images//224.png";
             MainImageTry();            
             button1.Image = Properties.Resources.close.ToImage();

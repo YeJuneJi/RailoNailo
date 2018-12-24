@@ -29,6 +29,11 @@ namespace RailoNailo
 
         private void FrmPlanView_Load(object sender, EventArgs e)
         {
+            imgCross1.Image = Image.FromFile(Application.StartupPath + "\\Images\\right.png");
+            imgCross2.Image= Image.FromFile(Application.StartupPath + "\\Images\\right.png");
+            imgCross3.Image= Image.FromFile(Application.StartupPath + "\\Images\\down.png");
+            imgCross4.Image= Image.FromFile(Application.StartupPath + "\\Images\\left.png");
+            imgCross5.Image = Image.FromFile(Application.StartupPath + "\\Images\\left.png");
             //this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\ViewBack.jpg");
             button7.BackgroundImage = Properties.Resources.close.ToImage();
             string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
