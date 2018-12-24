@@ -30,6 +30,7 @@ namespace RailoNailo
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox1.ImageLocation = Application.StartupPath + "//images//224.png";
             MainImageTry();            
             button1.Image = Properties.Resources.close.ToImage();
             btnTry.Image = Properties.Resources.Retry.ToImage();

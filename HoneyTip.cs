@@ -48,7 +48,8 @@ namespace RailoNailo
         string[] a = new string[27]; //제목, 블로그 이름(+9), 링크 (+18)
 
         private void HoneyTip_Load(object sender, EventArgs e) //내일로,내일로 여행후기 구분
-        {            
+        {        
+            
             btnImg1.FlatStyle = FlatStyle.Flat;
             button5.Image = Properties.Resources.close.ToImage();
             
@@ -58,11 +59,13 @@ namespace RailoNailo
             string honeyTipTitle = "";
             if (radioButton1.Checked)
             {
+                this.BackgroundImage = Image.FromFile(Application.StartupPath + "//Images//main4.PNG");
                 honeyTipTitle = HttpUtility.UrlEncode("내일로");
             }
             else
             {
                 honeyTipTitle = HttpUtility.UrlEncode("내일로 여행후기");
+                this.BackgroundImage = Image.FromFile(Application.StartupPath + "//Images//Main22.png");
             }
             blogSearch(honeyTipTitle);
         }
@@ -240,7 +243,7 @@ namespace RailoNailo
                 currPage = 0;
                 temp = 1;
                 HoneyTip_Load(null, null);
-                this.BackgroundImage = Image.FromFile(@"C:\Railo\honeyTipImage\main4.PNG");
+                
             }            
         }
 
@@ -253,7 +256,7 @@ namespace RailoNailo
                 totalPage = 0;
                 currPage = 0;
                 temp = 1;
-                this.BackgroundImage = Image.FromFile(@"C:\Railo\honeyTipImage\Main22.png");
+                
                 HoneyTip_Load(null, null);                
             }
         }
