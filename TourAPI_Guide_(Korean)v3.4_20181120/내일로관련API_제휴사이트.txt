@@ -1,3 +1,7 @@
 http://www.rail-ro.com/kor/main/
 https://www.data.go.kr/
 http://api.visitkorea.or.kr/main.do
+
+³¯¾¾ 
+
+https://openweathermap.org/
