@@ -127,6 +127,7 @@ namespace RailoNailo
 
         private void FindTourInformation(JObject jobj)
         {
+            lblNavigator.Text = "세부사항을 보시려면 클릭해주세요!";
             searchkeywordList.Clear();
             jtoken = jobj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item");
             totalDataCount = Int32.Parse(jobj.SelectToken("response").SelectToken("body").SelectToken("totalCount").ToString());

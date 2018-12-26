@@ -295,6 +295,9 @@
     <Content Include="Images\plus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\RepublicOfKorea.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\right.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

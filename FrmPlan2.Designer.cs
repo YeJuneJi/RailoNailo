@@ -39,6 +39,7 @@
             this.lblPage = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tourListView = new System.Windows.Forms.ListView();
+            this.lblNavigator = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,12 +132,22 @@
             // 
             // tourListView
             // 
-            this.tourListView.Location = new System.Drawing.Point(661, 26);
+            this.tourListView.Location = new System.Drawing.Point(661, 58);
             this.tourListView.Name = "tourListView";
-            this.tourListView.Size = new System.Drawing.Size(426, 524);
+            this.tourListView.Size = new System.Drawing.Size(426, 492);
             this.tourListView.TabIndex = 17;
             this.tourListView.UseCompatibleStateImageBehavior = false;
             this.tourListView.Click += new System.EventHandler(this.tourListView_Click);
+            // 
+            // lblNavigator
+            // 
+            this.lblNavigator.AutoSize = true;
+            this.lblNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.lblNavigator.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblNavigator.Location = new System.Drawing.Point(667, 31);
+            this.lblNavigator.Name = "lblNavigator";
+            this.lblNavigator.Size = new System.Drawing.Size(0, 21);
+            this.lblNavigator.TabIndex = 36;
             // 
             // FrmPlan2
             // 
@@ -144,6 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 644);
+            this.Controls.Add(this.lblNavigator);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnNext);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.Label lblPage;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView tourListView;
+        private System.Windows.Forms.Label lblNavigator;
     }
 }
