@@ -72,6 +72,12 @@
   <ItemGroup>
     <Compile Include="AreaBased.cs" />
     <Compile Include="DetailCommon.cs" />
+    <Compile Include="FormWeather.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWeather.Designer.cs">
+      <DependentUpon>FormWeather.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPlanView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,8 +148,12 @@
       <DependentUpon>TourListDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Train.cs" />
+    <Compile Include="Weather.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWeather.resx">
+      <DependentUpon>FormWeather.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoneyTip.resx">
       <DependentUpon>HoneyTip.cs</DependentUpon>
@@ -188,6 +198,7 @@
     </None>
     <None Include="json1.json" />
     <None Include="json2.json" />
+    <None Include="weather.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -236,15 +247,33 @@
     <EmbeddedResource Include="Images\next.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\close2.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Clouds.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Clear.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Images\down.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Images\Dust.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Fog.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Images\FormDetailBack.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\happy.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Images\Haze.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Images\left.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -265,6 +294,9 @@
     <Content Include="Images\main4.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Images\Mist.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Images\noImage.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -295,9 +327,9 @@
     <Content Include="Images\plus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\RepublicOfKorea.png">
+    <EmbeddedResource Include="Images\Rain.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
     <Content Include="Images\right.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -452,6 +484,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\포항.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\weather.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Railo_DB.mdf">

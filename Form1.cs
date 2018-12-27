@@ -22,7 +22,8 @@ namespace RailoNailo
         public static extern bool ReleaseCapture();
         public readonly int WM_NLBUTTONDOWN = 0xA1;
         public readonly int HT_CAPTION = 0x2;
-        
+        FormWeather fweather;
+        Weather weather;
         public Form1()
         {
             InitializeComponent();
@@ -46,12 +47,32 @@ namespace RailoNailo
             Font font16 = new Font(privateFonts.Families[0], 16f);
             lbl4.Font = lbl3.Font = lbl2.Font = lbl2.Font = lbl1.Font = font;
             btn1.Font = btn2.Font = btnHoneyTip.Font = btn4.Font = font16;
-            //폰트변경
-            //PrivateFontCollection privateFonts = new PrivateFontCollection();      
-            //privateFonts.AddFontFile( "한나체!.ttf" );
-            //Font font = new Font(privateFonts.Families[0], 24f);
-            //btn1.Font = btn2.Font= btnHoneyTip.Font= btn4.Font=font;
-
+            fweather = new FormWeather();
+            weather = fweather.CheckWeather(fweather.getJsonWeather("seoul"));
+            if (weather.HowWeather.ToUpper() == "CLOUDS")
+            {
+                btnWeather.Image = Properties.Resources.Clouds.ToImage();
+            }
+            else if(weather.HowWeather.ToUpper() == "CLEAR")
+            {
+                btnWeather.Image = Properties.Resources.Clear.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "HAZE")
+            {
+                btnWeather.Image = Properties.Resources.Haze.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "RAIN")
+            {
+                btnWeather.Image = Properties.Resources.Rain.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "MIST")
+            {
+                btnWeather.Image = Properties.Resources.Mist.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "FOG")
+            {
+                btnWeather.Image = Properties.Resources.Fog.ToImage();
+            }
         }
         
         private void MainImageTry() //메인 배경 랜덤으로 출력
@@ -158,6 +179,12 @@ namespace RailoNailo
         {
             FrmPlanView fpv = new FrmPlanView();
             fpv.ShowDialog();
+        }
+
+        private void btnWeather_Click(object sender, EventArgs e)
+        {
+            FormWeather fw = new FormWeather();
+            fw.Show();
         }
     }
 }

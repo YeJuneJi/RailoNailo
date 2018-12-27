@@ -26,7 +26,7 @@ namespace RailoNailo
         public readonly int HT_CAPTION = 0x2;
 
         private string serviceKey = "Sf8fjXzeJx8CxVqHJ5cDq2WSEO%2B7Gfor9J8ubISBAGIJIidA2L8rVXoAWxCx59Jo4PERKpiKGrqRLF2oMtTy%2Bw%3D%3D"; //서비스 키
-        private string weatherKey = "e0830184b177fdc64b093779164ea8a8";
+        
         //private string areaCode = string.Empty; //지역코드조회 . 지역코드는 areaCode.json 참조.
         //private string categoryCode = string.Empty; //서비스 분류코드 조회
         //private string areaBasedList = string.Empty;//지역기반 관광정보 조회

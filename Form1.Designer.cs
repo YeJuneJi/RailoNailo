@@ -44,6 +44,7 @@
             this.panelMove = new System.Windows.Forms.Panel();
             this.btnTry = new System.Windows.Forms.Button();
             this.lbl4 = new System.Windows.Forms.Label();
+            this.btnWeather = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -238,6 +239,18 @@
             this.lbl4.Text = "내 여행계획보기";
             this.lbl4.Click += new System.EventHandler(this.lbl4_Click);
             // 
+            // btnWeather
+            // 
+            this.btnWeather.BackColor = System.Drawing.Color.Transparent;
+            this.btnWeather.FlatAppearance.BorderSize = 0;
+            this.btnWeather.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWeather.Location = new System.Drawing.Point(616, 26);
+            this.btnWeather.Name = "btnWeather";
+            this.btnWeather.Size = new System.Drawing.Size(44, 41);
+            this.btnWeather.TabIndex = 17;
+            this.btnWeather.UseVisualStyleBackColor = false;
+            this.btnWeather.Click += new System.EventHandler(this.btnWeather_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -245,6 +258,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(166)))), ((int)(((byte)(209)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 583);
+            this.Controls.Add(this.btnWeather);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.btnTry);
             this.Controls.Add(this.panelMove);
@@ -289,7 +303,7 @@
         private System.Windows.Forms.Panel panelMove;
         private System.Windows.Forms.Button btnTry;
         private System.Windows.Forms.Label lbl4;
-
+        private System.Windows.Forms.Button btnWeather;
     }
 }
 
