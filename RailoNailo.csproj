@@ -298,6 +298,9 @@
     <Content Include="Images\right.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Save.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\ticket.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

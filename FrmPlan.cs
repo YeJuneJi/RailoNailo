@@ -39,6 +39,22 @@ namespace RailoNailo
             }
         }
 
+        private void rdoDay3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoDay7.Checked)
+            {
+                dateFinal.Value = dateStart.Value.AddDays(7);
+            }
+            else if (rdoDay5.Checked)
+            {
+                dateFinal.Value = dateStart.Value.AddDays(5);
+            }
+            else
+            {
+                dateFinal.Value = dateStart.Value.AddDays(3);
+            }
+            label3.Text = dateStart.Value.ToShortDateString() + " 부터 " + dateFinal.Value.ToShortDateString();
+        }
         private void dateStart_ValueChanged(object sender, EventArgs e)
         {
             if (dateStart.Value<DateTime.Now)
@@ -214,6 +230,6 @@ namespace RailoNailo
         {
             this.Close();
         }
-        
+
     }
 }

@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -15,6 +16,8 @@ namespace RailoNailo
 {
     public partial class FrmPlanView : Form
     {
+        PrivateFontCollection privateFonts;
+        Bitmap bm;
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
         [DllImport("user32.dll")]
@@ -29,12 +32,47 @@ namespace RailoNailo
 
         private void FrmPlanView_Load(object sender, EventArgs e)
         {
-            imgCross1.Image = Image.FromFile(Application.StartupPath + "\\Images\\right.png");
-            imgCross2.Image= Image.FromFile(Application.StartupPath + "\\Images\\right.png");
-            imgCross3.Image= Image.FromFile(Application.StartupPath + "\\Images\\down.png");
-            imgCross4.Image= Image.FromFile(Application.StartupPath + "\\Images\\left.png");
-            imgCross5.Image = Image.FromFile(Application.StartupPath + "\\Images\\left.png");
-            //this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\ViewBack.jpg");
+            btnSave.BackgroundImage= Image.FromFile(Application.StartupPath + "\\Images\\Save.png");
+
+            btnSave.BackColor = Color.MistyRose;
+            privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            Font font16 = new Font(privateFonts.Families[0], 15f);
+
+            //FirstLbl.Parent = First2;
+            //SecondLbl.Parent = Second2;
+            //ThirdLbl.Parent = Third2;
+            //FourthLbl.Parent = Fourth2;
+            //FifthLbl.Parent = Fifth2;
+            //SixthLbl.Parent = Sixth2;
+
+            for (int i = 0; i < 3; i++)
+            {
+                foreach (Control item in Controls)
+                {
+                    if (item.GetType().ToString() == "System.Windows.Forms.Label")
+                    {
+                        var pos = this.PointToScreen(item.Location);
+                        item.Font = font16;
+                        foreach (Control item2 in Controls)
+                        {
+                            if (item2.GetType().ToString() == "System.Windows.Forms.PictureBox")
+                            {
+                                if (item.Name.Contains(item2.Name.Substring(0, 3)))
+                                {
+                                    pos = item2.PointToClient(pos);
+
+                                    item.Parent = item2;
+                                    item.BackColor = Color.Transparent;
+                                    item.Location = pos;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+
             button7.BackgroundImage = Properties.Resources.close.ToImage();
             string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
             using (SqlConnection con = new SqlConnection(conStr))
@@ -49,57 +87,64 @@ namespace RailoNailo
                 var dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    label3.Text= dr["date"].ToString();
-                    if (dr["loc1"].ToString()!="NULL")
+                    label3.Text = dr["date"].ToString();
+                    if (dr["loc1"].ToString() != "NULL")
                     {
-                        firstLbl.Text = dr["loc1"].ToString();
-                        first.Image=ImageAccess(firstLbl.Text);
+                        FirstLbl.Text = dr["loc1"].ToString();
+                        First.Image = ImageAccess(FirstLbl.Text);
                         if (dr["loc2"].ToString() != "NULL")
                         {
-                            secondLbl.Text = dr["loc2"].ToString();
-                            second.Image = ImageAccess(secondLbl.Text);
+                            SecondLbl.Text = dr["loc2"].ToString();
+                            Second.Image = ImageAccess(SecondLbl.Text);
                             if (dr["loc3"].ToString() != "NULL")
                             {
-                                thirdLbl.Text = dr["loc3"].ToString();
-                                third.Image = ImageAccess(thirdLbl.Text);
+                                ThirdLbl.Text = dr["loc3"].ToString();
+                                Third.Image = ImageAccess(ThirdLbl.Text);
+
                                 if (dr["loc4"].ToString() != "NULL")
                                 {
-                                    fourthLbl.Text = dr["loc4"].ToString();
-                                    fourth.Image = ImageAccess(fourthLbl.Text);
+                                    FourthLbl.Text = dr["loc4"].ToString();
+                                    Fourth.Image = ImageAccess(FourthLbl.Text);
                                     if (dr["loc5"].ToString() != "NULL")
                                     {
-                                        fifthLbl.Text = dr["loc5"].ToString();
-                                        fifth.Image = ImageAccess(fifthLbl.Text);
+                                        FifthLbl.Text = dr["loc5"].ToString();
+                                        Fifth.Image = ImageAccess(FifthLbl.Text);
                                         if (dr["loc6"].ToString() != "NULL")
                                         {
-                                            sixthLbl.Text = dr["loc6"].ToString();
-                                            sixth.Image = ImageAccess(sixthLbl.Text);
-                                        }
-                                        else
-                                        {
-                                            imgCross5.Image = null;
+                                            SixthLbl.Text = dr["loc6"].ToString();
+                                            Sixth.Image = ImageAccess(SixthLbl.Text);
                                         }
                                     }
-                                    else
-                                    {
-                                        imgCross5.Image = imgCross4.Image = null;
-                                    }
                                 }
-                                else
-                                {
-                                    imgCross5.Image = imgCross4.Image = imgCross3.Image = null;
-                                }
-                            }
-                            else
-                            {
-                                imgCross5.Image = imgCross4.Image = imgCross3.Image = imgCross2.Image = null;
                             }
                         }
                     }
+                    
                 }
                 dr.Close();
                 con.Close();
+                for (int i = 0; i < 3; i++)
+                {
+                    foreach (Control item in Controls)
+                    {
+                        if (item.GetType().ToString() == "System.Windows.Forms.Label")
+                        {
+                            if (item.Text == null)
+                            {
+                                Controls.Remove(item);
+                            }
+                        }
+                        if (item.GetType().ToString() == "System.Windows.Forms.PictureBox")
+                        {
+                            if (((PictureBox)item).Image == null)
+                            {
+                                Controls.Remove(item);
+                            }
+                        }
+                    } 
+                }
             }
+
         }
 
         private Image ImageAccess(string text)
@@ -107,7 +152,7 @@ namespace RailoNailo
             Image returnImage;
             try
             {
-                returnImage = Image.FromFile(Application.StartupPath+"\\Images\\" + text + ".png");
+                returnImage = Image.FromFile(Application.StartupPath + "\\Images\\" + text + ".png");
             }
             catch (Exception)
             {
@@ -138,6 +183,30 @@ namespace RailoNailo
             }
 
             base.OnMouseDown(e);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
+
+            bm = new Bitmap(ClientSize.Width, ClientSize.Height);
+            var grapics=Graphics.FromImage(bm);
+            
+
+            saveFileDialog1.Filter = "JPEG File(*jpg)|*.jpg|Bitmap File(*.bmp)|*.bmp|PNG File(*.png)|*.png";
+            if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                foreach (Control item in Controls)
+                {
+                    if (item.GetType().ToString() == "System.Windows.Forms.Button")
+                    {
+                        Controls.Remove(item);
+                    }
+                }
+                grapics.CopyFromScreen(new Point(this.Location.X, this.Location.Y), new Point(0, 0), this.Size);
+                bm.Save(saveFileDialog1.FileName);
+                this.Close();
+            }
         }
     }
 }

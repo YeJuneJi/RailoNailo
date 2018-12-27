@@ -18,6 +18,7 @@ namespace RailoNailo
     public partial class FrmJiHyea : Form
     {
         PrivateFontCollection privateFonts;
+        PrivateFontCollection privateFonts2;
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
         [DllImport("user32.dll")]
@@ -40,6 +41,11 @@ namespace RailoNailo
         {
             button1.BackgroundImage = Properties.Resources.close.ToImage();
             this.BackgroundImage= Image.FromFile(Application.StartupPath + "\\Images\\mainBackground2.jpg");
+
+            privateFonts2 = new PrivateFontCollection();
+            privateFonts2.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            Font font2 = new Font(privateFonts2.Families[0], 16f);
+            lblCenter.Font = font2;
         }
         //private void Back() {
         //    foreach (Control item in Controls)

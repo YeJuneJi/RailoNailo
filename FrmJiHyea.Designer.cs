@@ -61,6 +61,7 @@
             this.cbbLocation = new System.Windows.Forms.ComboBox();
             this.panelMove = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblCenter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -416,6 +417,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblCenter
+            // 
+            this.lblCenter.AutoSize = true;
+            this.lblCenter.BackColor = System.Drawing.Color.Transparent;
+            this.lblCenter.Location = new System.Drawing.Point(433, 227);
+            this.lblCenter.Name = "lblCenter";
+            this.lblCenter.Size = new System.Drawing.Size(173, 12);
+            this.lblCenter.TabIndex = 34;
+            this.lblCenter.Text = "우측 상단의 메뉴를 골라주세요";
+            // 
             // FrmJiHyea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -423,6 +434,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 773);
+            this.Controls.Add(this.lblCenter);
             this.Controls.Add(this.panelMove);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbbLocation);
@@ -515,5 +527,6 @@
         private System.Windows.Forms.ComboBox cbbLocation;
         private System.Windows.Forms.Panel panelMove;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblCenter;
     }
 }

@@ -28,208 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.firstLbl = new System.Windows.Forms.Label();
-            this.secondLbl = new System.Windows.Forms.Label();
-            this.thirdLbl = new System.Windows.Forms.Label();
-            this.fourthLbl = new System.Windows.Forms.Label();
-            this.fifthLbl = new System.Windows.Forms.Label();
-            this.sixthLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.sixth = new System.Windows.Forms.PictureBox();
-            this.fifth = new System.Windows.Forms.PictureBox();
-            this.fourth = new System.Windows.Forms.PictureBox();
-            this.third = new System.Windows.Forms.PictureBox();
-            this.second = new System.Windows.Forms.PictureBox();
-            this.imgCross5 = new System.Windows.Forms.PictureBox();
-            this.imgCross4 = new System.Windows.Forms.PictureBox();
-            this.imgCross3 = new System.Windows.Forms.PictureBox();
-            this.imgCross2 = new System.Windows.Forms.PictureBox();
-            this.imgCross1 = new System.Windows.Forms.PictureBox();
-            this.first = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.First = new System.Windows.Forms.PictureBox();
+            this.Second = new System.Windows.Forms.PictureBox();
+            this.Third = new System.Windows.Forms.PictureBox();
+            this.Sixth = new System.Windows.Forms.PictureBox();
+            this.Fifth = new System.Windows.Forms.PictureBox();
+            this.Fourth = new System.Windows.Forms.PictureBox();
+            this.FirstLbl = new System.Windows.Forms.Label();
+            this.SecondLbl = new System.Windows.Forms.Label();
+            this.ThirdLbl = new System.Windows.Forms.Label();
+            this.FourthLbl = new System.Windows.Forms.Label();
+            this.FifthLbl = new System.Windows.Forms.Label();
+            this.SixthLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.sixth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fifth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fourth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.third)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.second)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.first)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.First)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Second)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Third)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sixth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fifth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fourth)).BeginInit();
             this.SuspendLayout();
-            // 
-            // firstLbl
-            // 
-            this.firstLbl.AutoSize = true;
-            this.firstLbl.Location = new System.Drawing.Point(79, 254);
-            this.firstLbl.Name = "firstLbl";
-            this.firstLbl.Size = new System.Drawing.Size(0, 12);
-            this.firstLbl.TabIndex = 40;
-            // 
-            // secondLbl
-            // 
-            this.secondLbl.AutoSize = true;
-            this.secondLbl.Location = new System.Drawing.Point(272, 254);
-            this.secondLbl.Name = "secondLbl";
-            this.secondLbl.Size = new System.Drawing.Size(0, 12);
-            this.secondLbl.TabIndex = 39;
-            // 
-            // thirdLbl
-            // 
-            this.thirdLbl.AutoSize = true;
-            this.thirdLbl.Location = new System.Drawing.Point(464, 254);
-            this.thirdLbl.Name = "thirdLbl";
-            this.thirdLbl.Size = new System.Drawing.Size(0, 12);
-            this.thirdLbl.TabIndex = 38;
-            // 
-            // fourthLbl
-            // 
-            this.fourthLbl.AutoSize = true;
-            this.fourthLbl.Location = new System.Drawing.Point(464, 464);
-            this.fourthLbl.Name = "fourthLbl";
-            this.fourthLbl.Size = new System.Drawing.Size(0, 12);
-            this.fourthLbl.TabIndex = 37;
-            // 
-            // fifthLbl
-            // 
-            this.fifthLbl.AutoSize = true;
-            this.fifthLbl.Location = new System.Drawing.Point(261, 464);
-            this.fifthLbl.Name = "fifthLbl";
-            this.fifthLbl.Size = new System.Drawing.Size(0, 12);
-            this.fifthLbl.TabIndex = 36;
-            // 
-            // sixthLbl
-            // 
-            this.sixthLbl.AutoSize = true;
-            this.sixthLbl.Location = new System.Drawing.Point(79, 464);
-            this.sixthLbl.Name = "sixthLbl";
-            this.sixthLbl.Size = new System.Drawing.Size(0, 12);
-            this.sixthLbl.TabIndex = 35;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("양재튼튼체B", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(22, 79);
+            this.label3.Location = new System.Drawing.Point(4, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 19);
             this.label3.TabIndex = 34;
-            // 
-            // sixth
-            // 
-            this.sixth.BackColor = System.Drawing.Color.Transparent;
-            this.sixth.Location = new System.Drawing.Point(24, 313);
-            this.sixth.Name = "sixth";
-            this.sixth.Size = new System.Drawing.Size(147, 148);
-            this.sixth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.sixth.TabIndex = 33;
-            this.sixth.TabStop = false;
-            // 
-            // fifth
-            // 
-            this.fifth.BackColor = System.Drawing.Color.Transparent;
-            this.fifth.Location = new System.Drawing.Point(217, 313);
-            this.fifth.Name = "fifth";
-            this.fifth.Size = new System.Drawing.Size(147, 148);
-            this.fifth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fifth.TabIndex = 32;
-            this.fifth.TabStop = false;
-            // 
-            // fourth
-            // 
-            this.fourth.BackColor = System.Drawing.Color.Transparent;
-            this.fourth.Location = new System.Drawing.Point(409, 313);
-            this.fourth.Name = "fourth";
-            this.fourth.Size = new System.Drawing.Size(147, 148);
-            this.fourth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fourth.TabIndex = 31;
-            this.fourth.TabStop = false;
-            // 
-            // third
-            // 
-            this.third.BackColor = System.Drawing.Color.Transparent;
-            this.third.Location = new System.Drawing.Point(409, 103);
-            this.third.Name = "third";
-            this.third.Size = new System.Drawing.Size(147, 148);
-            this.third.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.third.TabIndex = 30;
-            this.third.TabStop = false;
-            // 
-            // second
-            // 
-            this.second.BackColor = System.Drawing.Color.Transparent;
-            this.second.Location = new System.Drawing.Point(217, 103);
-            this.second.Name = "second";
-            this.second.Size = new System.Drawing.Size(147, 148);
-            this.second.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.second.TabIndex = 29;
-            this.second.TabStop = false;
-            // 
-            // imgCross5
-            // 
-            this.imgCross5.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross5.Location = new System.Drawing.Point(177, 365);
-            this.imgCross5.Name = "imgCross5";
-            this.imgCross5.Size = new System.Drawing.Size(34, 43);
-            this.imgCross5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCross5.TabIndex = 28;
-            this.imgCross5.TabStop = false;
-            // 
-            // imgCross4
-            // 
-            this.imgCross4.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross4.Location = new System.Drawing.Point(370, 365);
-            this.imgCross4.Name = "imgCross4";
-            this.imgCross4.Size = new System.Drawing.Size(34, 43);
-            this.imgCross4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCross4.TabIndex = 27;
-            this.imgCross4.TabStop = false;
-            // 
-            // imgCross3
-            // 
-            this.imgCross3.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross3.Location = new System.Drawing.Point(466, 271);
-            this.imgCross3.Name = "imgCross3";
-            this.imgCross3.Size = new System.Drawing.Size(34, 41);
-            this.imgCross3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCross3.TabIndex = 26;
-            this.imgCross3.TabStop = false;
-            // 
-            // imgCross2
-            // 
-            this.imgCross2.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross2.Location = new System.Drawing.Point(369, 163);
-            this.imgCross2.Name = "imgCross2";
-            this.imgCross2.Size = new System.Drawing.Size(34, 43);
-            this.imgCross2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCross2.TabIndex = 25;
-            this.imgCross2.TabStop = false;
-            // 
-            // imgCross1
-            // 
-            this.imgCross1.BackColor = System.Drawing.Color.Transparent;
-            this.imgCross1.Location = new System.Drawing.Point(177, 163);
-            this.imgCross1.Name = "imgCross1";
-            this.imgCross1.Size = new System.Drawing.Size(34, 43);
-            this.imgCross1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCross1.TabIndex = 24;
-            this.imgCross1.TabStop = false;
-            // 
-            // first
-            // 
-            this.first.BackColor = System.Drawing.Color.Transparent;
-            this.first.Location = new System.Drawing.Point(26, 103);
-            this.first.Name = "first";
-            this.first.Size = new System.Drawing.Size(147, 148);
-            this.first.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.first.TabIndex = 23;
-            this.first.TabStop = false;
             // 
             // button7
             // 
@@ -237,7 +70,7 @@
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(564, 0);
+            this.button7.Location = new System.Drawing.Point(265, 0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(17, 15);
             this.button7.TabIndex = 41;
@@ -249,103 +82,222 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(555, 19);
+            this.panel2.Size = new System.Drawing.Size(257, 19);
             this.panel2.TabIndex = 42;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // panel1
+            // First
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-13, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(603, 41);
-            this.panel1.TabIndex = 43;
+            this.First.BackColor = System.Drawing.Color.Transparent;
+            this.First.Location = new System.Drawing.Point(0, 127);
+            this.First.Margin = new System.Windows.Forms.Padding(0);
+            this.First.Name = "First";
+            this.First.Size = new System.Drawing.Size(284, 108);
+            this.First.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.First.TabIndex = 44;
+            this.First.TabStop = false;
+            // 
+            // Second
+            // 
+            this.Second.BackColor = System.Drawing.Color.Transparent;
+            this.Second.Location = new System.Drawing.Point(0, 235);
+            this.Second.Margin = new System.Windows.Forms.Padding(0);
+            this.Second.Name = "Second";
+            this.Second.Size = new System.Drawing.Size(284, 108);
+            this.Second.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Second.TabIndex = 45;
+            this.Second.TabStop = false;
+            // 
+            // Third
+            // 
+            this.Third.BackColor = System.Drawing.Color.Transparent;
+            this.Third.Location = new System.Drawing.Point(0, 343);
+            this.Third.Margin = new System.Windows.Forms.Padding(0);
+            this.Third.Name = "Third";
+            this.Third.Size = new System.Drawing.Size(284, 108);
+            this.Third.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Third.TabIndex = 46;
+            this.Third.TabStop = false;
+            // 
+            // Sixth
+            // 
+            this.Sixth.BackColor = System.Drawing.Color.Transparent;
+            this.Sixth.Location = new System.Drawing.Point(0, 667);
+            this.Sixth.Margin = new System.Windows.Forms.Padding(0);
+            this.Sixth.Name = "Sixth";
+            this.Sixth.Size = new System.Drawing.Size(284, 108);
+            this.Sixth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Sixth.TabIndex = 49;
+            this.Sixth.TabStop = false;
+            // 
+            // Fifth
+            // 
+            this.Fifth.BackColor = System.Drawing.Color.Transparent;
+            this.Fifth.Location = new System.Drawing.Point(0, 559);
+            this.Fifth.Margin = new System.Windows.Forms.Padding(0);
+            this.Fifth.Name = "Fifth";
+            this.Fifth.Size = new System.Drawing.Size(284, 108);
+            this.Fifth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Fifth.TabIndex = 48;
+            this.Fifth.TabStop = false;
+            // 
+            // Fourth
+            // 
+            this.Fourth.BackColor = System.Drawing.Color.Transparent;
+            this.Fourth.Location = new System.Drawing.Point(0, 451);
+            this.Fourth.Margin = new System.Windows.Forms.Padding(0);
+            this.Fourth.Name = "Fourth";
+            this.Fourth.Size = new System.Drawing.Size(284, 108);
+            this.Fourth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Fourth.TabIndex = 47;
+            this.Fourth.TabStop = false;
+            // 
+            // FirstLbl
+            // 
+            this.FirstLbl.AutoSize = true;
+            this.FirstLbl.BackColor = System.Drawing.Color.Transparent;
+            this.FirstLbl.Location = new System.Drawing.Point(117, 129);
+            this.FirstLbl.Name = "FirstLbl";
+            this.FirstLbl.Size = new System.Drawing.Size(0, 12);
+            this.FirstLbl.TabIndex = 50;
+            // 
+            // SecondLbl
+            // 
+            this.SecondLbl.AutoSize = true;
+            this.SecondLbl.Location = new System.Drawing.Point(117, 238);
+            this.SecondLbl.Name = "SecondLbl";
+            this.SecondLbl.Size = new System.Drawing.Size(0, 12);
+            this.SecondLbl.TabIndex = 51;
+            // 
+            // ThirdLbl
+            // 
+            this.ThirdLbl.AutoSize = true;
+            this.ThirdLbl.Location = new System.Drawing.Point(117, 347);
+            this.ThirdLbl.Name = "ThirdLbl";
+            this.ThirdLbl.Size = new System.Drawing.Size(0, 12);
+            this.ThirdLbl.TabIndex = 52;
+            // 
+            // FourthLbl
+            // 
+            this.FourthLbl.AutoSize = true;
+            this.FourthLbl.BackColor = System.Drawing.Color.Transparent;
+            this.FourthLbl.Location = new System.Drawing.Point(117, 445);
+            this.FourthLbl.Name = "FourthLbl";
+            this.FourthLbl.Size = new System.Drawing.Size(0, 12);
+            this.FourthLbl.TabIndex = 53;
+            // 
+            // FifthLbl
+            // 
+            this.FifthLbl.AutoSize = true;
+            this.FifthLbl.Location = new System.Drawing.Point(117, 567);
+            this.FifthLbl.Name = "FifthLbl";
+            this.FifthLbl.Size = new System.Drawing.Size(0, 12);
+            this.FifthLbl.TabIndex = 54;
+            // 
+            // SixthLbl
+            // 
+            this.SixthLbl.AutoSize = true;
+            this.SixthLbl.Location = new System.Drawing.Point(820, 595);
+            this.SixthLbl.Name = "SixthLbl";
+            this.SixthLbl.Size = new System.Drawing.Size(0, 12);
+            this.SixthLbl.TabIndex = 55;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굵은안상수체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(257, 12);
+            this.label1.Font = new System.Drawing.Font("양재튼튼체B", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(4, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "여행 계획표";
+            this.label1.Size = new System.Drawing.Size(149, 19);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "나만의 여행티켓";
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(218, 22);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(40, 40);
+            this.btnSave.TabIndex = 57;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("양재튼튼체B", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(4, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 19);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "내일로";
             // 
             // FrmPlanView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(587, 486);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(312, 874);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SixthLbl);
+            this.Controls.Add(this.FifthLbl);
+            this.Controls.Add(this.FourthLbl);
+            this.Controls.Add(this.ThirdLbl);
+            this.Controls.Add(this.SecondLbl);
+            this.Controls.Add(this.FirstLbl);
+            this.Controls.Add(this.Sixth);
+            this.Controls.Add(this.Fifth);
+            this.Controls.Add(this.Fourth);
+            this.Controls.Add(this.Third);
+            this.Controls.Add(this.Second);
+            this.Controls.Add(this.First);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.firstLbl);
-            this.Controls.Add(this.secondLbl);
-            this.Controls.Add(this.thirdLbl);
-            this.Controls.Add(this.fourthLbl);
-            this.Controls.Add(this.fifthLbl);
-            this.Controls.Add(this.sixthLbl);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.sixth);
-            this.Controls.Add(this.fifth);
-            this.Controls.Add(this.fourth);
-            this.Controls.Add(this.third);
-            this.Controls.Add(this.second);
-            this.Controls.Add(this.imgCross5);
-            this.Controls.Add(this.imgCross4);
-            this.Controls.Add(this.imgCross3);
-            this.Controls.Add(this.imgCross2);
-            this.Controls.Add(this.imgCross1);
-            this.Controls.Add(this.first);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPlanView";
             this.Text = "FrmPlanView";
             this.Load += new System.EventHandler(this.FrmPlanView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sixth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fifth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fourth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.third)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.second)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCross1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.first)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.First)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Second)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Third)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sixth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fifth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fourth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label firstLbl;
-        private System.Windows.Forms.Label secondLbl;
-        private System.Windows.Forms.Label thirdLbl;
-        private System.Windows.Forms.Label fourthLbl;
-        private System.Windows.Forms.Label fifthLbl;
-        private System.Windows.Forms.Label sixthLbl;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox sixth;
-        private System.Windows.Forms.PictureBox fifth;
-        private System.Windows.Forms.PictureBox fourth;
-        private System.Windows.Forms.PictureBox third;
-        private System.Windows.Forms.PictureBox second;
-        private System.Windows.Forms.PictureBox imgCross5;
-        private System.Windows.Forms.PictureBox imgCross4;
-        private System.Windows.Forms.PictureBox imgCross3;
-        private System.Windows.Forms.PictureBox imgCross2;
-        private System.Windows.Forms.PictureBox imgCross1;
-        private System.Windows.Forms.PictureBox first;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox First;
+        private System.Windows.Forms.PictureBox Second;
+        private System.Windows.Forms.PictureBox Third;
+        private System.Windows.Forms.PictureBox Sixth;
+        private System.Windows.Forms.PictureBox Fifth;
+        private System.Windows.Forms.PictureBox Fourth;
+        private System.Windows.Forms.Label FirstLbl;
+        private System.Windows.Forms.Label SecondLbl;
+        private System.Windows.Forms.Label ThirdLbl;
+        private System.Windows.Forms.Label FourthLbl;
+        private System.Windows.Forms.Label FifthLbl;
+        private System.Windows.Forms.Label SixthLbl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
