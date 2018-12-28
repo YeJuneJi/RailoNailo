@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Configuration;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -26,8 +27,8 @@ namespace RailoNailo
         private Weather weather;
         private string weatherKey = "e0830184b177fdc64b093779164ea8a8";
         private string city = "seoul";
-
         private FormTourInformation ft = new FormTourInformation();
+        private readonly double kalvin = Convert.ToDouble(ConfigurationManager.AppSettings.GetValues("Kalvin")[0]);
         public FormWeather()
         {
             InitializeComponent();
@@ -77,10 +78,10 @@ namespace RailoNailo
                 lblWeather.Text = "안개";
                 pbxWeather.Image = Properties.Resources.Fog.ToImage();
             }
-            lblTemp.Text = Math.Round(weather.Temp - 273.15, 2).ToString() + " 도(섭씨)";
+            lblTemp.Text = Math.Round(weather.Temp - kalvin).ToString() + " 도(섭씨)";
             lblPress.Text = weather.Press.ToString() + " 기압(hPa)";
-            lblMaxTemp.Text = Math.Round(weather.Maxtemp - 273.15, 2).ToString() + " 도(섭씨)";
-            lblMinTemp.Text = Math.Round(weather.Mintemp - 273.15, 2).ToString() + " 도(섭씨)";
+            lblMaxTemp.Text = Math.Round(weather.Maxtemp - kalvin).ToString() + " 도(섭씨)";
+            lblMinTemp.Text = Math.Round(weather.Mintemp - kalvin).ToString() + " 도(섭씨)";
         }
 
         internal string getJsonWeather(string city)

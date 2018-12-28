@@ -24,6 +24,7 @@ namespace RailoNailo
         public readonly int HT_CAPTION = 0x2;
         FormWeather fweather;
         Weather weather;
+        private readonly double kalvin = Convert.ToDouble(ConfigurationManager.AppSettings.GetValues("Kalvin")[0]);
         public Form1()
         {
             InitializeComponent();
@@ -73,7 +74,7 @@ namespace RailoNailo
             {
                 btnWeather.Image = Properties.Resources.Fog.ToImage();
             }
-            lblTemp.Text = Math.Round(weather.Temp - 273.15, 2).ToString() + " 도(섭씨)";
+            lblTemp.Text = Math.Round(weather.Temp - kalvin, 2).ToString() + " 도(섭씨)";
         }
         
         private void MainImageTry() //메인 배경 랜덤으로 출력

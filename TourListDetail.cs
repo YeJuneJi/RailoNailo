@@ -82,7 +82,6 @@ namespace RailoNailo
                         Serialnum = item["serialnum"].ToString(),
                         Originimgurl = item["originimgurl"].ToString()
                     };
-                    //detailImagesList.Add(detailImage);
                     AddImageList(detailImage);
                 }
 
@@ -103,7 +102,6 @@ namespace RailoNailo
                 AddImageList(detailImage);
                 plusImageTrackBar.Visible = false;
             }
-            //pbxPlusImg.Image = imgList.Images[0];
             pbxPlusImg.Image = img;
             plusImageTrackBar.Maximum = imgList.Images.Count - 1;
 
@@ -155,7 +153,10 @@ namespace RailoNailo
             }
             
         }
-
+        /// <summary>
+        /// 이미지정보를 Stream 클래스를 이용하여 Image로 변경하고 이미지 리스트에 저장하는 메서드.
+        /// </summary>
+        /// <param name="detailImage">이미지정보</param>
         private void AddImageList(DetailImage detailImage)
         {
             try
