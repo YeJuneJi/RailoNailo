@@ -145,7 +145,7 @@ namespace RailoNailo
             }
             else
             {
-                string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
+                string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf;Integrated Security=True";
                 string[] planArr = new string[6];
                 int count = 0;
                 foreach (Control item in groupBox3.Controls)
@@ -213,7 +213,6 @@ namespace RailoNailo
             {
                 // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
                 ReleaseCapture();
-
                 // 타이틀 바의 다운 이벤트처럼 보냄
                 SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
             }

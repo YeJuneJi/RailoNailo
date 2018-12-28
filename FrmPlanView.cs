@@ -74,7 +74,7 @@ namespace RailoNailo
             }
 
             button7.BackgroundImage = Properties.Resources.close.ToImage();
-            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
+            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf;Integrated Security=True";
             using (SqlConnection con = new SqlConnection(conStr))
             {
                 con.Open();

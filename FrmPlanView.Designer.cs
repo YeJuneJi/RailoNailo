@@ -156,7 +156,7 @@
             // 
             this.FirstLbl.AutoSize = true;
             this.FirstLbl.BackColor = System.Drawing.Color.Transparent;
-            this.FirstLbl.Location = new System.Drawing.Point(117, 129);
+            this.FirstLbl.Location = new System.Drawing.Point(117, 172);
             this.FirstLbl.Name = "FirstLbl";
             this.FirstLbl.Size = new System.Drawing.Size(0, 12);
             this.FirstLbl.TabIndex = 50;
@@ -164,7 +164,7 @@
             // SecondLbl
             // 
             this.SecondLbl.AutoSize = true;
-            this.SecondLbl.Location = new System.Drawing.Point(117, 238);
+            this.SecondLbl.Location = new System.Drawing.Point(117, 281);
             this.SecondLbl.Name = "SecondLbl";
             this.SecondLbl.Size = new System.Drawing.Size(0, 12);
             this.SecondLbl.TabIndex = 51;
@@ -172,7 +172,7 @@
             // ThirdLbl
             // 
             this.ThirdLbl.AutoSize = true;
-            this.ThirdLbl.Location = new System.Drawing.Point(117, 347);
+            this.ThirdLbl.Location = new System.Drawing.Point(117, 386);
             this.ThirdLbl.Name = "ThirdLbl";
             this.ThirdLbl.Size = new System.Drawing.Size(0, 12);
             this.ThirdLbl.TabIndex = 52;
@@ -181,7 +181,7 @@
             // 
             this.FourthLbl.AutoSize = true;
             this.FourthLbl.BackColor = System.Drawing.Color.Transparent;
-            this.FourthLbl.Location = new System.Drawing.Point(117, 445);
+            this.FourthLbl.Location = new System.Drawing.Point(117, 500);
             this.FourthLbl.Name = "FourthLbl";
             this.FourthLbl.Size = new System.Drawing.Size(0, 12);
             this.FourthLbl.TabIndex = 53;
@@ -189,7 +189,7 @@
             // FifthLbl
             // 
             this.FifthLbl.AutoSize = true;
-            this.FifthLbl.Location = new System.Drawing.Point(117, 567);
+            this.FifthLbl.Location = new System.Drawing.Point(117, 601);
             this.FifthLbl.Name = "FifthLbl";
             this.FifthLbl.Size = new System.Drawing.Size(0, 12);
             this.FifthLbl.TabIndex = 54;
@@ -197,7 +197,7 @@
             // SixthLbl
             // 
             this.SixthLbl.AutoSize = true;
-            this.SixthLbl.Location = new System.Drawing.Point(820, 595);
+            this.SixthLbl.Location = new System.Drawing.Point(117, 706);
             this.SixthLbl.Name = "SixthLbl";
             this.SixthLbl.Size = new System.Drawing.Size(0, 12);
             this.SixthLbl.TabIndex = 55;

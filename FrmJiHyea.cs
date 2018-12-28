@@ -47,25 +47,6 @@ namespace RailoNailo
             Font font2 = new Font(privateFonts2.Families[0], 16f);
             lblCenter.Font = font2;
         }
-        //private void Back() {
-        //    foreach (Control item in Controls)
-        //    {
-        //        if (item.GetType().ToString() == "System.Windows.Forms.Label")
-        //        {
-        //            var pos = this.PointToScreen(item.Location);
-        //            foreach (Control item2 in Controls)
-        //            {
-        //                if (item2.GetType().ToString() == "System.Windows.Forms.PictureBox" && item2.Name.ToString().Substring(item2.Name.Length - 1, 1) == item.Name.ToString().Substring(item.Name.Length - 1, 1))
-        //                {
-        //                    pos = item2.PointToClient(pos);
-        //                    item.Parent = item2;
-        //                    item.BackColor = Color.Transparent;
-        //                    item.Location = pos;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
         private void Display()
         {
             locList = new List<Location>();
@@ -115,7 +96,6 @@ namespace RailoNailo
                             try
                             {
                                 ((PictureBox)item2).Image = Image.FromFile(Application.StartupPath + "\\Images\\" + item.InnerText.Trim() + ".png");
-                                //((PictureBox)item2).Image = Image.FromFile(@"C:\Railo\Images\" + item.InnerText.Trim() + ".png");
                             }
                             catch (Exception)
                             {
@@ -206,6 +186,11 @@ namespace RailoNailo
             }
 
             base.OnMouseDown(e);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
