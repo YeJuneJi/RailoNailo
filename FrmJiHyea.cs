@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -16,6 +17,7 @@ namespace RailoNailo
 {
     public partial class FrmJiHyea : Form
     {
+        PrivateFontCollection privateFonts;
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
         [DllImport("user32.dll")]
@@ -37,6 +39,7 @@ namespace RailoNailo
         private void FrmJiHyea_Load(object sender, EventArgs e)
         {
             button1.BackgroundImage = Properties.Resources.close.ToImage();
+            this.BackgroundImage= Image.FromFile(Application.StartupPath + "\\Images\\mainBackground2.jpg");
         }
         //private void Back() {
         //    foreach (Control item in Controls)
@@ -105,12 +108,12 @@ namespace RailoNailo
                         {
                             try
                             {
-
-                                ((PictureBox)item2).Image = Image.FromFile(@"C:\Railo\Images\" + item.InnerText.Trim() + ".png");
+                                ((PictureBox)item2).Image = Image.FromFile(Application.StartupPath + "\\Images\\" + item.InnerText.Trim() + ".png");
+                                //((PictureBox)item2).Image = Image.FromFile(@"C:\Railo\Images\" + item.InnerText.Trim() + ".png");
                             }
                             catch (Exception)
                             {
-                                ((PictureBox)item2).Image = Image.FromFile(@"C:\C#\RailoNailo\Images\" + item.InnerText.Trim() + ".png");
+                                ((PictureBox)item2).Image = Image.FromFile(Application.StartupPath + "\\Images\\noImage.jpg");
                             }
                             
                             ((PictureBox)item2).Click += FrmJiHyea_Click;
@@ -123,6 +126,19 @@ namespace RailoNailo
                     locList.Add(loc);
                 }
                 
+            }
+            privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            Font font = new Font(privateFonts.Families[0], 10f);
+
+
+
+            foreach (Control item in Controls)
+            {
+                if (item.GetType().ToString() == "System.Windows.Forms.Label")
+                {
+                    item.Font = font;
+                }
             }
         }
 

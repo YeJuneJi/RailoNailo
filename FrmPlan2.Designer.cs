@@ -37,7 +37,6 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.lblPage = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tourListView = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +59,7 @@
             // 
             // btnCan
             // 
-            this.btnCan.Location = new System.Drawing.Point(113, 586);
+            this.btnCan.Location = new System.Drawing.Point(358, 585);
             this.btnCan.Name = "btnCan";
             this.btnCan.Size = new System.Drawing.Size(127, 48);
             this.btnCan.TabIndex = 14;
@@ -70,7 +69,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(363, 586);
+            this.btnAdd.Location = new System.Drawing.Point(608, 585);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(145, 48);
             this.btnAdd.TabIndex = 15;
@@ -104,7 +103,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(1007, 561);
+            this.btnNext.Location = new System.Drawing.Point(1007, 556);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(80, 23);
             this.btnNext.TabIndex = 19;
@@ -115,22 +114,11 @@
             // lblPage
             // 
             this.lblPage.AutoSize = true;
-            this.lblPage.Location = new System.Drawing.Point(865, 547);
+            this.lblPage.BackColor = System.Drawing.Color.Transparent;
+            this.lblPage.Location = new System.Drawing.Point(864, 561);
             this.lblPage.Name = "lblPage";
             this.lblPage.Size = new System.Drawing.Size(0, 12);
             this.lblPage.TabIndex = 20;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(1078, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(17, 15);
-            this.button5.TabIndex = 29;
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -154,9 +142,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 644);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
@@ -184,7 +172,6 @@
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblPage;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView tourListView;
     }

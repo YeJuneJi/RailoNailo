@@ -85,6 +85,12 @@
     <Compile Include="FrmTrain.Designer.cs">
       <DependentUpon>FrmTrain.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoneyTipBlogSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoneyTipBlogSave.Designer.cs">
+      <DependentUpon>HoneyTipBlogSave.cs</DependentUpon>
+    </Compile>
     <Compile Include="IconToImage.cs" />
     <Compile Include="JsonCodes.cs" />
     <Compile Include="Form1.cs">
@@ -166,6 +172,9 @@
     <EmbeddedResource Include="FrmTrain.resx">
       <DependentUpon>FrmTrain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoneyTipBlogSave.resx">
+      <DependentUpon>HoneyTipBlogSave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -180,6 +189,12 @@
     <None Include="areBasedList.json" />
     <None Include="DetailCommon.json" />
     <None Include="detailImage.json" />
+    <None Include="Font\Hanna.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Font\HannaPro.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="json1.json" />
     <None Include="json2.json" />
     <None Include="packages.config" />
@@ -192,10 +207,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="한나체!.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="한나체Pro.ttf" />
     <None Include="searchKeword.json" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +242,29 @@
     <EmbeddedResource Include="Images\Map.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\next.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Images\down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FormDetailBack.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\happy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\mainBackground.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\mainBackground2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\mainBackground3.jpg">
+    </Content>
     <Content Include="Images\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -258,9 +292,30 @@
     <EmbeddedResource Include="Images\Retry.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\prev.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Images\search.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="Images\planBack.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\plus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ticket.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TourInfo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ViewBack.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\가평.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

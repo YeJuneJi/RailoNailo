@@ -62,6 +62,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
+            this.check = new System.Windows.Forms.CheckBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnImg1
@@ -79,6 +81,7 @@
             this.btnImg1.TabIndex = 0;
             this.btnImg1.UseVisualStyleBackColor = false;
             this.btnImg1.Click += new System.EventHandler(this.btnImg1_Click);
+            this.btnImg1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnImg3_MouseClick);
             // 
             // btnImg2
             // 
@@ -110,7 +113,8 @@
             this.btnImg3.Size = new System.Drawing.Size(165, 124);
             this.btnImg3.TabIndex = 2;
             this.btnImg3.UseVisualStyleBackColor = false;
-            this.btnImg3.Click += new System.EventHandler(this.btnImg3_Click);
+            this.btnImg3.Click += new System.EventHandler(this.btnImg3_Click_1);
+            this.btnImg3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnImg3_MouseClick);
             // 
             // btnImg4
             // 
@@ -390,6 +394,7 @@
             this.lblMainTitle.Size = new System.Drawing.Size(404, 48);
             this.lblMainTitle.TabIndex = 25;
             this.lblMainTitle.Text = "내일로 여행 꿀팁!";
+            this.lblMainTitle.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnImg3_MouseClick);
             // 
             // radioButton1
             // 
@@ -481,12 +486,39 @@
             this.button7.TabIndex = 30;
             this.button7.UseVisualStyleBackColor = false;
             // 
+            // check
+            // 
+            this.check.AutoSize = true;
+            this.check.BackColor = System.Drawing.Color.Transparent;
+            this.check.ForeColor = System.Drawing.Color.Red;
+            this.check.Location = new System.Drawing.Point(523, 43);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(264, 16);
+            this.check.TabIndex = 32;
+            this.check.Text = "체크 후 블로그 접속하면 즐겨찾기가 됩니다!";
+            this.check.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(701, 62);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 33;
+            this.button8.Text = "즐겨찾기";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // HoneyTip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(803, 637);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
@@ -565,5 +597,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.CheckBox check;
+        private System.Windows.Forms.Button button8;
     }
 }

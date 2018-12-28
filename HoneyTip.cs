@@ -30,13 +30,13 @@ namespace RailoNailo
         {
             InitializeComponent();
             PrivateFontCollection privateFonts = new PrivateFontCollection();
-            privateFonts.AddFontFile(@"C:\Railo\한나체Pro.ttf");
+            privateFonts.AddFontFile(Application.StartupPath+"\\Font\\HannaPro.ttf");
             Font font = new Font(privateFonts.Families[0], 14f);
             Font font2 = new Font(privateFonts.Families[0], 9f);
             Font font3 = new Font(privateFonts.Families[0], 11f);
             Font font4 = new Font(privateFonts.Families[0], 36f);
-            btnImg1.Font = btnImg2.Font = btnImg3.Font = btnImg4.Font = btnImg5.Font = btnImg6.Font = btnImg7.Font = btnImg8.Font = btnImg9.Font = font;
-            radioButton1.Font = radioButton2.Font=lblPageNum.Font = font2;
+             btnImg1.Font = btnImg2.Font = btnImg3.Font = btnImg4.Font = btnImg5.Font = btnImg6.Font = btnImg7.Font = btnImg8.Font = btnImg9.Font = font;
+            check.Font = button8.Font = radioButton1.Font = radioButton2.Font=lblPageNum.Font = font2;
             lbl1.Font = lbl2.Font = lbl3.Font = lbl4.Font = lbl5.Font = lbl6.Font = lbl7.Font = lbl8.Font = lbl9.Font = font3;
             lblMainTitle.Font = font4;
         }
@@ -181,49 +181,95 @@ namespace RailoNailo
             //currPage = totalPage-2;
             //HoneyTip_Load(null, null);
         }
-
+        List<string> blogSave = new List<string>();
+        List<string> blogSaveLink = new List<string>();
         private void btnImg1_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[18]);
+                blogSave.Add(a[0]);
+            }
             System.Diagnostics.Process.Start(a[18]);
         }
 
         private void btnImg2_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[19]);
+                blogSave.Add(a[1]);
+            }
             System.Diagnostics.Process.Start(a[19]);
         }
 
-        private void btnImg3_Click(object sender, EventArgs e)
+        private void btnImg3_Click_1(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[20]);
+                blogSave.Add(a[2]);
+            }
             System.Diagnostics.Process.Start(a[20]);
         }
 
         private void btnImg4_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[21]);
+                blogSave.Add(a[3]);
+            }
             System.Diagnostics.Process.Start(a[21]);
         }
 
         private void btnImg5_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[22]);
+                blogSave.Add(a[4]);
+            }
             System.Diagnostics.Process.Start(a[22]);
         }
 
         private void btnImg6_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[23]);
+                blogSave.Add(a[5]);
+            }
             System.Diagnostics.Process.Start(a[23]);
         }
 
         private void btnImg7_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[24]);
+                blogSave.Add(a[6]);
+            }
             System.Diagnostics.Process.Start(a[24]);
         }
 
         private void btnImg8_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[25]);
+                blogSave.Add(a[7]);
+            }
             System.Diagnostics.Process.Start(a[25]);
         }
 
         private void btnImg9_Click(object sender, EventArgs e)
         {
+            if (check.Checked == true)
+            {
+                blogSaveLink.Add(a[26]);
+                blogSave.Add(a[8]);
+            }
             System.Diagnostics.Process.Start(a[26]);
         }
 
@@ -276,10 +322,25 @@ namespace RailoNailo
                 // 타이틀 바의 다운 이벤트처럼 보냄
                 SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
             }
+            base.OnMouseDown(e);            
+        }
 
-            base.OnMouseDown(e);
+       
 
+        private void btnImg3_MouseClick(object sender, MouseEventArgs e)
+        {            
+            if (e.Button == MouseButtons.Right)
+            {
+                MessageBox.Show("RIGHT");
+            }
+        }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+            HoneyTipBlogSave h = new HoneyTipBlogSave(blogSave, blogSaveLink);
+            h.Show();
+                
         }
     }
 }

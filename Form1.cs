@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
@@ -14,6 +15,7 @@ namespace RailoNailo
 {
     public partial class Form1 : Form
     {
+        PrivateFontCollection privateFonts;
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
         [DllImport("user32.dll")]
@@ -25,6 +27,7 @@ namespace RailoNailo
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
+            
         }        
         
         private void Form1_Load(object sender, EventArgs e)
@@ -36,7 +39,13 @@ namespace RailoNailo
             pictureBox3.Image = Properties.Resources.map.ToImage();
             pictureBox2.Image = Properties.Resources.ticket.ToImage();
             pictureBox4.Image = Properties.Resources.time.ToImage();
-            
+
+            privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            Font font = new Font(privateFonts.Families[0], 12f);
+            Font font16 = new Font(privateFonts.Families[0], 16f);
+            lbl4.Font = lbl3.Font = lbl2.Font = lbl2.Font = lbl1.Font = font;
+            btn1.Font = btn2.Font = btnHoneyTip.Font = btn4.Font = font16;
             //폰트변경
             //PrivateFontCollection privateFonts = new PrivateFontCollection();      
             //privateFonts.AddFontFile( "한나체!.ttf" );
@@ -118,8 +127,6 @@ namespace RailoNailo
         {
             MainImageTry();
         }
-
-        
 
         private void btnTra_Click(object sender, EventArgs e)
         {

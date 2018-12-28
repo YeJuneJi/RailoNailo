@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -23,7 +24,9 @@ namespace RailoNailo
         public readonly int WM_NLBUTTONDOWN = 0xA1;
         public readonly int HT_CAPTION = 0x2;
 
+        PrivateFontCollection privateFonts;
         private string contentID;
+        private Image img;
         private DetailCommon detailCommon;
         private List<DetailCommon> detailCommonList = new List<DetailCommon>();
         private List<DetailImage> detailImagesList = new List<DetailImage>();
@@ -33,14 +36,23 @@ namespace RailoNailo
         {
             InitializeComponent();
         }
+      
 
-        public TourListDetail(string contentID) : this()
+        public TourListDetail(string contentID, Image img) : this()
         {
             this.contentID = contentID;
+            this.img = img;
 
         }
         private void TourListDetail_Load(object sender, EventArgs e)
         {
+            privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\Hanna.ttf");
+            lblName.Font = new Font(privateFonts.Families[0], 24f, FontStyle.Bold);
+            lblAddr.Font = lblTel.Font = lblZipcode.Font = label1.Font = label2.Font = label3.Font = label4.Font = new Font(privateFonts.Families[1], 11f, FontStyle.Regular);
+            tbxOverView.Font = new Font(privateFonts.Families[0], 11f, FontStyle.Regular);
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\FormDetailBack.jpg");
             button7.BackgroundImage = Properties.Resources.close.ToImage();
             this.Text = "세부정보";
             imgList.ImageSize = new Size(256, 256);
@@ -72,7 +84,6 @@ namespace RailoNailo
                     };
                     //detailImagesList.Add(detailImage);
                     AddImageList(detailImage);
-
                 }
 
             }
@@ -92,7 +103,8 @@ namespace RailoNailo
                 AddImageList(detailImage);
                 plusImageTrackBar.Visible = false;
             }
-            pbxPlusImg.Image = imgList.Images[0];
+            //pbxPlusImg.Image = imgList.Images[0];
+            pbxPlusImg.Image = img;
             plusImageTrackBar.Maximum = imgList.Images.Count - 1;
 
 
@@ -142,7 +154,6 @@ namespace RailoNailo
                 linkLblHomePage.Enabled = false;
             }
             
-
         }
 
         private void AddImageList(DetailImage detailImage)

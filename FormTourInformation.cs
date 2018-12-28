@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -38,13 +39,15 @@ namespace RailoNailo
         private List<JsonCodes> category2List;
         private List<JsonCodes> category3List;
         private List<AreaBased> areaBasedlist;
+        PrivateFontCollection privateFonts;
+        Font font;
         //private int numOfRows = 20; //한 페이지 결과 수
         private int totalDataCount = 0; // 전체 데이터 개수
         private int totalPageNo = 0;
         private int pageNo = 1; //한 페이지 번호
         public int PageNo
         {
-            get { return this.pageNo;  }
+            get { return this.pageNo; }
             set { this.pageNo = value; }
         }
 
@@ -64,8 +67,12 @@ namespace RailoNailo
 
         private void FormTourInformation_Load(object sender, EventArgs e)
         {
-            btnSearch.BackgroundImage = Properties.Resources.search.ToImage();
-            button5.BackgroundImage = Properties.Resources.close.ToImage();
+
+            btnSearch.Image = Properties.Resources.search.ToImage();
+            btnClose.Image = Properties.Resources.close.ToImage();
+            btnNext.Image = Properties.Resources.next.ToImage();
+            btnPrev.Image = Properties.Resources.prev.ToImage();
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\TourInfo.jpg");
             this.Text = "전국관광정보";
             cbxAreas.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxAreaDetails.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -79,7 +86,12 @@ namespace RailoNailo
             lblInfo.Visible = false;
             DisplayComboBx("areaCode", areaList, cbxAreas);
             DisplayComboBx("categoryCode", categoryList, cbxCategory1);
+            privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            font = new Font(privateFonts.Families[0], 14f);
 
+            lblArea.Font = lblCategory.Font = lblInfo.Font = font;
+            lblName.Font = new Font(privateFonts.Families[0], 24f);
         }
 
         private void DisplayComboBx(string operationName, List<JsonCodes> jsonlist, ComboBox cbx)
@@ -261,7 +273,21 @@ namespace RailoNailo
             string requestName5 = string.Empty;
             if (cbxAreas.SelectedIndex == -1 || cbxCategory1.SelectedIndex == -1)
             {
-                MessageBox.Show("항목을 선택해 주세요!. ", "전광정", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string mbxName = string.Empty;
+                if (cbxAreas.SelectedIndex == -1 && cbxCategory1.SelectedIndex != -1)
+                {
+                    mbxName = "지역";
+                    ValidateMbxOut(mbxName);
+                }
+                else if(cbxAreas.SelectedIndex != -1 && cbxCategory1.SelectedIndex == -1)
+                {
+                    mbxName = "분류";
+                    ValidateMbxOut(mbxName);
+                }
+                else
+                {
+                    ValidateMbxOut(mbxName);
+                }
                 return;
             }
             else if (cbxAreas.SelectedItem.ToString() == "전체" && cbxCategory1.SelectedItem.ToString() == "전체")
@@ -302,6 +328,15 @@ namespace RailoNailo
         }
 
         /// <summary>
+        /// 분류별 지역별 예외 메시지박스를 띄워주는 메서드.
+        /// </summary>
+        /// <param name="mbxName"> 어떤 예외를 메세지 박스에 띄울지 지정.</param>
+        private static void ValidateMbxOut(string mbxName)
+        {
+            MessageBox.Show(mbxName + " 항목을 선택해 주세요!. ", "전국관광정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
         /// 관광정보를 찾아 이미지로 출력해주는 메서드
         /// </summary>
         /// <param name="jobj">경로가 담긴 jobject 객체</param>
@@ -319,7 +354,7 @@ namespace RailoNailo
             }
             catch (Exception)
             {
-                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "여행을 떠나자^ㅡ^", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("찾으시는 관광정보가 없습니다!.", "전국관광정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tourListView.Clear();
                 tourimgList.Images.Clear();
                 cbxAreas.SelectedIndex = cbxCategory1.SelectedIndex = 0;
@@ -436,11 +471,11 @@ namespace RailoNailo
 
         private void tourListView_Click(object sender, EventArgs e)
         {
-            TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString());
+            TourListDetail tourDetail = new TourListDetail(tourListView.FocusedItem.ImageKey.ToString(), tourListView.LargeImageList.Images[tourListView.FocusedItem.ImageKey.ToString()]);
             tourDetail.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
