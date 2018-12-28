@@ -142,6 +142,7 @@
       <DependentUpon>TourListDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Train.cs" />
+    <Compile Include="Translation.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,148 +311,148 @@
     <Content Include="Images\ViewBack.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\가평.png">
+    <Content Include="Images\Gapyeong.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\강릉.png">
+    <Content Include="Images\Gangneung.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\경주.png">
+    <Content Include="Images\Gyeongju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\광명.png">
+    <Content Include="Images\Gwangmyeong.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\광주.png">
+    <Content Include="Images\Gwangju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\광주송정.png">
+    <Content Include="Images\GwangjuSongjeong.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\구미.png">
+    <Content Include="Images\Gumi.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\김천%28구미%29.png">
+    <Content Include="Images\Gimcheongumi.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\나주.png">
+    <Content Include="Images\Naju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\남원.png">
+    <Content Include="Images\Namwon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\단양.png">
+    <Content Include="Images\Danyang.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\대구.png">
+    <Content Include="Images\Daegu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\대전.png">
+    <Content Include="Images\Daejeon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\동대구.png">
+    <Content Include="Images\EastDaegu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\동해.png">
+    <Content Include="Images\Donghae.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\마산.png">
+    <Content Include="Images\Masan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\목포.png">
+    <Content Include="Images\Mokpo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\민둥산.png">
+    <Content Include="Images\Mindungsan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\부산.png">
+    <Content Include="Images\Busan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\부전.png">
+    <Content Include="Images\Bujeon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\서울.png">
+    <Content Include="Images\Seoul.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\수원.png">
+    <Content Include="Images\Suwon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\순천.png">
+    <Content Include="Images\Suncheon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\신경주.png">
+    <Content Include="Images\Singyeongju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\안동.png">
+    <Content Include="Images\Andong.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\여수엑스포.png">
+    <Content Include="Images\YeosuExpo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\영등포.png">
+    <Content Include="Images\Yeongdeungpo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\영월.png">
+    <Content Include="Images\Yeongwol.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\영전.png">
+    <Content Include="Images\Promotional.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\영주.png">
+    <Content Include="Images\Yeongju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\영천.png">
+    <Content Include="Images\Yeongcheon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\용산.png">
+    <Content Include="Images\Yongsan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\울산.png">
+    <Content Include="Images\Ulsan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\익산.png">
+    <Content Include="Images\Iksan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\전주.png">
+    <Content Include="Images\Jeonju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\점촌.png">
+    <Content Include="Images\Jeomchon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\정읍.png">
+    <Content Include="Images\Jeongeup.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\제천.png">
+    <Content Include="Images\Jecheon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\진주.png">
+    <Content Include="Images\Jinju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\천안.png">
+    <Content Include="Images\Cheonan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\천안아산.png">
+    <Content Include="Images\CheonanAsan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\청량리.png">
+    <Content Include="Images\Cheongnyangni.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\춘양.png">
+    <Content Include="Images\Chunyang.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\춘천.png">
+    <Content Include="Images\Chuncheon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\충주.png">
+    <Content Include="Images\Chungju.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\태백.png">
+    <Content Include="Images\Taebaek.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\평창.png">
+    <Content Include="Images\Pyeongchang .png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\포항.png">
+    <Content Include="Images\Pohang.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Railo_DB.mdf">

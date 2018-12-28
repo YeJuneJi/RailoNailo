@@ -95,7 +95,7 @@ namespace RailoNailo
                         {
                             try
                             {
-                                ((PictureBox)item2).Image = Image.FromFile(Application.StartupPath + "\\Images\\" + item.InnerText.Trim() + ".png");
+                                ((PictureBox)item2).Image = Image.FromFile(Application.StartupPath + "\\Images\\" + Translation.translationText(item.InnerText.Trim()) + ".png");
                             }
                             catch (Exception)
                             {

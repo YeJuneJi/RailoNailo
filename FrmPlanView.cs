@@ -152,7 +152,7 @@ namespace RailoNailo
             Image returnImage;
             try
             {
-                returnImage = Image.FromFile(Application.StartupPath + "\\Images\\" + text + ".png");
+                returnImage = Image.FromFile(Application.StartupPath + "\\Images\\" + Translation.translationText(text) + ".png");
             }
             catch (Exception)
             {

@@ -116,7 +116,7 @@ namespace RailoNailo
                 ((PictureBox)sender).SizeMode = PictureBoxSizeMode.StretchImage;
                 try
                 {
-                    ((PictureBox)sender).Image = Image.FromFile(Application.StartupPath+"\\Images\\" + locString + ".png");
+                    ((PictureBox)sender).Image = Image.FromFile(Application.StartupPath+"\\Images\\" + Translation.translationText(locString) + ".png");
                     ((PictureBox)sender).Image.Tag = LocString;
                 }
                 catch (Exception)
