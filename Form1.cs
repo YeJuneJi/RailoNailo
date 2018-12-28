@@ -45,7 +45,7 @@ namespace RailoNailo
             privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
             Font font = new Font(privateFonts.Families[0], 12f);
             Font font16 = new Font(privateFonts.Families[0], 16f);
-            lbl4.Font = lbl3.Font = lbl2.Font = lbl2.Font = lbl1.Font = font;
+            lbl4.Font = lbl3.Font = lbl2.Font = lbl2.Font = lbl1.Font = lblweather.Font =lblTemp.Font= font;
             btn1.Font = btn2.Font = btnHoneyTip.Font = btn4.Font = font16;
             fweather = new FormWeather();
             weather = fweather.CheckWeather(fweather.getJsonWeather("seoul"));
@@ -73,6 +73,7 @@ namespace RailoNailo
             {
                 btnWeather.Image = Properties.Resources.Fog.ToImage();
             }
+            lblTemp.Text = Math.Round(weather.Temp - 273.15, 2).ToString() + " 도(섭씨)";
         }
         
         private void MainImageTry() //메인 배경 랜덤으로 출력

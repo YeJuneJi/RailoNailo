@@ -41,6 +41,8 @@
             this.lblWeather = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.pbxWeather = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWeather)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +63,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(47, 148);
+            this.label2.Location = new System.Drawing.Point(47, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 19);
             this.label2.TabIndex = 4;
@@ -73,7 +75,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 198);
+            this.label3.Location = new System.Drawing.Point(47, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 19);
             this.label3.TabIndex = 5;
@@ -85,7 +87,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(47, 248);
+            this.label4.Location = new System.Drawing.Point(47, 225);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 19);
             this.label4.TabIndex = 6;
@@ -97,7 +99,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(47, 298);
+            this.label6.Location = new System.Drawing.Point(47, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 19);
             this.label6.TabIndex = 8;
@@ -109,7 +111,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(47, 348);
+            this.label7.Location = new System.Drawing.Point(47, 345);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 19);
             this.label7.TabIndex = 9;
@@ -121,7 +123,7 @@
             this.lblMinTemp.BackColor = System.Drawing.Color.Transparent;
             this.lblMinTemp.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblMinTemp.ForeColor = System.Drawing.Color.Black;
-            this.lblMinTemp.Location = new System.Drawing.Point(170, 348);
+            this.lblMinTemp.Location = new System.Drawing.Point(169, 345);
             this.lblMinTemp.Name = "lblMinTemp";
             this.lblMinTemp.Size = new System.Drawing.Size(85, 19);
             this.lblMinTemp.TabIndex = 15;
@@ -133,7 +135,7 @@
             this.lblMaxTemp.BackColor = System.Drawing.Color.Transparent;
             this.lblMaxTemp.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblMaxTemp.ForeColor = System.Drawing.Color.Black;
-            this.lblMaxTemp.Location = new System.Drawing.Point(170, 298);
+            this.lblMaxTemp.Location = new System.Drawing.Point(169, 285);
             this.lblMaxTemp.Name = "lblMaxTemp";
             this.lblMaxTemp.Size = new System.Drawing.Size(85, 19);
             this.lblMaxTemp.TabIndex = 14;
@@ -145,7 +147,7 @@
             this.lblPress.BackColor = System.Drawing.Color.Transparent;
             this.lblPress.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblPress.ForeColor = System.Drawing.Color.Black;
-            this.lblPress.Location = new System.Drawing.Point(170, 248);
+            this.lblPress.Location = new System.Drawing.Point(169, 225);
             this.lblPress.Name = "lblPress";
             this.lblPress.Size = new System.Drawing.Size(47, 19);
             this.lblPress.TabIndex = 12;
@@ -157,7 +159,7 @@
             this.lblTemp.BackColor = System.Drawing.Color.Transparent;
             this.lblTemp.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblTemp.ForeColor = System.Drawing.Color.Black;
-            this.lblTemp.Location = new System.Drawing.Point(170, 198);
+            this.lblTemp.Location = new System.Drawing.Point(169, 165);
             this.lblTemp.Name = "lblTemp";
             this.lblTemp.Size = new System.Drawing.Size(47, 19);
             this.lblTemp.TabIndex = 11;
@@ -169,7 +171,7 @@
             this.lblWeather.BackColor = System.Drawing.Color.Transparent;
             this.lblWeather.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblWeather.ForeColor = System.Drawing.Color.Black;
-            this.lblWeather.Location = new System.Drawing.Point(170, 148);
+            this.lblWeather.Location = new System.Drawing.Point(169, 105);
             this.lblWeather.Name = "lblWeather";
             this.lblWeather.Size = new System.Drawing.Size(47, 19);
             this.lblWeather.TabIndex = 10;
@@ -197,13 +199,24 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pbxWeather
+            // 
+            this.pbxWeather.BackColor = System.Drawing.Color.Transparent;
+            this.pbxWeather.Location = new System.Drawing.Point(213, 97);
+            this.pbxWeather.Name = "pbxWeather";
+            this.pbxWeather.Size = new System.Drawing.Size(39, 37);
+            this.pbxWeather.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxWeather.TabIndex = 32;
+            this.pbxWeather.TabStop = false;
+            // 
             // FormWeather
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(462, 583);
+            this.ClientSize = new System.Drawing.Size(458, 583);
+            this.Controls.Add(this.pbxWeather);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblMinTemp);
@@ -221,6 +234,7 @@
             this.Name = "FormWeather";
             this.Text = "FormWeather";
             this.Load += new System.EventHandler(this.FormWeather_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWeather)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +255,6 @@
         private System.Windows.Forms.Label lblWeather;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox pbxWeather;
     }
 }

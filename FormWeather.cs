@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -17,18 +18,24 @@ namespace RailoNailo
         public static extern bool ReleaseCapture();
         public readonly int WM_NLBUTTONDOWN = 0xA1;
         public readonly int HT_CAPTION = 0x2;
-
+        HttpWebRequest request;
+        HttpWebResponse response;
+        PrivateFontCollection privateFonts;
+        Font font;
+        Font font2;
         private Weather weather;
         private string weatherKey = "e0830184b177fdc64b093779164ea8a8";
         private string city = "seoul";
-
-
-
 
         private FormTourInformation ft = new FormTourInformation();
         public FormWeather()
         {
             InitializeComponent();
+            privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile(Application.StartupPath + "\\Font\\HannaPro.ttf");
+            font = new Font(privateFonts.Families[0], 12f);
+            font2 = new Font(privateFonts.Families[0], 25f);
+            
         }
 
         private void FormWeather_Load(object sender, EventArgs e)
@@ -36,7 +43,40 @@ namespace RailoNailo
             this.Text = "오늘의 날씨";
             btnClose.Image = Properties.Resources.close2.ToImage();
             weather = CheckWeather(getJsonWeather(city));
-
+            label1.Font = font2;
+            label2.Font = label3.Font = label4.Font = label6.Font = label7.Font = font;
+            lblMaxTemp.Font = lblMinTemp.Font = lblPress.Font = lblTemp.Font = lblWeather.Font = font;
+            lblWeather.Text = weather.HowWeather.ToString().ToUpper();
+            if (weather.HowWeather.ToUpper() == "CLOUDS")
+            {
+                lblWeather.Text = "구름";
+                pbxWeather.Image = Properties.Resources.Clouds.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "CLEAR")
+            {
+                lblWeather.Text = "맑음";
+                pbxWeather.Image = Properties.Resources.Clear.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "HAZE")
+            {
+                lblWeather.Text = "연무";
+                pbxWeather.Image = Properties.Resources.Haze.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "RAIN")
+            {
+                lblWeather.Text = "비";
+                pbxWeather.Image = Properties.Resources.Rain.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "MIST")
+            {
+                lblWeather.Text = "박무";
+                pbxWeather.Image = Properties.Resources.Mist.ToImage();
+            }
+            else if (weather.HowWeather.ToUpper() == "FOG")
+            {
+                lblWeather.Text = "안개";
+                pbxWeather.Image = Properties.Resources.Fog.ToImage();
+            }
             lblTemp.Text = Math.Round(weather.Temp - 273.15, 2).ToString() + " 도(섭씨)";
             lblPress.Text = weather.Press.ToString() + " 기압(hPa)";
             lblMaxTemp.Text = Math.Round(weather.Maxtemp - 273.15, 2).ToString() + " 도(섭씨)";
@@ -45,14 +85,29 @@ namespace RailoNailo
 
         internal string getJsonWeather(string city)
         {
-            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\weather.jpg");
+            try
+            {
+                this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\weather.jpg");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("이미지가 없습니다.", "날씨정보");
+            }
             string serverURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + weatherKey;
-            HttpWebRequest request = WebRequest.Create(serverURL) as HttpWebRequest;
-            HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+            try
+            {
+                request = WebRequest.Create(serverURL) as HttpWebRequest;
+                response = request.GetResponse() as HttpWebResponse;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("요청 또는 응답 에러!", "날씨정보");
+            }
             string statusCode = response.StatusCode.ToString();
             string json = string.Empty;
             if (statusCode == "OK")
             {
+                
                 Stream stream = response.GetResponseStream();
                 StreamReader streamReader = new StreamReader(stream, Encoding.UTF8);
                 json = streamReader.ReadToEnd();
@@ -75,7 +130,6 @@ namespace RailoNailo
             JToken jmain = jobj.SelectToken("main");
             foreach (var item in jWeather)
             {
-                lblWeather.Text = item["main"].ToString();
                 weather.Id = Convert.ToInt32(item["id"]);
                 weather.HowWeather = Convert.ToString(item["main"]);
             }

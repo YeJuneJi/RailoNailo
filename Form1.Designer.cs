@@ -45,7 +45,8 @@
             this.btnTry = new System.Windows.Forms.Button();
             this.lbl4 = new System.Windows.Forms.Label();
             this.btnWeather = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblweather = new System.Windows.Forms.Label();
+            this.lblTemp = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,6 +109,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblTemp);
             this.panel1.Controls.Add(this.btn1);
             this.panel1.Controls.Add(this.btn4);
             this.panel1.Controls.Add(this.btn2);
@@ -252,16 +254,25 @@
             this.btnWeather.UseVisualStyleBackColor = false;
             this.btnWeather.Click += new System.EventHandler(this.btnWeather_Click);
             // 
-            // label1
+            // lblweather
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(676, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 20);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "날씨를보시려면 날씨를 클릭 !";
+            this.lblweather.AutoSize = true;
+            this.lblweather.BackColor = System.Drawing.Color.Transparent;
+            this.lblweather.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblweather.Location = new System.Drawing.Point(586, 35);
+            this.lblweather.Name = "lblweather";
+            this.lblweather.Size = new System.Drawing.Size(281, 20);
+            this.lblweather.TabIndex = 18;
+            this.lblweather.Text = "세부적인 날씨를보시려면 이미지를 클릭해 주세요!";
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.BackColor = System.Drawing.Color.Transparent;
+            this.lblTemp.Location = new System.Drawing.Point(727, 3);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(0, 12);
+            this.lblTemp.TabIndex = 19;
             // 
             // Form1
             // 
@@ -270,7 +281,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(166)))), ((int)(((byte)(209)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 583);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblweather);
             this.Controls.Add(this.btnWeather);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.btnTry);
@@ -289,6 +300,7 @@
             this.Text = "내일로레일로";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -317,7 +329,8 @@
         private System.Windows.Forms.Button btnTry;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Button btnWeather;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblweather;
+        private System.Windows.Forms.Label lblTemp;
     }
 }
 
