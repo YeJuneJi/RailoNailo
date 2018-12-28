@@ -151,8 +151,6 @@ namespace RailoNailo
             MainImageTry();
         }
 
-        
-
         private void btnTra_Click(object sender, EventArgs e)
         {
             FrmTrain ft = new FrmTrain();
