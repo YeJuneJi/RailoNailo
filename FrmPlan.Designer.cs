@@ -87,6 +87,7 @@
             this.rdoDay3.TabStop = true;
             this.rdoDay3.Text = "3일권";
             this.rdoDay3.UseVisualStyleBackColor = true;
+            this.rdoDay3.CheckedChanged += new System.EventHandler(this.rdoDay3_CheckedChanged);
             // 
             // rdoDay5
             // 
@@ -97,6 +98,7 @@
             this.rdoDay5.TabIndex = 1;
             this.rdoDay5.Text = "5일권";
             this.rdoDay5.UseVisualStyleBackColor = true;
+            this.rdoDay5.CheckedChanged += new System.EventHandler(this.rdoDay3_CheckedChanged);
             // 
             // rdoDay7
             // 
@@ -107,6 +109,7 @@
             this.rdoDay7.TabIndex = 2;
             this.rdoDay7.Text = "7일권";
             this.rdoDay7.UseVisualStyleBackColor = true;
+            this.rdoDay7.CheckedChanged += new System.EventHandler(this.rdoDay3_CheckedChanged);
             // 
             // groupBox1
             // 

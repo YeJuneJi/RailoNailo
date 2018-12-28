@@ -50,7 +50,7 @@ namespace RailoNailo
 
             locList = new List<Location>();
             tourListView.View = View.LargeIcon;
-            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
+            string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf;Integrated Security=True";
             locTable = new DataTable();
             locTable.Columns.Add("역 이름");
             

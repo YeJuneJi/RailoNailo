@@ -39,6 +39,22 @@ namespace RailoNailo
             }
         }
 
+        private void rdoDay3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoDay7.Checked)
+            {
+                dateFinal.Value = dateStart.Value.AddDays(7);
+            }
+            else if (rdoDay5.Checked)
+            {
+                dateFinal.Value = dateStart.Value.AddDays(5);
+            }
+            else
+            {
+                dateFinal.Value = dateStart.Value.AddDays(3);
+            }
+            label3.Text = dateStart.Value.ToShortDateString() + " 부터 " + dateFinal.Value.ToShortDateString();
+        }
         private void dateStart_ValueChanged(object sender, EventArgs e)
         {
             if (dateStart.Value<DateTime.Now)
@@ -100,7 +116,7 @@ namespace RailoNailo
                 ((PictureBox)sender).SizeMode = PictureBoxSizeMode.StretchImage;
                 try
                 {
-                    ((PictureBox)sender).Image = Image.FromFile(Application.StartupPath+"\\Images\\" + locString + ".png");
+                    ((PictureBox)sender).Image = Image.FromFile(Application.StartupPath+"\\Images\\" + Translation.translationText(locString) + ".png");
                     ((PictureBox)sender).Image.Tag = LocString;
                 }
                 catch (Exception)
@@ -129,7 +145,7 @@ namespace RailoNailo
             }
             else
             {
-                string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf";
+                string conStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString + "AttachDbFilename=" + Application.StartupPath + "\\Railo_DB.mdf;Integrated Security=True";
                 string[] planArr = new string[6];
                 int count = 0;
                 foreach (Control item in groupBox3.Controls)
@@ -197,7 +213,6 @@ namespace RailoNailo
             {
                 // 다른 컨트롤에 묶여있을 수 있을 수 있으므로 마우스캡쳐 해제
                 ReleaseCapture();
-
                 // 타이틀 바의 다운 이벤트처럼 보냄
                 SendMessage(this.Handle, WM_NLBUTTONDOWN, HT_CAPTION, 0);
             }
@@ -214,6 +229,6 @@ namespace RailoNailo
         {
             this.Close();
         }
-        
+
     }
 }
