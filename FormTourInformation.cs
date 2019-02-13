@@ -208,8 +208,8 @@ namespace RailoNailo
                 temp.Rname = Convert.ToInt32(obj.SelectToken("response").SelectToken("body").SelectToken("items").SelectToken("item").SelectToken("rname"));
                 jsonList.Add(temp);
             }
-
             return jsonList;
+
         }
         private void cbxCategory2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -379,9 +379,9 @@ namespace RailoNailo
                 };
                 try
                 {
-                    Uri uri = new Uri(areaBased.FirstImage);
+                    Uri uri = new Uri(areaBased.FirstImage); //이미지의 Uri 경로를 가져온다.
                 }
-                catch (UriFormatException)
+                catch (UriFormatException) //이미지가 없을경우 없는 이미지를 출력해주기위한 예외처리.
                 {
                     areaBased.FirstImage = "http://api.visitkorea.or.kr/static/images/common/noImage.gif";
                 }
